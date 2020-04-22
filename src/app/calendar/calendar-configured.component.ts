@@ -2,10 +2,8 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Calendar as CalendarDHX } from 'dhx-suite';
 import 'dhx-suite/codebase/suite.min.css';
 
-declare const dhx;
-
 @Component({
-    selector: 'app-richtext-cdn',
+    selector: 'app-calendar-cdn',
     template: `<div #widget class='widget-box-wide'></div>`,
 })
 export class CalendarComponent implements OnDestroy {
@@ -19,7 +17,11 @@ export class CalendarComponent implements OnDestroy {
     ngOnInit() {
         this.calendar = new CalendarDHX(this.container.nativeElement, {
             css: 'dhx_widget--bordered',
+            weekNumbers: true,
             value: new Date(),
+            timePicker: true,
+            timeFormat: 12,
+            thisMonthOnly: false,
         });
     }
 
