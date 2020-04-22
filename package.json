@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +21,7 @@
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
+    "from-cdn": "^1.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -28,9 +31,16 @@
     "@angular/cli": "~9.1.1",
     "@angular/compiler-cli": "~9.1.1",
     "@angular/language-service": "~9.1.1",
-    "@types/node": "^12.11.1",
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-notes": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/angular": "^5.3.18",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "babel-loader": "^8.1.0",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
