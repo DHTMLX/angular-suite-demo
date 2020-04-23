@@ -6,7 +6,7 @@ import { Timepicker as TimepickerDHX } from 'dhx-suite';
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
     styleUrls: [ './timepicker.scss' ],
 })
-export class TimePickerComponent implements OnDestroy {
+export class TimePickerConfiguratedComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
     container: ElementRef;
     timepicker: TimepickerDHX;
@@ -17,6 +17,8 @@ export class TimePickerComponent implements OnDestroy {
     ngOnInit() {
         this.timepicker = new TimepickerDHX(this.container.nativeElement, {
             css: 'dhx_widget--bordered',
+            controls: true,
+            timeFormat: 12,
         });
     }
 

@@ -1,5 +1,5 @@
-import {TimePickerComponent} from '../app/timepicker/timepicker.component'
-
+import { TimePickerComponent } from '../app/timepicker/timepicker.component';
+import { TimePickerConfiguratedComponent } from '../app/timepicker/timepicker-configurated.component';
 
 export default {
     title: 'Time Picker',
@@ -10,9 +10,9 @@ export const Base = () => ({
     component: TimePickerComponent,
 });
 
-// export const Configurated = () => ({
-//     component: CalendarComponentConfigurated,
-// });
+export const Configurated = () => ({
+    component: TimePickerConfiguratedComponent,
+});
 
 // export const CDN = () => ({
 //     component: CalendarCDNComponent,
