@@ -6,7 +6,8 @@ declare const dhx;
 
 @Component({
     selector: 'app-richtext-cdn',
-    template: `<div #widget class='widget-box-wide'></div>`,
+    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
+    styleUrls: [ '../app.component.scss' ],
 })
 export class CalendarComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

@@ -4,7 +4,8 @@ import 'dhx-suite/codebase/suite.min.css';
 
 @Component({
     selector: 'app-calendar-cdn',
-    template: `<div #widget class='widget-box-wide'></div>`,
+    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
+    styleUrls: [ '../app.component.scss' ],
 })
 export class CalendarComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
