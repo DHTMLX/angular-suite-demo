@@ -12,7 +12,6 @@ export class TimePickerComponent implements OnDestroy {
     timepicker: TimepickerDHX;
     wait: Promise<void>;
 
-    @Output() ready: EventEmitter<any> = new EventEmitter();
 
     ngOnInit() {
         this.timepicker = new TimepickerDHX(this.container.nativeElement, {
