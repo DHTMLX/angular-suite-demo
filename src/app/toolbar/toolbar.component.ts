@@ -1,6 +1,5 @@
 import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import { Toolbar as ToolbarDHX, TreeCollection } from 'dhx-suite';
-
 @Component({
     selector: 'app-timepicker-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
@@ -18,7 +17,7 @@ export class ToolbarComponent implements OnDestroy {
             navigationType: 'pointer',
         });
 
-        this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/sidebar.json');
+        this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/toolbar.json');
     }
 
     ngOnDestroy() {

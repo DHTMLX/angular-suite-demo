@@ -1,5 +1,6 @@
 import { ToolbarComponent } from '../app/toolbar/toolbar.component';
-import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated';
+import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated.component';
+import { ToolbarDataComponent } from '../app/toolbar/toolbar-data.component';
 
 export default {
     title: 'Toolbar',
@@ -12,6 +13,10 @@ export const Base = () => ({
 
 export const Configurated = () => ({
     component: ToolbarConfiguratedComponent,
+});
+
+export const Data = () => ({
+    component: ToolbarDataComponent,
 });
 
 // export const CDN = () => ({
