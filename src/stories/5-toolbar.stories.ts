@@ -1,4 +1,5 @@
-import {ToolbarComponent} from '../app/toolbar/toolbar.component'
+import { ToolbarComponent } from '../app/toolbar/toolbar.component';
+import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated';
 
 export default {
     title: 'Toolbar',
@@ -9,9 +10,9 @@ export const Base = () => ({
     component: ToolbarComponent,
 });
 
-// export const Configurated = () => ({
-//     component: SliderConfiguraetedComponent,
-// });
+export const Configurated = () => ({
+    component: ToolbarConfiguratedComponent,
+});
 
 // export const CDN = () => ({
 //     component: SliderCDNComponent,
