@@ -2,6 +2,7 @@
 
 import { SliderComponent } from '../app/slider/slider.component';
 import { SliderConfiguraetedComponent } from '../app/slider/slider-configurated.component';
+import { SliderCDNComponent } from '../app/slider/slider-cdn.component';
 
 export default {
     title: 'Slider',
@@ -16,9 +17,9 @@ export const Configurated = () => ({
     component: SliderConfiguraetedComponent,
 });
 
-// export const CDN = () => ({
-//     component: TimePickerCDNComponent,
-// });
+export const CDN = () => ({
+    component: SliderCDNComponent,
+});
 
 // export const Events = () => ({
 //     component: TimePickerEventsComponent,
