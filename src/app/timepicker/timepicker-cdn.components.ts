@@ -2,6 +2,7 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Timepicker as TimepickerDHX } from 'dhx-suite';
 import fromCDN from 'from-cdn';
 
+declare const dhx;
 @Component({
     selector: 'app-timepicker-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
@@ -20,7 +21,7 @@ export class TimePickerCDNComponent implements OnDestroy {
             'https://cdn.dhtmlx.com/suite/edge/suite.js',
             'https://cdn.dhtmlx.com/suite/edge/suite.css',
         ]).then(() => {
-            this.timepicker = new TimepickerDHX(this.container.nativeElement, {
+            this.timepicker = new dhx.Timepicker(this.container.nativeElement, {
                 css: 'dhx_widget--bordered',
             });
             this.ready.emit({ timepicker: this.timepicker });
