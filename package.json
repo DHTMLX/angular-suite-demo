@@ -1,6 +1,7 @@
 {
   "name": "ng-widgets",
   "version": "0.0.0",
+  "homepage": " https://dhtmlx.github.io/react-widgets/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
