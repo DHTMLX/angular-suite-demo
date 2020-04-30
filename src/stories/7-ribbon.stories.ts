@@ -2,7 +2,7 @@ import { RibbonComponent } from '../app/ribbon/ribbon.component';
 import { RibbonConfiguratedComponent } from '../app/ribbon/ribbon-configurated.component';
 import { RibbonDataComponent } from '../app/ribbon/ribbon-data.component';
 import { RibbonCDNComponent } from '../app/ribbon/ribbon-cdn.component';
-import { EventsCDNComponent } from '../app/ribbon/ribbon-events.component';
+import { RibbonEventsComponent } from '../app/ribbon/ribbon-events.component';
 
 export default {
     title: 'Ribbon',
@@ -26,5 +26,5 @@ export const CDN = () => ({
 });
 
 export const Events = () => ({
-    component: SidebarEventsComponent,
+    component: RibbonEventsComponent,
 });
