@@ -1,6 +1,6 @@
 import { SidebarComponent } from '../app/sidebar/sidebar.component';
-// import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated.component';
-// import { ToolbarDataComponent } from '../app/toolbar/toolbar-data.component';
+import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated';
+import { SidebarDataComponent } from '../app/sidebar/sidebar-data.component';
 // import { ToolbarCDNComponent } from '../app/toolbar/toolbar-cdn.component';
 // import { ToolbarEventsComponent } from '../app/toolbar/toolbar-events.component';
 
@@ -13,13 +13,13 @@ export const Base = () => ({
     component: SidebarComponent,
 });
 
-// export const Configurated = () => ({
-//     component: ToolbarConfiguratedComponent,
-// });
+export const Configurated = () => ({
+    component: SidebarConfiguratedComponent,
+});
 
-// export const Data = () => ({
-//     component: ToolbarDataComponent,
-// });
+export const Data = () => ({
+    component: SidebarDataComponent,
+});
 
 // export const CDN = () => ({
 //     component: ToolbarCDNComponent,
