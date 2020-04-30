@@ -1,0 +1,41 @@
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
+import { Ribbon as RibbonDHX, TreeCollection } from 'dhx-suite';
+
+@Component({
+    selector: 'app-ribbon-data-cdn',
+    template: `<div class="container">
+    <div #widget class='widget-box-wide'></div>
+    <div>
+    <button (click)="handleAddClick(click)">disable/enable print button</button>
+    </div>
+    </div>`,
+    styleUrls: [ './ribbon.scss' ],
+})
+export class RibbonDataComponent implements OnDestroy {
+    @ViewChild('widget', { static: true })
+    container: ElementRef;
+    toolbar: RibbonDHX;
+    wait: Promise<void>;
+
+    data = new TreeCollection();
+    disabled = false;
+
+    handleAddClick = () => {
+        this.data.update('print', { disabled: !this.data.getItem('print').disabled });
+    };
+
+    ngOnInit() {
+        this.toolbar = new RibbonDHX(this.container.nativeElement, {
+            css: 'dhx_widget--bordered dhx_widget--bg_white',
+            data: this.data,
+        });
+
+        this.data.load('https://dhtmlx.github.io/react-widgets/static/ribbon.json');
+    }
+
+    ngOnDestroy() {
+        if (this.toolbar) {
+            this.toolbar.destructor();
+        }
+    }
+}
