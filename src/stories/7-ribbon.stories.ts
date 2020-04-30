@@ -1,10 +1,8 @@
 import { RibbonComponent } from '../app/ribbon/ribbon.component';
 import { RibbonConfiguratedComponent } from '../app/ribbon/ribbon-configurated.component';
 import { RibbonDataComponent } from '../app/ribbon/ribbon-data.component';
-// import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated';
-// import { SidebarDataComponent } from '../app/sidebar/sidebar-data.component';
-// import { SidebarCDNComponent } from '../app/sidebar/sidebar-cdn.component';
-// import { SidebarEventsComponent } from '../app/sidebar/sidebar-events.component';
+import { RibbonCDNComponent } from '../app/ribbon/ribbon-cdn.component';
+import { EventsCDNComponent } from '../app/ribbon/ribbon-events.component';
 
 export default {
     title: 'Ribbon',
@@ -23,10 +21,10 @@ export const Data = () => ({
     component: RibbonDataComponent,
 });
 
-// export const CDN = () => ({
-//     component: SidebarCDNComponent,
-// });
+export const CDN = () => ({
+    component: RibbonCDNComponent,
+});
 
-// export const Events = () => ({
-//     component: SidebarEventsComponent,
-// });
+export const Events = () => ({
+    component: SidebarEventsComponent,
+});
