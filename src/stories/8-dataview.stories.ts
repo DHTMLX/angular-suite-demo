@@ -1,6 +1,7 @@
 import { DataviewComponent } from '../app/dataview/dataview.component';
 import { DataviewConfiguratedComponent } from '../app/dataview/dataview-configurated.component';
 import { DataviewCDNComponent } from '../app/dataview/dataview-cdn.component';
+import { DataviewEventsComponent } from '../app/dataview/dataview-events.component';
 
 
 export default {
@@ -24,6 +25,6 @@ export const CDN = () => ({
     component: DataviewCDNComponent,
 });
 
-// export const Events = () => ({
-//     component: RibbonEventsComponent,
-// });
+export const Events = () => ({
+    component: DataviewEventsComponent,
+});
