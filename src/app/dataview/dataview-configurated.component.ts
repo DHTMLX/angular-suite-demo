@@ -5,7 +5,7 @@ import { DataView as DataviewDHX, DataCollection } from 'dhx-suite';
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
     styleUrls: [ './dataview.scss' ],
 })
-export class DataviewComponent implements OnDestroy {
+export class DataviewConfiguratedComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
     container: ElementRef;
     toolbar: DataviewDHX;
@@ -25,7 +25,9 @@ export class DataviewComponent implements OnDestroy {
         this.toolbar = new DataviewDHX(this.container.nativeElement, {
             css: 'dhx_widget--bordered dhx_widget--bg_white',
             template: this.renderTemplate,
-            itemsInRow: 6
+            itemsInRow: 6,
+            gap: 20,
+            keyNavigation: true,
         });
 
         this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/dataview.json');
