@@ -3,16 +3,17 @@ import { Slider as SliderDHX } from 'dhx-suite';
 
 @Component({
     selector: 'app-timepicker-cdn',
-    template: `<div>
-    <div #widget class='container'></div>
+    template: `<div class="component-wrapper">
+    <div #widget class='widget-box-wide slider-container'></div>
     <div class="events-list-wrapper">
-        <div *ngFor='let event of eventsList'>
+    <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
             <p>{{event.name}}</p>
             <p>{{event.payload}}</p>
         </div>
     </div>
 </div>`,
-    styleUrls: [ './slider.scss' ],
+    styleUrls: [ '../app.component.scss', './slider.scss' ],
 })
 export class SliderEventsComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
