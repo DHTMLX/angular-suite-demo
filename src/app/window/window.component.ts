@@ -12,7 +12,6 @@ import { Window } from 'dhx-suite';
     styleUrls: [ './window.scss' ],
 })
 export class WindowComponent implements OnDestroy {
-    @ViewChild('widget', { static: true })
     window: Window;
     wait: Promise<void>;
 
