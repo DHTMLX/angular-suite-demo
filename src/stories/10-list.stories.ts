@@ -1,5 +1,5 @@
 import { ListComponent } from '../app/list/list.component';
-
+import { ListEventComponent } from '../app/list/list-event.component';
 
 
 export default {
@@ -9,6 +9,10 @@ export default {
 
 export const Base = () => ({
     component: ListComponent,
+});
+
+export const Events = () => ({
+  component: ListEventComponent,
 });
 
 // export const Configurated = () => ({
@@ -23,6 +27,3 @@ export const Base = () => ({
 //     component: DataviewCDNComponent,
 // });
 
-// export const Events = () => ({
-//     component: DataviewEventsComponent,
-// });
