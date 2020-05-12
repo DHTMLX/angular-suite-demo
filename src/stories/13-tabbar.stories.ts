@@ -1,4 +1,5 @@
 import { TabbarComponent } from '../app/tabbar/tabbar.component';
+import { TabbarEventComponent } from "../app/tabbar/tabbar-event.component";
 
 
 
@@ -9,6 +10,10 @@ export default {
 
 export const Base = () => ({
     component: TabbarComponent,
+});
+
+export const Events = () => ({
+    component: TabbarEventComponent,
 });
 
 // export const Configurated = () => ({
@@ -23,6 +28,4 @@ export const Base = () => ({
 //     component: DataviewCDNComponent,
 // });
 
-// export const Events = () => ({
-//     component: DataviewEventsComponent,
-// });
+

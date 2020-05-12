@@ -9,11 +9,11 @@ import { Tabbar as TabbarDHX } from 'dhx-suite';
 export class TabbarComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
     container: ElementRef;
-    form: TabbarDHX;
+    tabbar: TabbarDHX;
     wait: Promise<void>;
 
     ngOnInit() {
-        this.form = new TabbarDHX(this.container.nativeElement, {
+        this.tabbar = new TabbarDHX(this.container.nativeElement, {
             mode: 'top',
             css: 'dhx_widget--bordered dhx_widget--bg_white',
             views: [
@@ -42,8 +42,8 @@ export class TabbarComponent implements OnDestroy {
     }
 
     ngOnDestroy() {
-        if (this.form) {
-            this.form.destructor();
+        if (this.tabbar) {
+            this.tabbar.destructor();
         }
     }
 }
