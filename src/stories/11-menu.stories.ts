@@ -1,5 +1,5 @@
 import { MenuComponent } from '../app/menu/menu.component';
-
+import { MenuEventComponent } from '../app/menu/menu-event.component';
 
 
 export default {
@@ -9,6 +9,10 @@ export default {
 
 export const Base = () => ({
     component: MenuComponent,
+});
+
+export const Events = () => ({
+    component: MenuEventComponent,
 });
 
 // export const Configurated = () => ({
@@ -23,6 +27,3 @@ export const Base = () => ({
 //     component: DataviewCDNComponent,
 // });
 
-// export const Events = () => ({
-//     component: DataviewEventsComponent,
-// });
