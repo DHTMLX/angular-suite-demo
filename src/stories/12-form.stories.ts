@@ -1,4 +1,5 @@
 import { FormComponent } from '../app/form/form.component';
+import { FormEventComponent } from "../app/form/form-event.component";
 
 
 
@@ -9,6 +10,10 @@ export default {
 
 export const Base = () => ({
     component: FormComponent,
+});
+
+export const Events = () => ({
+  component: FormEventComponent,
 });
 
 // export const Configurated = () => ({
@@ -23,6 +28,4 @@ export const Base = () => ({
 //     component: DataviewCDNComponent,
 // });
 
-// export const Events = () => ({
-//     component: DataviewEventsComponent,
-// });
+
