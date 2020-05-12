@@ -1,5 +1,5 @@
 import { ComboboxComponent } from '../app/combobox/combobox.component';
-
+import { ComboboxEventComponent } from '../app/combobox/combobox-event.component'
 
 
 export default {
@@ -9,6 +9,10 @@ export default {
 
 export const Base = () => ({
     component: ComboboxComponent,
+});
+
+export const Events = () => ({
+    component: ComboboxEventComponent,
 });
 
 // export const Configurated = () => ({
@@ -23,6 +27,3 @@ export const Base = () => ({
 //     component: DataviewCDNComponent,
 // });
 
-// export const Events = () => ({
-//     component: DataviewEventsComponent,
-// });
