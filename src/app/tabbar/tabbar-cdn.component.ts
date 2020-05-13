@@ -50,6 +50,7 @@ export class TabbarCDNComponent implements OnDestroy {
           },
         ],
       });
+      this.ready.emit({tabbar: this.tabbar});
     });
   }
 
