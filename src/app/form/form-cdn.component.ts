@@ -17,6 +17,8 @@ export class FormCDNComponent implements OnDestroy {
   form: any;
   wait: Promise<void>;
 
+  @Output() ready: EventEmitter<any> = new EventEmitter();
+
   constructor() {
     this.wait = fromCDN([
       'https://cdn.dhtmlx.com/suite/edge/suite.js',
@@ -61,6 +63,7 @@ export class FormCDNComponent implements OnDestroy {
           },
         ],
       });
+      this.ready.emit({form: this.form});
     });
   }
 
