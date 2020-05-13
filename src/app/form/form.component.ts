@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Form as FormDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-form-cdn',
+  selector: 'app-form-common-cdn',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
