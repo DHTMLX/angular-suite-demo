@@ -28,7 +28,6 @@ export class WindowEventComponent implements OnDestroy {
   eventsList = [];
 
   logEvent = (payload, name: string) => {
-    console.log("payload", payload);
     this.eventsList = [{name, payload}].concat(this.eventsList);
   };
 
@@ -46,8 +45,9 @@ export class WindowEventComponent implements OnDestroy {
 
     this.window.show(650, 100);
 
-    this.window.events.on('resize', (values) => {
-      this.logEvent(JSON.stringify(values), 'resize');
+    this.window.events.on('resize', (size, oldsize, resizeSide) => {
+      const info = {size, oldsize, resizeSide};
+      this.logEvent(JSON.stringify(info), 'resize');
     });
     this.window.events.on('headerDoubleClick', () => this.logEvent(null, 'headerDoubleClick'));
     this.window.events.on('move', (values) => {
@@ -56,8 +56,8 @@ export class WindowEventComponent implements OnDestroy {
     this.window.events.on('afterShow', () => this.logEvent(null, 'afterShow'));
     this.window.events.on('afterHide', () => this.logEvent(null, 'afterHide'));
     this.window.events.on('beforeShow', (x, y) => {
-      let position = {x: x, y: y};
-      this.logEvent(JSON.stringify(position), 'beforeShow')
+      const position = {x, y};
+      this.logEvent(JSON.stringify(position), 'beforeShow');
     });
     this.window.events.on('beforeHide', () => this.logEvent(null, 'beforeHide'));
   }
