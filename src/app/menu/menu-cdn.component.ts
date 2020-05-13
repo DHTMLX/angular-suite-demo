@@ -28,6 +28,7 @@ export class MenuCDNComponent implements OnDestroy {
         css: 'dhx_widget--bordered',
       });
       this.menu.data.load(`https://dhtmlx.github.io/react-widgets/static/menu.json`);
+      this.ready.emit({menu: this.menu});
     });
   }
 
