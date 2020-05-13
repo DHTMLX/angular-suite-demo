@@ -37,16 +37,16 @@ export class PopupEventComponent implements OnDestroy {
       css: 'dhx_widget--bordered',
     });
     this.popup.attachHTML(
-      "<div style='padding: 16px; text-align: center'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>",
+      '<div style=\'padding: 16px; text-align: center\'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>',
     );
 
-    this.popup.events.on('beforeHide', (value) => this.logEvent(value, 'beforeHide'));
+    this.popup.events.on('beforeHide', (fromOuterClick) => this.logEvent(fromOuterClick, 'beforeHide'));
     this.popup.events.on('beforeShow', (element) => {
-      this.logEvent(element.outerHTML, 'beforeShow')
+      this.logEvent(element.outerHTML, 'beforeShow');
     });
     this.popup.events.on('afterHide', () => this.logEvent(null, 'afterHide'));
     this.popup.events.on('afterShow', () => this.logEvent(null, 'afterShow'));
-    this.popup.events.on('click', (id) => this.logEvent(id, 'click'));
+    this.popup.events.on('click', (e) => this.logEvent(JSON.stringify(e), 'click'));
   }
 
   ngOnDestroy() {
