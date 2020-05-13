@@ -27,7 +27,7 @@ export class TabbarEventComponent implements OnDestroy {
 
   logEvent = (payload, name: string) => {
     this.eventsList = [{name, payload}].concat(this.eventsList);
-  };
+  }
 
   ngOnInit() {
     this.tabbar = new TabbarDHX(this.container.nativeElement, {
@@ -39,18 +39,21 @@ export class TabbarEventComponent implements OnDestroy {
           tab: 'Vilnius',
           width: 400,
           html:
-            "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Vilnius(Lithuanian pronunciation: [ˈvʲɪlʲnʲʊs]</strong> , see also other names) is the capital of Lithuania and its largest city, with a population of 574,147 as of 2018. Vilnius is in the southeast part of Lithuania and is the second largest city in the Baltic states. Vilnius is the seat of the main government institutions of Lithuania and the Vilnius District Municipality.</p></div>",
+            '<div><p style=\'font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px\'><strong>Vilnius(Lithuanian pronunciation: [ˈvʲɪlʲnʲʊs]</strong> , see also other names) is the capital of Lithuania and its largest city, with a population of 574,147 as of 2018. Vilnius is in the southeast part of Lithuania and is the second largest city in the Baltic states. Vilnius is the seat of the main government institutions of Lithuania and the Vilnius District Municipality.</p></div>',
         },
         {
           tab: 'Paris',
           width: 400,
           html:
-            "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Paris (French pronunciation: ​[paʁi]</strong> is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science, as well as the arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2019 population of 12,213,364, or about 18 percent of the population of France.</p></div>",
+            '<div><p style=\'font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px\'><strong>Paris (French pronunciation: ​[paʁi]</strong> is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe\'s major centres of finance, diplomacy, commerce, fashion, science, as well as the arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2019 population of 12,213,364, or about 18 percent of the population of France.</p></div>',
         }
       ]
     });
 
-    this.tabbar.events.on('change', (id) => this.logEvent(id, 'change'));
+    this.tabbar.events.on('change', (activeId, prevId) => {
+      const info = {activeId, prevId};
+      this.logEvent(JSON.stringify(info), 'change');
+    });
     this.tabbar.events.on('afterClose', (id) => this.logEvent(id, 'afterClose'));
     this.tabbar.events.on('beforeClose', (id) => this.logEvent(id, 'beforeClose'));
   }
