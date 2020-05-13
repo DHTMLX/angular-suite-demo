@@ -39,7 +39,7 @@ export class ColorpickerEventComponent implements OnDestroy {
     ]).then(() => {
       this.colorPicker = new dhx.Colorpicker(this.container.nativeElement);
       this.ready.emit({colorPicker: this.colorPicker});
-      this.colorPicker.events.on('change', (id) => this.logEvent(id, 'change'));
+      this.colorPicker.events.on('change', (color) => this.logEvent(color, 'change'));
       this.colorPicker.events.on('modeChange', (mode) => this.logEvent(mode, 'modeChange'));
       this.colorPicker.events.on('cancelClick', () => this.logEvent(null, 'cancelClick'));
       this.colorPicker.events.on('apply', () => this.logEvent(null, 'apply'));
