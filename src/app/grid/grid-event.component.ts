@@ -5,9 +5,7 @@ import {Grid as GridDHX, DataCollection} from 'dhx-suite';
   selector: 'app-grid-event-cdn',
   template: `
     <div class="component-wrapper">
-      <div class="container">
-        <div #widget class='widget-box'></div>
-      </div>
+      <div #widget class='widget-box'></div>
       <div class="events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
@@ -16,7 +14,7 @@ import {Grid as GridDHX, DataCollection} from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['./grid.scss', '../app.component.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class GridEventComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
