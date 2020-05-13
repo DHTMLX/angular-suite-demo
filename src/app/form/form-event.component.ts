@@ -26,7 +26,7 @@ export class FormEventComponent implements OnDestroy {
 
   logEvent = (payload, name: string) => {
     this.eventsList = [{name, payload}].concat(this.eventsList);
-  };
+  }
 
   ngOnInit() {
     this.form = new FormDHX(this.container.nativeElement, {
@@ -35,39 +35,42 @@ export class FormEventComponent implements OnDestroy {
       width: 400,
       rows: [
         {
-          type: "input",
-          label: "Name",
+          type: 'input',
+          label: 'Name',
           required: true,
-          placeholder: "John Doe"
+          placeholder: 'John Doe'
         },
         {
-          type: "input",
-          label: "Email",
-          validation: "email",
+          type: 'input',
+          label: 'Email',
+          validation: 'email',
           required: true,
-          placeholder: "jd@mail.name"
+          placeholder: 'jd@mail.name'
         },
         {
-          type: "checkbox",
-          label: "I agree",
-          name: "agree",
-          labelPosition: "right",
-          id: "agree",
+          type: 'checkbox',
+          label: 'I agree',
+          name: 'agree',
+          labelPosition: 'right',
+          id: 'agree',
           required: true,
-          value: "checkboxvalue",
+          value: 'checkboxvalue',
         },
         {
-          type: "button",
-          value: "Send",
-          size: "medium",
-          view: "flat",
-          color: "primary",
+          type: 'button',
+          value: 'Send',
+          size: 'medium',
+          view: 'flat',
+          color: 'primary',
           submit: true
         }
       ]
     });
 
-    this.form.events.on('change', (id, g) => this.logEvent(id, 'change'));
+    this.form.events.on('change', (name, newValue) => {
+      const info = {name, newValue};
+      this.logEvent(JSON.stringify(info), 'change');
+    });
     this.form.events.on('buttonClick', (id) => this.logEvent(id, 'buttonClick'));
     this.form.events.on('validationFail', (id) => this.logEvent(id, 'validationFail'));
   }
