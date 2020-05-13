@@ -1,5 +1,7 @@
 import { ListComponent } from '../app/list/list.component';
 import { ListEventComponent } from '../app/list/list-event.component';
+import { ListCDNComponent } from '../app/list/list-cdn.component';
+import { ListConfiguratedComponent } from '../app/list/list-configured.component';
 
 
 export default {
@@ -11,19 +13,21 @@ export const Base = () => ({
     component: ListComponent,
 });
 
-export const Events = () => ({
-  component: ListEventComponent,
+export const Configurated = () => ({
+    component: ListConfiguratedComponent,
 });
 
-// export const Configurated = () => ({
-//     component: DataviewConfiguratedComponent,
-// });
+export const CDN = () => ({
+    component: ListCDNComponent,
+});
+
+export const Events = () => ({
+    component: ListEventComponent,
+});
 
 // // export const Data = () => ({
 // //     component: RibbonDataComponent,
 // // });
 
-// export const CDN = () => ({
-//     component: DataviewCDNComponent,
-// });
+
 
