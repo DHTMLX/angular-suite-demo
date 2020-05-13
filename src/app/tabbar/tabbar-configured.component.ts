@@ -2,14 +2,14 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Tabbar as TabbarDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-tabbar-common-cdn',
+  selector: 'app-tabbar-configured-cdn',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
   styleUrls: ['./tabbar.scss'],
 })
-export class TabbarComponent implements OnDestroy {
+export class TabbarConfiguredComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
   container: ElementRef;
   tabbar: TabbarDHX;
@@ -17,7 +17,10 @@ export class TabbarComponent implements OnDestroy {
 
   ngOnInit() {
     this.tabbar = new TabbarDHX(this.container.nativeElement, {
-      mode: 'top',
+      mode: 'bottom',
+      tabHeight: 40,
+      tabWidth: 120,
+      closable: true,
       css: 'dhx_widget--bordered dhx_widget--bg_white',
       views: [
         {
