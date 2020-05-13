@@ -9,7 +9,6 @@ import {Popup as PopupDHX} from 'dhx-suite';
         <div #widget class='widget-box-wide'>
         </div>
         <button (click)="this.popup.show(this.container.nativeElement)">Show Popup</button>
-        <button (click)="this.popup.hide(this.container.nativeElement)">Hide Popup</button>
       </div>
       <div class="events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
