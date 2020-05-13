@@ -1,0 +1,72 @@
+import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import fromCDN from 'from-cdn';
+
+declare const dhx;
+
+@Component({
+  selector: 'app-form-cdn',
+  template: `
+      <div class="container">
+          <div #widget class='widget-box-wide'></div>
+      </div>`,
+  styleUrls: ['./form.scss'],
+})
+export class FormCDNComponent implements OnDestroy {
+  @ViewChild('widget', {static: true})
+  container: ElementRef;
+  form: any;
+  wait: Promise<void>;
+
+  constructor() {
+    this.wait = fromCDN([
+      'https://cdn.dhtmlx.com/suite/edge/suite.js',
+      'https://cdn.dhtmlx.com/suite/edge/suite.css',
+    ]).then(() => {
+      this.form = new dhx.Form(this.container.nativeElement, {
+        css: 'dhx_widget--bordered',
+        gravity: false,
+        width: 400,
+        rows: [
+          {
+            type: 'input',
+            label: 'Name',
+            icon: 'dxi-magnify',
+            placeholder: 'John Doe',
+          },
+          {
+            type: 'input',
+            label: 'Email',
+            placeholder: 'jd@mail.name',
+          },
+          {
+            type: 'input',
+            inputType: 'password',
+            label: 'Password',
+            placeholder: '********',
+          },
+          {
+            type: 'checkbox',
+            label: 'I agree',
+            name: 'agree',
+            labelPosition: 'right',
+            value: 'checkboxvalue',
+          },
+          {
+            type: 'button',
+            value: 'Send',
+            size: 'medium',
+            view: 'flat',
+            submit: true,
+            color: 'primary',
+          },
+        ],
+      });
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.form) {
+      this.form.destructor();
+    }
+  }
+}

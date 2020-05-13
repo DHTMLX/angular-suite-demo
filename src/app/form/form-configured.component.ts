@@ -2,14 +2,14 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Form as FormDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-form-cdn',
+  selector: 'app-form-configurated-cdn',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
   styleUrls: ['./form.scss'],
 })
-export class FormComponent implements OnDestroy {
+export class FormConfiguratedComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
   container: ElementRef;
   form: FormDHX;
@@ -19,13 +19,17 @@ export class FormComponent implements OnDestroy {
     this.form = new FormDHX(this.container.nativeElement, {
       css: 'dhx_widget--bordered',
       gravity: false,
-      width: 400,
+      width: 500,
+      height: 450,
+      title: 'Form',
+      padding: 40,
       rows: [
         {
           type: 'input',
           label: 'Name',
           icon: 'dxi-magnify',
           placeholder: 'John Doe',
+          required: true,
         },
         {
           type: 'input',
