@@ -1,47 +1,51 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Chart as ChartDHX, DataCollection } from 'dhx-suite';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
+
 @Component({
-    selector: 'app-chart-cdn',
-    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: [ './chart.scss' ],
+  selector: 'app-chart-common-cdn',
+  template: `
+      <div class="container">
+          <div #widget class='widget-box-wide'></div>
+      </div>`,
+  styleUrls: ['./chart.scss'],
 })
 export class ChartComponent implements OnDestroy {
-    @ViewChild('widget', { static: true })
-    container: ElementRef;
-    chart: ChartDHX;
-    wait: Promise<void>;
+  @ViewChild('widget', {static: true})
+  container: ElementRef;
+  chart: ChartDHX;
+  wait: Promise<void>;
 
-    ngOnInit() {
-        this.chart = new ChartDHX(this.container.nativeElement, {
-            type: 'bar',
-            scales: {
-                bottom: {
-                    text: 'month',
-                },
-                left: {
-                    maxTicks: 10,
-                    max: 100,
-                    min: 0,
-                },
-            },
-            series: [
-                {
-                    id: 'A',
-                    value: 'company C',
-                    color: '#5E83BA',
-                    pointType: 'circle',
-                    fill: '#5E83BA',
-                    barWidth: 35,
-                },
-            ],
-        });
+  ngOnInit() {
+    this.chart = new ChartDHX(this.container.nativeElement, {
+      type: 'bar',
+      scales: {
+        bottom: {
+          text: 'month',
+        },
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: 'A',
+          value: 'company C',
+          color: '#5E83BA',
+          pointType: 'circle',
+          fill: '#5E83BA',
+          barWidth: 35,
+        },
+      ],
+    });
 
-        this.chart.data.load('https://dhtmlx.github.io/react-widgets/static/chart.json');
+    this.chart.data.load('https://dhtmlx.github.io/react-widgets/static/chart.json');
+  }
+
+  ngOnDestroy() {
+    if (this.chart) {
+      this.chart.destructor();
     }
-
-    ngOnDestroy() {
-        if (this.chart) {
-            this.chart.destructor();
-        }
-    }
+  }
 }
