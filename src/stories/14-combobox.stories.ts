@@ -2,6 +2,7 @@ import { ComboboxComponent } from '../app/combobox/combobox.component';
 import { ComboboxEventComponent } from '../app/combobox/combobox-event.component';
 import { ComboboxCDNComponent } from '../app/combobox/combobox-cdn.component';
 import { ComboboxConfiguredComponent } from '../app/combobox/combobox-configured.component';
+import { ComboboxDataComponent } from '../app/combobox/combobox-data.component';
 
 
 export default {
@@ -17,6 +18,10 @@ export const Configurated = () => ({
     component: ComboboxConfiguredComponent,
 });
 
+export const Data = () => ({
+    component: ComboboxDataComponent,
+});
+
 export const CDN = () => ({
     component: ComboboxCDNComponent,
 });
@@ -24,9 +29,3 @@ export const CDN = () => ({
 export const Events = () => ({
     component: ComboboxEventComponent,
 });
-
-// // export const Data = () => ({
-// //     component: RibbonDataComponent,
-// // });
-
-
