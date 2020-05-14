@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-menu-common-cdn',
+  selector: 'app-menu-data',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
