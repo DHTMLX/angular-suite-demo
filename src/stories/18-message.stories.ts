@@ -1,4 +1,5 @@
 import { MessageComponent } from '../app/message/message.component';
+import { MessageCDNComponent } from '../app/message/message-cdn.component';
 
 export default {
     title: 'Message',
@@ -7,4 +8,8 @@ export default {
 
 export const Base = () => ({
     component: MessageComponent,
+});
+
+export const CDN = () => ({
+    component: MessageCDNComponent,
 });
