@@ -5,7 +5,7 @@ import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
   selector: 'app-chart-data',
   template: `
       <div class="container">
-          <div>
+          <div class="btn-container">
               <button (click)="handleClick('reset')">Reset</button>
               <button (click)="handleClick('remove')">Remove first item</button>
           </div>

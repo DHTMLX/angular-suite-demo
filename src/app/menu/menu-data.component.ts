@@ -4,11 +4,12 @@ import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
 @Component({
   selector: 'app-menu-data',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-          <div>
+      <div>
+          <div class="btn-container">
               <button (click)="handleClick()">disable/enable edit button</button>
           </div>
+          <div #widget class='container widget-box-wide'></div>
+
       </div>`,
   styleUrls: ['./menu.scss'],
 })

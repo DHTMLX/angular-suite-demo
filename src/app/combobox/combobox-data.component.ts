@@ -4,11 +4,11 @@ import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
 @Component({
   selector: 'app-combobox-data',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-          <div>
+      <div>
+          <div class="btn-container">
               <button (click)="handleClick()">Select first item</button>
           </div>
+          <div #widget class='container widget-box-wide'></div>
       </div>`,
   styleUrls: ['./combobox.scss'],
 })

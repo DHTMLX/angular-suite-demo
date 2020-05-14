@@ -4,11 +4,13 @@ import {List as ListDHX, DataCollection} from 'dhx-suite';
 @Component({
   selector: 'app-list-data',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-          <div>
-              <button (click)="handleClick('remove')" [disabled]="!this.list.getFocus()">Remove</button>
+      <div>
+          <div class='btn-container'>
               <button (click)="handleClick('reset')">Reset</button>
+              <button (click)="handleClick('remove')">Remove first item</button>
+          </div>
+          <div class="container">
+              <div #widget class='widget-box-wide'></div>
           </div>
       </div>`,
   styleUrls: ['./list.scss'],
@@ -21,9 +23,9 @@ export class ListDataComponent implements OnDestroy {
   data = new DataCollection();
 
   handleClick = (action) => {
-    if (action === 'remove') {
-      this.data.remove(this.list.getFocusItem().id);
-    } else if (action === 'reset') {
+    if (action==='remove') {
+      this.data.remove(this.data.getId(0));
+    } else if (action==='reset') {
       this.data.removeAll();
       this.data.load(`https://dhtmlx.github.io/react-widgets/static/dataview.json`);
     }

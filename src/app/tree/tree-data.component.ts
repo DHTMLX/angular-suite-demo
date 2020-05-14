@@ -4,12 +4,12 @@ import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
 @Component({
   selector: 'app-tree-data',
   template: `
-      <div class="container">
-          <div>
+      <div>
+          <div class="btn-container">
               <button (click)="handleClick(false)">Collapse All</button>
               <button (click)="handleClick(true)">Expand All</button>
           </div>
-          <div #widget class='widget-box-wide'></div>
+          <div #widget class='container widget-box-wide'></div>
       </div>`,
   styleUrls: ['./tree.scss'],
 })

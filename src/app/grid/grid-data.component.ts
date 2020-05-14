@@ -5,7 +5,7 @@ import {Grid as GridDHX, DataCollection} from 'dhx-suite';
   selector: 'app-grid-data',
   template: `
       <div>
-          <div class='buttons-container'>
+          <div class='btn-container'>
               <button (click)="handleClick('reset')">Reset</button>
               <button (click)="handleClick('remove')">Remove first row</button>
           </div>

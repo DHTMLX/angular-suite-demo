@@ -2,14 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: auto;
 }
 
-.buttons-container {
-    margin: 50px 0 0 50px;
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .container-wide {
-    margin: 50px;
+    margin: 50px auto;
     width: 900px;
 }

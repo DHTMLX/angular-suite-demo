@@ -1,8 +1,13 @@
 .container{
     max-width: 500px;
-    margin: 50px auto;
+    margin: auto;
 }
 
 .widget-box-wide {
   min-width: 500px;
+}
+
+.btn-container {
+  text-align: center;
+  margin: 20px;
 }
