@@ -20,10 +20,6 @@ export class ListDataComponent implements OnDestroy {
   wait: Promise<void>;
   data = new DataCollection();
 
-  constructor() {
-    this.data.load(`https://dhtmlx.github.io/react-widgets/static/dataview.json`);
-  }
-
   handleClick = (action) => {
     if (action === 'remove') {
       this.data.remove(this.list.getFocusItem().id);
@@ -40,6 +36,7 @@ export class ListDataComponent implements OnDestroy {
       height: 400,
       data: this.data
     });
+    this.data.load(`https://dhtmlx.github.io/react-widgets/static/dataview.json`);
   }
 
   ngOnDestroy() {
