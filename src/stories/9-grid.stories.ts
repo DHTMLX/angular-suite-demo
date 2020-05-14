@@ -1,5 +1,6 @@
 import { GridComponent } from '../app/grid/grid.component';
-import { GridEventComponent } from "../app/grid/grid-event.component";
+import { GridEventComponent } from '../app/grid/grid-event.component';
+import { GridCDNComponent } from '../app/grid/grid-cdn.component';
 
 export default {
     title: 'Grid',
@@ -8,6 +9,10 @@ export default {
 
 export const Base = () => ({
     component: GridComponent,
+});
+
+export const CDN = () => ({
+    component: GridCDNComponent,
 });
 
 export const Events = () => ({
@@ -22,6 +27,3 @@ export const Events = () => ({
 // //     component: RibbonDataComponent,
 // // });
 
-// export const CDN = () => ({
-//     component: DataviewCDNComponent,
-// });
