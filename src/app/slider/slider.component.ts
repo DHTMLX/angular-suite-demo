@@ -2,7 +2,7 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Slider as SliderDHX } from 'dhx-suite';
 
 @Component({
-    selector: 'app-timepicker-cdn',
+    selector: 'app-slider',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
     styleUrls: [ './slider.scss' ],
 })

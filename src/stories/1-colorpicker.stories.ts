@@ -4,14 +4,10 @@ import { ColorpickerEventComponent } from '../app/colorpicker/colorpicker-event.
 import { ColorpickerComponentConfigurated } from '../app/colorpicker/colorpicker-configured.component';
 
 
-import colorPickerMD from './markdown/colorpicker.md'
 
 export default {
     title: 'Color Picker',
     component: ColorPickerCDNComponent,
-    parameters: {
-      notes: colorPickerMD
-    },
 };
 
 export const Base = () => ({
