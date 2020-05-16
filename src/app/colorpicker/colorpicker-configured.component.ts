@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter, Input} from '@angular/core';
 import {Colorpicker as ColorpickerDHX} from 'dhx-suite';
 
 @Component({
@@ -15,10 +15,12 @@ export class ColorpickerComponentConfigurated implements OnDestroy {
   colorpicker: any;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.colorpicker = new ColorpickerDHX(this.container.nativeElement, {
       css: 'dhx_widget--bordered',
-      customColors: ['#1d2de7', '#ab31ff', '#a3fa76']
+      ...this.options,
     });
   }
 
