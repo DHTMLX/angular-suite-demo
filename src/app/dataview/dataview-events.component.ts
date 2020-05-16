@@ -2,17 +2,19 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { DataView as DataviewDHX, DataCollection } from 'dhx-suite';
 
 @Component({
-    selector: 'app-ribbon-cdn',
-    template: `<div class="">
-    <div #widget class='widget-box-wide'></div>
-    <div class="events-list-wrapper">
-        <div *ngFor='let event of eventsList'>
-            <p>{{event.name}}</p>
-            <p>{{event.payload}}</p>
+  selector: 'app-dataview-event-cdn',
+  template: `
+    <div class="component-wrapper">
+      <div #widget class='widget-box'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
         </div>
-    </div>
-</div>`,
-    styleUrls: [ '../app.component.scss' ],
+      </div>
+    </div>`,
+  styleUrls: ['../app.component.scss', './dataview.scss'],
 })
 export class DataviewEventsComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
@@ -29,7 +31,7 @@ export class DataviewEventsComponent implements OnDestroy {
     renderTemplate = (item) => `<div class='item_wrap item-wrap--grid'>
     <img
         class='image'
-        style="max-width: 150px"
+        style="max-width: 80px"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
     />
     <h2 class='title'>${item.title}</h2>

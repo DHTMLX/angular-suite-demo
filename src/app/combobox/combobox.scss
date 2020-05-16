@@ -1,4 +1,13 @@
-.container{
-    max-width: 500px;
-    margin: 50px auto;
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.container .widget-box-wide {
+  width: 400px;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
 }

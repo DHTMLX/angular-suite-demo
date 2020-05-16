@@ -11,7 +11,7 @@ declare const dhx;
 export class CalendarCDNComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
     container: ElementRef;
-    colorPicker: any;
+    calendar: any;
     wait: Promise<void>;
 
     @Output() ready: EventEmitter<any> = new EventEmitter();
@@ -21,18 +21,18 @@ export class CalendarCDNComponent implements OnDestroy {
             'https://cdn.dhtmlx.com/suite/edge/suite.js',
             'https://cdn.dhtmlx.com/suite/edge/suite.css',
         ]).then(() => {
-            this.colorPicker = new dhx.Calendar(this.container.nativeElement, {
+            this.calendar = new dhx.Calendar(this.container.nativeElement, {
                 css: 'dhx_widget--bordered',
                 value: new Date(),
             });
 
-            this.ready.emit({ colorPicker: this.colorPicker });
+            this.ready.emit({ colorPicker: this.calendar });
         });
     }
 
     ngOnDestroy() {
-        if (this.colorPicker) {
-            this.colorPicker.destructor();
+        if (this.calendar) {
+            this.calendar.destructor();
         }
     }
 }

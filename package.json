@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addon-notes": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/angular": "^5.3.18",
     "@storybook/storybook-deployer": "^2.8.5",
@@ -46,6 +48,7 @@
     "@types/node": "^12.11.1",
     "babel-loader": "^8.1.0",
     "codelyzer": "^5.1.2",
+    "gh-pages": "^2.2.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.4.1",

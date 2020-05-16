@@ -3,16 +3,18 @@ import { Ribbon as RibbonDHX, TreeCollection } from 'dhx-suite';
 
 
 @Component({
-    selector: 'app-ribbon-cdn',
-    template: `<div class="">
-    <div #widget class='widget-box-wide'></div>
-    <div class="events-list-wrapper">
-        <div *ngFor='let event of eventsList'>
-            <p>{{event.name}}</p>
-            <p>{{event.payload}}</p>
+  selector: 'app-ribbon-event-cdn',
+  template: `
+    <div class="component-wrapper">
+      <div #widget class='widget-box-wide'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
         </div>
-    </div>
-</div>`,
+      </div>
+    </div>`,
     styleUrls: [ '../app.component.scss' ],
 })
 export class RibbonEventsComponent implements OnDestroy {

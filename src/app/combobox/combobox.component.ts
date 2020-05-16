@@ -1,27 +1,31 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Combobox as ComboboxDHX, DataCollection } from 'dhx-suite';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
+
 @Component({
-    selector: 'app-combobox-cdn',
-    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: [ './combobox.scss' ],
+  selector: 'app-combobox-common-cdn',
+  template: `
+      <div class="container">
+          <div #widget class='widget-box-wide'></div>
+      </div>`,
+  styleUrls: ['./combobox.scss'],
 })
 export class ComboboxComponent implements OnDestroy {
-    @ViewChild('widget', { static: true })
-    container: ElementRef;
-    combobox: ComboboxDHX;
-    wait: Promise<void>;
+  @ViewChild('widget', {static: true})
+  container: ElementRef;
+  combobox: ComboboxDHX;
+  wait: Promise<void>;
 
-    ngOnInit() {
-        this.combobox = new ComboboxDHX(this.container.nativeElement, {
-            placeholder: 'Click to choose',
-        });
+  ngOnInit() {
+    this.combobox = new ComboboxDHX(this.container.nativeElement, {
+      placeholder: 'Click to choose',
+    });
 
-        this.combobox.data.load('https://dhtmlx.github.io/react-widgets/static/combobox.json');
+    this.combobox.data.load('https://dhtmlx.github.io/react-widgets/static/combobox.json');
+  }
+
+  ngOnDestroy() {
+    if (this.combobox) {
+      this.combobox.destructor();
     }
-
-    ngOnDestroy() {
-        if (this.combobox) {
-            this.combobox.destructor();
-        }
-    }
+  }
 }
