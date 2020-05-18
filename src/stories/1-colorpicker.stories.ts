@@ -3,6 +3,8 @@ import { ColorPickerCDNComponent } from '../app/colorpicker/colorpicker-cdn.comp
 import { ColorpickerEventComponent } from '../app/colorpicker/colorpicker-event.component';
 import { ColorpickerComponentConfigurated } from '../app/colorpicker/colorpicker-configured.component';
 
+
+
 export default {
     title: 'Color Picker',
     component: ColorPickerCDNComponent,
@@ -14,6 +16,11 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: ColorpickerComponentConfigurated,
+  props: {
+   options: {
+    customColors: ['#1d2de7', '#ab31ff', '#a3fa76', '#eeeeee', 'red', 'gray'],
+   }
+  }
 });
 
 export const CDN = () => ({
