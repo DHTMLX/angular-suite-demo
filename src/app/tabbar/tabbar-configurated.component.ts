@@ -2,14 +2,14 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Tabbar as TabbarDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-tabbar-configured-cdn',
+  selector: 'app-tabbar-configured',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./tabbar.scss'],
+  styleUrls: ['../app.component.scss'],
 })
-export class TabbarConfiguredComponent implements OnDestroy {
+export class TabbarConfiguratedComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
   container: ElementRef;
   tabbar: TabbarDHX;

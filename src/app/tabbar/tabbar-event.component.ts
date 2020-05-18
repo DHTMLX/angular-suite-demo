@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Tabbar as TabbarDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-tabbar-cdn',
+  selector: 'app-tabbar-event',
   template: `
     <div class="component-wrapper">
       <div #widget class='widget-box-wide'></div>
@@ -15,7 +15,6 @@ import {Tabbar as TabbarDHX} from 'dhx-suite';
       </div>
     </div>`,
   styleUrls: ['../app.component.scss'],
-
 })
 export class TabbarEventComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

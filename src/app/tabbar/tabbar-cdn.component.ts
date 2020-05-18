@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./tabbar.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class TabbarCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
