@@ -29,7 +29,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/button.js"
+              "src/assets/button.txt"
             ],
             "scripts": []
           },
