@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Colorpicker as ColorpickerDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-colorpicker-event-cdn',
+  selector: 'app-colorpicker-event',
   template: `
       <div class="component-wrapper">
           <div #widget class='widget-box-wide'></div>
