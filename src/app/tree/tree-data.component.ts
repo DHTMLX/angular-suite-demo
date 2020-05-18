@@ -11,7 +11,7 @@ import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./tree.scss'],
+  styleUrls: ['../app.component.scss', './tree.scss'],
 })
 export class TreeDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

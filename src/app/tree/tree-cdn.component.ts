@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./tree.scss'],
+  styleUrls: ['../app.component.scss', './tree.scss'],
 })
 export class TreeCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

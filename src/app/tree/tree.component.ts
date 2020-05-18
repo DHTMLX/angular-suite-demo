@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-tree-common-cdn',
+  selector: 'app-tree',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./tree.scss'],
+  styleUrls: ['../app.component.scss', './tree.scss'],
 })
 export class TreeComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
