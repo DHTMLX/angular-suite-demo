@@ -1,5 +1,14 @@
+let intervalId;
+
 function addButtons() {
 	const menuElement = document.getElementsByClassName('css-11sh1n2')[0];
+
+	if (menuElement) {
+		clearInterval(intervalId);
+	} else {
+		return;
+	}
+
 	let div = document.createElement('div');
 	const url = window.location.href.split("/");
 	const currentWidget = url[url.length-1].split("--")[0];
@@ -51,4 +60,6 @@ function addButtons() {
 	});
 }
 
-window.addEventListener("load", addButtons);
+window.addEventListener("load", function () {
+	intervalId = setInterval(addButtons, 300);
+});
