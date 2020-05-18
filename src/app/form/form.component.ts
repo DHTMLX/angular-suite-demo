@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Form as FormDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-form-common-cdn',
+  selector: 'app-form',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./form.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class FormComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./form.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class FormCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
