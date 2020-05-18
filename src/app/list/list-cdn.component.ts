@@ -4,12 +4,12 @@ import fromCDN from 'from-cdn';
 declare const dhx;
 
 @Component({
-  selector: 'app-list-common-cdn',
+  selector: 'app-list-cdn',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./list.scss'],
+  styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

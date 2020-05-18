@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {List as ListDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-list-common-cdn',
+  selector: 'app-list',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./list.scss'],
+  styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

@@ -13,7 +13,7 @@ import {List as ListDHX, DataCollection} from 'dhx-suite';
               <div #widget class='widget-box-wide'></div>
           </div>
       </div>`,
-  styleUrls: ['./list.scss'],
+  styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

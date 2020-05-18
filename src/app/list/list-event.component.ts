@@ -2,7 +2,7 @@ import {Component, ViewChild, OnDestroy, ElementRef} from '@angular/core';
 import {List as ListDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-list-event-cdn',
+  selector: 'app-list-event',
   template: `
       <div class="component-wrapper">
           <div #widget class='widget-box-wide'></div>
@@ -14,7 +14,7 @@ import {List as ListDHX} from 'dhx-suite';
               </div>
           </div>
       </div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListEventComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
