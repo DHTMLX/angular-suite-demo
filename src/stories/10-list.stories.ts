@@ -1,7 +1,7 @@
 import {ListComponent} from '../app/list/list.component';
 import {ListEventComponent} from '../app/list/list-event.component';
 import {ListCDNComponent} from '../app/list/list-cdn.component';
-import {ListConfiguratedComponent} from '../app/list/list-configured.component';
+import {ListConfiguratedComponent} from '../app/list/list-configurated.component';
 import {ListDataComponent} from '../app/list/list-data.component';
 import {moduleMetadata} from '@storybook/angular';
 import {CommonModule} from '@angular/common';
@@ -46,14 +46,14 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-configured.component.ts"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-configurated.component.ts"
         target="_blank"
         >
             Source code
         </a>
      </div>
      <div>
-        <app-list-configured></app-list-configured>
+        <app-list-configurated></app-list-configurated>
      </div>
     </div>
   `,
