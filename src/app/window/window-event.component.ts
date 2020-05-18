@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Window} from 'dhx-suite';
 
 @Component({
-  selector: 'app-window-event-cdn',
+  selector: 'app-window-event',
   template: `
     <div class="component-wrapper">
       <div class="container">

@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Window} from 'dhx-suite';
 
 @Component({
-  selector: 'app-window-common-cdn',
+  selector: 'app-window',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
@@ -10,7 +10,7 @@ import {Window} from 'dhx-suite';
               Show Window
           </button>
       </div>`,
-  styleUrls: ['./window.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class WindowComponent implements OnDestroy {
   window: Window;

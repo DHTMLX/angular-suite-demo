@@ -11,7 +11,7 @@ declare const dhx;
         Show Window
         </button>
     </div>`,
-  styleUrls: [ './window.scss' ],
+  styleUrls: ['../app.component.scss'],
 })
 export class WindowCDNComponent implements OnDestroy {
   window: any;
