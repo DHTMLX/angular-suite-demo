@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/button.txt"
+              "src/styles.scss"
             ],
             "scripts": []
           },
