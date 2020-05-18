@@ -34,7 +34,7 @@
     color: #fff;
     border-radius: 32px;
     text-decoration: none;
-    margin: 4px 0 0 5px;
+    margin: 4px 10px 0 5px;
 }
 
 #btn-trial:hover {
@@ -44,4 +44,8 @@
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
     transition-delay: 0s;
+}
+
+.css-pvky73 {
+    display: none !important;
 }

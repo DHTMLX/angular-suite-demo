@@ -11,14 +11,14 @@ function addButtons() {
 
 	let div = document.createElement('div');
 	const url = window.location.href.split("/");
-	const currentWidget = url[url.length-1].split("--")[0];
+	const currentWidget = url[url.length - 1].split("--")[0];
 	div.innerHTML = `<button id='btn-docs'>DHX ${currentWidget[0].toUpperCase() + currentWidget.slice(1)} documentation</button><button id='btn-trial'>Free trial</button>`
 	menuElement.after(div);
 
 	const btnDocs = document.getElementById('btn-docs');
 	btnDocs.addEventListener("click", function () {
 		const url = window.location.href.split("/");
-		const currentWidget = url[url.length-1].split("--")[0];
+		const currentWidget = url[url.length - 1].split("--")[0];
 		if (currentWidget === "combobox") {
 			window.open("https://docs.dhtmlx.com/suite/combo__index.html", "_blank");
 		} else if (currentWidget === "color-picker") {
@@ -37,7 +37,7 @@ function addButtons() {
 
 	window.addEventListener('locationchange', function () {
 		const url = window.location.href.split("/");
-		const currentWidget = url[url.length-1].split("--")[0];
+		const currentWidget = url[url.length - 1].split("--")[0];
 		btnDocs.innerText = `DHX ${currentWidget[0].toUpperCase() + currentWidget.slice(1)} documentation`;
 	});
 
@@ -61,5 +61,5 @@ function addButtons() {
 }
 
 window.addEventListener("load", function () {
-	intervalId = setInterval(addButtons, 300);
+	intervalId = setInterval(addButtons, 100);
 });
