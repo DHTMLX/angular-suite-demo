@@ -11,7 +11,7 @@ declare const dhx;
           <button className="button" (click)="this.showConfirm()">Show Confirm</button>
           <button className="button" (click)="this.showMessage()">Show Message</button>
       </div>`,
-  styleUrls: ['./message.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class MessageCDNComponent implements OnDestroy {
   wait: Promise<void>;

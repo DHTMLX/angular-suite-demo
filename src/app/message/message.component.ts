@@ -2,14 +2,14 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {alert as dhxAlert, confirm as dhxConfirm, message as dhxMessage} from 'dhx-suite';
 
 @Component({
-  selector: 'app-message-commmon-cdn',
+  selector: 'app-message',
   template: `
       <div class="container">
           <button className="button" (click)="this.showAlert()">Show Alert</button>
           <button className="button" (click)="this.showConfirm()">Show Confirm</button>
           <button className="button" (click)="this.showMessage()">Show Message</button>
       </div>`,
-  styleUrls: ['./message.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class MessageComponent implements OnDestroy {
   showAlert = () => {
