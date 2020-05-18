@@ -11,7 +11,7 @@ import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
           </div>
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./chart.scss'],
+  styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

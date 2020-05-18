@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-chart-event-cdn',
+  selector: 'app-chart-event',
   template: `
     <div class="component-wrapper">
       <div class="container">

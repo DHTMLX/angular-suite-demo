@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-chart-common-cdn',
+  selector: 'app-chart',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./chart.scss'],
+  styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

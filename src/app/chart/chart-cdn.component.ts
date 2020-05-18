@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./chart.scss'],
+  styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
