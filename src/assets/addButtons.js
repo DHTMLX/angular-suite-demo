@@ -1,4 +1,4 @@
-window.onload = function () {
+function addButtons() {
 	const menuElement = document.getElementsByClassName('css-11sh1n2')[0];
 	let div = document.createElement('div');
 	const url = window.location.href.split("/");
@@ -49,6 +49,6 @@ window.onload = function () {
 	window.addEventListener('popstate', () => {
 		window.dispatchEvent(new Event('locationchange'))
 	});
-};
+}
 
-
+window.addEventListener("load", addButtons);
