@@ -2,9 +2,9 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Menu as MenuDHX, TreeCollection } from 'dhx-suite';
 
 @Component({
-  selector: 'app-menu-configurated-cdn',
+  selector: 'app-menu-configurated',
   template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-  styleUrls: [ './menu.scss' ],
+  styleUrls: ['../app.component.scss'],
 })
 export class MenuConfiguredComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

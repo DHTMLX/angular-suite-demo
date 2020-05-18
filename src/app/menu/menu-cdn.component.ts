@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./menu.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class MenuCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

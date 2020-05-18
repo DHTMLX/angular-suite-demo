@@ -11,7 +11,7 @@ import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
           <div #widget class='container widget-box-wide'></div>
 
       </div>`,
-  styleUrls: ['./menu.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class MenuDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
