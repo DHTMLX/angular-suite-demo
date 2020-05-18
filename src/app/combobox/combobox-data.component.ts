@@ -10,7 +10,7 @@ import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./combobox.scss'],
+  styleUrls: ['../app.component.scss', './combobox.scss'],
 })
 export class ComboboxDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

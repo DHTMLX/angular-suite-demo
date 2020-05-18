@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-combobox-configured-cdn',
+  selector: 'app-combobox-configured',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./combobox.scss'],
+  styleUrls: ['../app.component.scss', './combobox.scss'],
 })
 export class ComboboxConfiguredComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

@@ -2,7 +2,7 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Combobox as ComboboxDHX, DataCollection } from 'dhx-suite';
 
 @Component({
-  selector: 'app-combobox-event-cdn',
+  selector: 'app-combobox-event',
   template: `
     <div class="component-wrapper">
       <div class="container"><div #widget class='widget-box-wide'></div></div>
