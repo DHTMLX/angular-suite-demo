@@ -11,7 +11,7 @@ export default {
   component: TreeComponent,
   decorators: [
     moduleMetadata({
-      declarations: [TreeComponent, TreeCDNComponent, TreeDataComponent, TreeEventComponent],
+      declarations: [TreeComponent, TreeCDNComponent, TreeDataComponent, TreeConfiguratedComponent, TreeEventComponent],
       imports: [CommonModule],
     }),
   ],
@@ -39,7 +39,31 @@ export const Base = () => ({
 });
 
 export const Configurated = () => ({
-  component: TreeConfiguratedComponent
+  component: TreeConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      keyNavigation: true,
+      checkbox: true,
+    }
+  },
+  template: `
+    <div style="padding: 3rem">
+     <div>
+        <a
+        class="source-link"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree-configurated.component.ts"
+        target="_blank"
+        >
+            Source code
+        </a>
+     </div>
+     <div>
+        <app-tree-configurated [options]="options"></app-tree-configurated>
+     </div>
+    </div>
+  `,
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const Data = () => ({
