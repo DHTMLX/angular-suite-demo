@@ -1,6 +1,7 @@
 import {WindowComponent} from '../app/window/window.component';
 import {WindowEventComponent} from '../app/window/window-event.component';
 import {WindowCDNComponent} from '../app/window/window-cdn.component';
+import {WindowConfiguratedComponent} from '../app/window/window-configurated.component';
 import {moduleMetadata} from '@storybook/angular';
 import {CommonModule} from '@angular/common';
 
@@ -34,6 +35,10 @@ export const Base = () => ({
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
+});
+
+export const Configurated = () => ({
+  component: WindowConfiguratedComponent,
 });
 
 export const CDN = () => ({
