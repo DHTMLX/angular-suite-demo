@@ -7,7 +7,7 @@ declare const dhx;
 @Component({
     selector: 'app-slider-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: [ './slider.scss' ],
+    styleUrls: ['../app.component.scss', './slider.scss'],
 })
 export class SliderCDNComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

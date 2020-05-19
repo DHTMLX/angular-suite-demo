@@ -13,7 +13,7 @@ import { Slider as SliderDHX } from 'dhx-suite';
         </div>
     </div>
 </div>`,
-    styleUrls: [ '../app.component.scss', './slider.scss' ],
+    styleUrls: ['../app.component.scss', './slider.scss'],
 })
 export class SliderEventsComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

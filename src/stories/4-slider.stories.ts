@@ -1,27 +1,27 @@
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-import { SliderComponent } from '../app/slider/slider.component';
-import { SliderConfiguraetedComponent } from '../app/slider/slider-configurated.component';
-import { SliderCDNComponent } from '../app/slider/slider-cdn.component';
-import { SliderEventsComponent } from '../app/slider/slider-events.component';
+import {moduleMetadata} from '@storybook/angular';
+import {CommonModule} from '@angular/common';
+import {SliderComponent} from '../app/slider/slider.component';
+import {SliderConfiguraetedComponent} from '../app/slider/slider-configurated.component';
+import {SliderCDNComponent} from '../app/slider/slider-cdn.component';
+import {SliderEventsComponent} from '../app/slider/slider-events.component';
 
 
 import './styles/stories.css';
 
 export default {
-    title: 'Slider',
-    component: SliderComponent,
-    decorators: [
-        moduleMetadata({
-          declarations: [SliderComponent, SliderConfiguraetedComponent, SliderCDNComponent, SliderEventsComponent],
-          imports: [CommonModule],
-        }),
-      ],
+  title: 'Slider',
+  component: SliderComponent,
+  decorators: [
+    moduleMetadata({
+      declarations: [SliderComponent, SliderConfiguraetedComponent, SliderCDNComponent, SliderEventsComponent],
+      imports: [CommonModule],
+    }),
+  ],
 };
 
 export const Base = () => ({
-    component: SliderComponent,
-    template:`
+  component: SliderComponent,
+  template: `
     <div style="padding: 3rem">
      <div>
         <a
@@ -35,12 +35,12 @@ export const Base = () => ({
       <app-slider></app-slider>
     </div>
   `,
-  styleUrls: [ './styles/stories.css' ],
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const Configurated = () => ({
-    component: SliderConfiguraetedComponent,
-    template:`
+  component: SliderConfiguraetedComponent,
+  template: `
     <div style="padding: 3rem">
      <div>
         <a
@@ -54,12 +54,12 @@ export const Configurated = () => ({
       <app-slider-configurated></app-slider-configurated>
     </div>
   `,
-  styleUrls: [ './styles/stories.css' ],
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const CDN = () => ({
-    component: SliderCDNComponent,
-    template:`
+  component: SliderCDNComponent,
+  template: `
     <div style="padding: 3rem">
      <div>
         <a
@@ -73,12 +73,12 @@ export const CDN = () => ({
       <app-slider-cdn></app-slider-cdn>
     </div>
   `,
-  styleUrls: [ './styles/stories.css' ],
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const Events = () => ({
-    component: SliderEventsComponent,
-    template:`
+  component: SliderEventsComponent,
+  template: `
     <div style="padding: 3rem">
      <div>
         <a
@@ -92,5 +92,5 @@ export const Events = () => ({
       <app-slider-events></app-slider-events>
     </div>
   `,
-  styleUrls: [ './styles/stories.css' ],
+  styleUrls: ['./styles/stories.css'],
 });
