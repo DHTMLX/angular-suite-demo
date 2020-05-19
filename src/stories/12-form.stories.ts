@@ -39,6 +39,57 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: FormConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered',
+      gravity: false,
+      padding: 20,
+      title: 'DHX Form',
+      width: 400,
+      rows: [
+        {
+          type: 'input',
+          label: 'Name',
+          icon: 'dxi-magnify',
+          placeholder: 'John Doe',
+          required: true
+        },
+        {
+          type: 'input',
+          label: 'Email',
+          placeholder: 'jd@mail.name',
+          preMessage: 'Enter Email',
+          errorMessage: 'Invalid email',
+          successMessage: 'Valid Email',
+          validation: 'email',
+          required: true
+        },
+        {
+          type: 'input',
+          inputType: 'password',
+          label: 'Password',
+          placeholder: '********',
+          required: true
+        },
+        {
+          type: 'checkbox',
+          label: 'I agree',
+          name: 'agree',
+          labelInline: true,
+          value: 'checkboxvalue',
+          required: true
+        },
+        {
+          type: 'button',
+          value: 'Send',
+          size: 'medium',
+          view: 'flat',
+          submit: true,
+          color: 'primary'
+        }
+      ]
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -51,7 +102,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-form-configurated></app-form-configurated>
+        <app-form-configurated [options]="options"></app-form-configurated>
      </div>
     </div>
   `,
