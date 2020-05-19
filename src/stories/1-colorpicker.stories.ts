@@ -42,7 +42,9 @@ export const Configurated = () => ({
   component: ColorpickerComponentConfigurated,
   props: {
     options: {
-      customColors: ['#1d2de7', '#ab31ff', '#a3fa76', '#eeeeee', 'red', 'gray'],
+      paletteOnly: true,
+      grayShades: true,
+      pickerOnly: true
     }
   },
   template: `
@@ -57,7 +59,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-colorpicker-configurated></app-colorpicker-configurated>
+        <app-colorpicker-configurated [options]="options"></app-colorpicker-configurated>
      </div>
     </div>
   `,
