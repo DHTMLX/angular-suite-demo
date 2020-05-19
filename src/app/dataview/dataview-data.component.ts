@@ -9,11 +9,12 @@ import {DataView as DataviewDHX, DataCollection} from 'dhx-suite';
               <button (click)="handleClick('reset')">Reset</button>
               <button (click)="handleClick('remove')">Remove first item</button>
           </div>
-          <div class='container-wide'>
+          <div>
               <div #widget class='widget-box-wide'></div>
           </div>
       </div>`,
-  styleUrls: ['./dataview.scss'],
+  styleUrls: ['../app.component.scss'],
+
 })
 export class DataviewDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
@@ -24,10 +25,10 @@ export class DataviewDataComponent implements OnDestroy {
   data = new DataCollection();
 
   handleClick = (action) => {
-    if (action === 'reset') {
+    if (action==='reset') {
       this.data.removeAll();
       this.data.load('https://dhtmlx.github.io/react-widgets/static/dataview.json');
-    } else if (action === 'remove') {
+    } else if (action==='remove') {
       this.data.remove(this.data.getId(0));
     }
   };
@@ -35,7 +36,7 @@ export class DataviewDataComponent implements OnDestroy {
   renderTemplate = (item) => `<div class='item_wrap item-wrap--grid'>
     <img
         class='image'
-        style="max-width: 130px"
+        style="max-width: 145px"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
     />
     <h2 class='title'>${item.title}</h2>
