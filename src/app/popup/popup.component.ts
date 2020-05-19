@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Popup as PopupDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-window-common-cdn',
+  selector: 'app-popup',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'>
@@ -11,7 +11,7 @@ import {Popup as PopupDHX} from 'dhx-suite';
               Show Popup
           </button>
       </div>`,
-  styleUrls: ['./popup.scss'],
+  styleUrls: ['../app.component.scss', './popup.scss'],
 })
 export class PopupComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

@@ -4,7 +4,7 @@ import fromCDN from 'from-cdn';
 declare const dhx;
 
 @Component({
-  selector: 'app-window-cdn',
+  selector: 'app-popup-cdn',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'>
@@ -13,7 +13,7 @@ declare const dhx;
               Show Popup
           </button>
       </div>`,
-  styleUrls: ['./popup.scss'],
+  styleUrls: ['../app.component.scss', './popup.scss'],
 })
 export class PopupCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

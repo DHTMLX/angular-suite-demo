@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Popup as PopupDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-window-cdn',
+  selector: 'app-popup-event',
   template: `
     <div class="component-wrapper">
       <div class="container">
