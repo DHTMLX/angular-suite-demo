@@ -10,7 +10,7 @@ export default {
   component: WindowComponent,
   decorators: [
     moduleMetadata({
-      declarations: [WindowComponent, WindowCDNComponent, WindowEventComponent],
+      declarations: [WindowComponent, WindowConfiguratedComponent, WindowCDNComponent, WindowEventComponent],
       imports: [CommonModule],
     }),
   ],
@@ -39,6 +39,33 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: WindowConfiguratedComponent,
+  props: {
+    options: {
+      width: 440,
+      height: 520,
+      title: 'Window',
+      html: `<p>Here is a neat and flexible JavaScript window system with a fast and simple initialization.</p><p>Inspect all the DHTMLX window samples to discover each and every feature.</p><img style='display: block; width: 200px; height: 200px; margin-top: 20px; margin-left: auto; margin-right: auto' src='https://dhtmlx.github.io/react-widgets/static/developer.svg'>`,
+      closable: true,
+      modal: true
+    }
+  },
+  template: `
+    <div style="padding: 3rem">
+     <div>
+        <a
+        class="source-link"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window-configurated.component.ts"
+        target="_blank"
+        >
+            Source code
+        </a>
+     </div>
+     <div>
+        <app-window-configurated [options]="options"></app-window-configurated>
+     </div>
+    </div>
+  `,
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const CDN = () => ({
