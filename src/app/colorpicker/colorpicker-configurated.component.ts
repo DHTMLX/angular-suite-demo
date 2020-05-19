@@ -19,7 +19,6 @@ export class ColorpickerComponentConfigurated implements OnDestroy {
 
   ngOnInit() {
     this.colorpicker = new ColorpickerDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered',
       ...this.options,
     });
   }

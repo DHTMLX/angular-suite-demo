@@ -42,6 +42,7 @@ export const Configurated = () => ({
   component: ColorpickerComponentConfigurated,
   props: {
     options: {
+      css: 'dhx_widget--bordered',
       paletteOnly: true,
       grayShades: true,
       pickerOnly: true
