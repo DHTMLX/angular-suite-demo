@@ -1,21 +1,25 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Menu as MenuDHX, TreeCollection } from 'dhx-suite';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
+import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
   selector: 'app-menu-configurated',
-  template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
+  template: `
+      <div class="container">
+          <div #widget class='widget-box-wide'></div>
+      </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class MenuConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild('widget', {static: true})
   container: ElementRef;
   menu: MenuDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.menu = new MenuDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered dhx_widget--border-shadow',
-      navigationType: 'click'
+      ...this.options
     });
     this.menu.data.load(`https://dhtmlx.github.io/react-widgets/static/menu.json`);
   }

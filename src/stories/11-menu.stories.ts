@@ -41,6 +41,11 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: MenuConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered',
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -53,7 +58,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-menu-configurated></app-menu-configurated>
+        <app-menu-configurated [options]="options"></app-menu-configurated>
      </div>
     </div>
   `,
