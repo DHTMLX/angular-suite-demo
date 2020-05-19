@@ -1,7 +1,7 @@
 import {ComboboxComponent} from '../app/combobox/combobox.component';
 import {ComboboxEventComponent} from '../app/combobox/combobox-event.component';
 import {ComboboxCDNComponent} from '../app/combobox/combobox-cdn.component';
-import {ComboboxConfiguredComponent} from '../app/combobox/combobox-configured.component';
+import {ComboboxConfiguratedComponent} from '../app/combobox/combobox-configurated.component';
 import {ComboboxDataComponent} from '../app/combobox/combobox-data.component';
 import {moduleMetadata} from '@storybook/angular';
 import {CommonModule} from '@angular/common';
@@ -12,7 +12,7 @@ export default {
   component: ComboboxComponent,
   decorators: [
     moduleMetadata({
-      declarations: [ComboboxComponent, ComboboxCDNComponent, ComboboxDataComponent, ComboboxConfiguredComponent, ComboboxEventComponent],
+      declarations: [ComboboxComponent, ComboboxCDNComponent, ComboboxDataComponent, ComboboxConfiguratedComponent, ComboboxEventComponent],
       imports: [CommonModule],
     }),
   ],
@@ -40,7 +40,7 @@ export const Base = () => ({
 });
 
 export const Configurated = () => ({
-  component: ComboboxConfiguredComponent,
+  component: ComboboxConfiguratedComponent,
   template: `
     <div style="padding: 3rem">
      <div class="link-container">

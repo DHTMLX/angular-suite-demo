@@ -51,7 +51,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-tabbar-configured></app-tabbar-configured>
+        <app-tabbar-configurated></app-tabbar-configurated>
      </div>
     </div>
   `,

@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {List as ListDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-list-configured',
+  selector: 'app-list-configurated',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
