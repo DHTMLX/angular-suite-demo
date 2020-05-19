@@ -4,7 +4,7 @@ import fromCDN from 'from-cdn';
 declare const dhx;
 
 @Component({
-    selector: 'app-richtext-cdn',
+    selector: 'app-calendar-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
     styleUrls:['../app.component.scss']
 })

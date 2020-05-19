@@ -5,7 +5,7 @@ import 'dhx-suite/codebase/suite.min.css';
 declare const dhx;
 
 @Component({
-    selector: 'app-richtext-cdn',
+    selector: 'app-calendar',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
     styleUrls: [ '../app.component.scss' ],
 })
