@@ -2,7 +2,7 @@ import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } fro
 import { Sidebar as SidebarDHX, TreeCollection } from 'dhx-suite';
 
 @Component({
-  selector: 'app-sidebar-cdn',
+  selector: 'app-sidebar-event',
   template: `
     <div class="component-wrapper">
       <div #widget class='widget-box-wide'></div>

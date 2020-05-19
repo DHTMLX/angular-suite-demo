@@ -10,7 +10,7 @@ declare const dhx;
 @Component({
     selector: 'app-sidebar-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: [ './sidebar.scss' ],
+    styleUrls: ['../app.component.scss'],
 })
 export class SidebarCDNComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

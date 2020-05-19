@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Sidebar as SidebarDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-sidebar-data-cdn',
+  selector: 'app-sidebar-data',
   template: `
       <div>
           <div class="btn-container">
@@ -11,7 +11,7 @@ import {Sidebar as SidebarDHX, TreeCollection} from 'dhx-suite';
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./sidebar.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class SidebarDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
