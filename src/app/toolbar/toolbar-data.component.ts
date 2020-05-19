@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-timepicker-cdn',
+  selector: 'app-toolbar-data',
   template: `
       <div>
           <div class="btn-container">
@@ -11,7 +11,7 @@ import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./toolbar.scss'],
+  styleUrls: ['../app.component.scss', './toolbar.scss'],
 })
 export class ToolbarDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
