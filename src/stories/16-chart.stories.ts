@@ -11,7 +11,7 @@ export default {
   component: ChartComponent,
   decorators: [
     moduleMetadata({
-      declarations: [ChartComponent, ChartCDNComponent, ChartDataComponent, ChartEventComponent],
+      declarations: [ChartComponent, ChartConfiguratedComponent, ChartCDNComponent, ChartDataComponent, ChartEventComponent],
       imports: [CommonModule],
     }),
   ],
@@ -40,6 +40,49 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: ChartConfiguratedComponent,
+  props: {
+    options: {
+      type: 'bar',
+      barWidth: 45,
+      scales: {
+        bottom: {
+          text: 'month',
+        },
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: 'A',
+          value: 'company C',
+          color: '#5E83BA',
+          pointType: 'circle',
+          fill: '#5E83BA',
+          barWidth: 35,
+        },
+      ],
+    }
+  },
+  template: `
+    <div style="padding: 3rem">
+     <div>
+        <a
+        class="source-link"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-configurated.component.ts"
+        target="_blank"
+        >
+            Source code
+        </a>
+     </div>
+     <div>
+        <app-chart-configurated [options]="options"></app-chart-configurated>
+     </div>
+    </div>
+  `,
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const Data = () => ({

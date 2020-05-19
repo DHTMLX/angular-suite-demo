@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
 
 @Component({
@@ -15,29 +15,11 @@ export class ChartConfiguratedComponent implements OnDestroy {
   chart: ChartDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.chart = new ChartDHX(this.container.nativeElement, {
-      type: 'bar',
-      scales: {
-        bottom: {
-          text: 'month',
-        },
-        left: {
-          maxTicks: 10,
-          max: 100,
-          min: 0,
-        },
-      },
-      series: [
-        {
-          id: 'A',
-          value: 'company C',
-          color: '#5E83BA',
-          pointType: 'circle',
-          fill: '#5E83BA',
-          barWidth: 35,
-        },
-      ],
+      ...this.options
     });
 
     this.chart.data.load('https://dhtmlx.github.io/react-widgets/static/chart.json');
