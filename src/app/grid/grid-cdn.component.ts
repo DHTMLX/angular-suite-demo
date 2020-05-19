@@ -9,7 +9,7 @@ declare const dhx;
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./grid.scss'],
+  styleUrls: ['../app.component.scss', './grid.scss'],
 })
 export class GridCDNComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
@@ -41,7 +41,7 @@ export class GridCDNComponent implements OnDestroy {
         autoWidth: true,
       });
       this.grid.data.load(`https://dhtmlx.github.io/react-widgets/static/grid.json`);
-      this.ready.emit({ grid: this.grid });
+      this.ready.emit({grid: this.grid});
     });
   }
 

@@ -13,7 +13,7 @@ import {Grid as GridDHX, DataCollection} from 'dhx-suite';
               <div #widget class='widget-box-wide'></div>
           </div>
       </div>`,
-  styleUrls: ['./grid.scss'],
+  styleUrls: ['../app.component.scss', './grid.scss'],
 })
 export class GridDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
@@ -24,10 +24,10 @@ export class GridDataComponent implements OnDestroy {
   data = new DataCollection();
 
   handleClick = (action) => {
-    if (action === 'reset') {
+    if (action==='reset') {
       this.data.removeAll();
       this.data.load(`https://dhtmlx.github.io/react-widgets/static/grid.json`);
-    } else if (action === 'remove') {
+    } else if (action==='remove') {
       this.data.remove(this.data.getId(0));
     }
   };

@@ -2,12 +2,12 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Grid as GridDHX, DataCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-grid-common-cdn',
+  selector: 'app-grid',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./grid.scss'],
+  styleUrls: ['../app.component.scss', './grid.scss'],
 })
 export class GridComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
