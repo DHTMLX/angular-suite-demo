@@ -2,6 +2,7 @@ import {TreeComponent} from '../app/tree/tree.component';
 import {TreeEventComponent} from '../app/tree/tree-event.component';
 import {TreeCDNComponent} from '../app/tree/tree-cdn.component';
 import {TreeDataComponent} from '../app/tree/tree-data.component';
+import {TreeConfiguratedComponent} from '../app/tree/tree-configurated.component';
 import {moduleMetadata} from '@storybook/angular';
 import {CommonModule} from '@angular/common';
 
@@ -35,6 +36,10 @@ export const Base = () => ({
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
+});
+
+export const Configurated = () => ({
+  component: TreeConfiguratedComponent
 });
 
 export const Data = () => ({
