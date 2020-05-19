@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
-  selector: 'app-ribbon-data-cdn',
+  selector: 'app-ribbon-data',
   template: `
       <div>
           <div class="btn-container">
@@ -10,7 +10,7 @@ import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
-  styleUrls: ['./ribbon.scss'],
+  styleUrls: ['../app.component.scss', './ribbon.scss'],
 })
 export class RibbonDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})
