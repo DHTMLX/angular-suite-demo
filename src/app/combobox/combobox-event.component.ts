@@ -5,7 +5,7 @@ import { Combobox as ComboboxDHX, DataCollection } from 'dhx-suite';
   selector: 'app-combobox-event',
   template: `
     <div class="component-wrapper">
-      <div class="container"><div #widget class='widget-box-wide'></div></div>
+      <div><div #widget class='widget-box-wide'></div></div>
       <div class="events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>

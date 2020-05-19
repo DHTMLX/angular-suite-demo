@@ -61,7 +61,7 @@ export const Events = () => ({
   component: WindowEventComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window-event.component.ts"

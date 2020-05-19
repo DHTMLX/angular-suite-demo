@@ -22,7 +22,7 @@ export const Base = () => ({
   component: MenuComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu.component.ts"
@@ -43,7 +43,7 @@ export const Configurated = () => ({
   component: MenuConfiguratedComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-configurated.component.ts"
@@ -64,7 +64,7 @@ export const Data = () => ({
   component: MenuDataComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-data.component.ts"
@@ -85,7 +85,7 @@ export const CDN = () => ({
   component: MenuCDNComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-cdn.component.ts"
@@ -106,7 +106,7 @@ export const Events = () => ({
   component: MenuEventComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-event.component.ts"

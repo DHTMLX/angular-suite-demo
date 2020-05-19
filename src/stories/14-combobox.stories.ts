@@ -22,7 +22,7 @@ export const Base = () => ({
   component: ComboboxComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox.component.ts"
@@ -43,7 +43,7 @@ export const Configurated = () => ({
   component: ComboboxConfiguratedComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox.component.ts"
@@ -64,7 +64,7 @@ export const Data = () => ({
   component: ComboboxDataComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-data.component.ts"
@@ -85,7 +85,7 @@ export const CDN = () => ({
   component: ComboboxCDNComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-cdn.component.ts"
@@ -106,7 +106,7 @@ export const Events = () => ({
   component: ComboboxEventComponent,
   template: `
     <div style="padding: 3rem">
-     <div class="link-container">
+     <div>
         <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-event.component.ts"

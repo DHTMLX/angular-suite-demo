@@ -5,7 +5,7 @@ import {Popup as PopupDHX} from 'dhx-suite';
   selector: 'app-popup-event',
   template: `
     <div class="component-wrapper">
-      <div class="container">
+      <div>
         <div #widget class='widget-box-wide'>
         </div>
         <button (click)="this.popup.show(this.container.nativeElement)">Show Popup</button>
