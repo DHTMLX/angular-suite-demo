@@ -2,7 +2,7 @@ import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from 
 import {Tabbar as TabbarDHX} from 'dhx-suite';
 
 @Component({
-  selector: 'app-tabbar-configured',
+  selector: 'app-tabbar-configurated',
   template: `
       <div class="container">
           <div #widget class='widget-box-wide'></div>
