@@ -41,19 +41,31 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: ComboboxConfiguratedComponent,
+  props: {
+    options: {
+      multiselection: true,
+      label: 'DHX-angular combobox',
+      labelPosition: 'top',
+      labelWidth: 150,
+      selectAllButton: true,
+      required: true,
+      itemsCount: true,
+      placeholder: 'Click to choose',
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox.component.ts"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-configurated.component.ts"
         target="_blank"
         >
             Source code
         </a>
      </div>
      <div>
-        <app-combobox></app-combobox>
+        <app-combobox-configurated [options]="options"></app-combobox-configurated>
      </div>
     </div>
   `,

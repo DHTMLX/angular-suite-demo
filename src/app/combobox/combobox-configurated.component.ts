@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
 
 @Component({
@@ -15,17 +15,11 @@ export class ComboboxConfiguratedComponent implements OnDestroy {
   combobox: ComboboxDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.combobox = new ComboboxDHX(this.container.nativeElement, {
-      placeholder: 'Click to choose',
-      helpMessage: 'Some text',
-      itemHeight: 50,
-      multiselection: true,
-      label: 'My Combo label',
-      labelPosition: 'top',
-      labelWidth: 200,
-      listHeight: 200,
-      selectAllButton: true
+      ...this.options
     });
 
     this.combobox.data.load('https://dhtmlx.github.io/react-widgets/static/combobox.json');
