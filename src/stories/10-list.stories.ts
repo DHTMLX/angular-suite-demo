@@ -41,6 +41,16 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: ListConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      template: (item) => `<span><strong>${item.title}</strong> ${item.short}</span>`,
+      height: 400,
+      itemHeight: 70,
+      virtual: false,
+      keyNavigation: true
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -53,7 +63,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-list-configurated></app-list-configurated>
+        <app-list-configurated [options]="options"></app-list-configurated>
      </div>
     </div>
   `,
