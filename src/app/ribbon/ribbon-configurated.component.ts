@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
@@ -15,9 +15,11 @@ export class RibbonConfiguratedComponent implements OnDestroy {
   toolbar: RibbonDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.toolbar = new RibbonDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      ...this.options
     });
 
     this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/ribbon.json');

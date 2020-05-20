@@ -38,6 +38,11 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: RibbonConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -49,7 +54,7 @@ export const Configurated = () => ({
             Source code
         </a>
      </div>
-      <app-ribbon-configurated></app-ribbon-configurated>
+      <app-ribbon-configurated [options]="options"></app-ribbon-configurated>
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
