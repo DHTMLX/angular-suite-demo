@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Slider as SliderDHX} from 'dhx-suite';
 
 @Component({
@@ -15,15 +15,11 @@ export class SliderConfiguraetedComponent implements OnDestroy {
   slider: SliderDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.slider = new SliderDHX(this.container.nativeElement, {
-      min: 0,
-      max: 100,
-      step: 1,
-      thumbLabel: true,
-      tick: 1,
-      majorTick: 10,
-      tickTemplate: (v) => v,
+      ...this.options
     });
   }
 

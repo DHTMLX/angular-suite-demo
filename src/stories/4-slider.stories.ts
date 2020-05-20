@@ -40,6 +40,17 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: SliderConfiguraetedComponent,
+  props: {
+    options: {
+      min: 0,
+      max: 100,
+      step: 1,
+      tooltip: true,
+      tick: 1,
+      majorTick: 10,
+      tickTemplate: (v) => v,
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -51,7 +62,7 @@ export const Configurated = () => ({
             Source code
         </a>
      </div>
-      <app-slider-configurated></app-slider-configurated>
+      <app-slider-configurated [options]="options"></app-slider-configurated>
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
