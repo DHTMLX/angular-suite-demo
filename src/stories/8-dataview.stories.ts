@@ -39,6 +39,24 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: DataviewConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      itemsInRow: 6,
+      gap: 20,
+      keyNavigation: true,
+      template: (item) => `
+       <div class='item_wrap item-wrap--grid'>
+        <img
+            class='image'
+            style="max-width: 120px"
+            src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
+        />
+        <h2 class='title'>${item.title}</h2>
+        <div>${item.short}</div>
+       </div>`,
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -50,7 +68,7 @@ export const Configurated = () => ({
             Source code
         </a>
      </div>
-      <app-dataview-configurated></app-dataview-configurated>
+      <app-dataview-configurated [options]="options"></app-dataview-configurated>
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
