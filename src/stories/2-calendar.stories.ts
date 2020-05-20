@@ -39,6 +39,16 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: CalendarConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered',
+      value: new Date(),
+      weekNumbers: true,
+      timePicker: true,
+      timeFormat: 12,
+      thisMonthOnly: true,
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -51,7 +61,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-calendar-configurated></app-calendar-configurated>
+        <app-calendar-configurated [options]="options"></app-calendar-configurated>
      </div>
     </div>
   `,
