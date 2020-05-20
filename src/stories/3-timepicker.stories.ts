@@ -39,6 +39,13 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: TimePickerConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered',
+      controls: true,
+      timeFormat: 12
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -51,7 +58,7 @@ export const Configurated = () => ({
         </a>
      </div>
      <div>
-        <app-timepicker-configurated></app-timepicker-configurated>
+        <app-timepicker-configurated [options]="options"></app-timepicker-configurated>
      </div>
     </div>
   `,

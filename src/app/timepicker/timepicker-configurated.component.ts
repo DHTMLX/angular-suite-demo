@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Timepicker as TimepickerDHX} from 'dhx-suite';
 
 @Component({
@@ -15,12 +15,11 @@ export class TimePickerConfiguratedComponent implements OnDestroy {
   timepicker: TimepickerDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
 
   ngOnInit() {
     this.timepicker = new TimepickerDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered',
-      controls: true,
-      timeFormat: 12,
+      ...this.options
     });
   }
 
