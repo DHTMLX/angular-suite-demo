@@ -2,6 +2,7 @@ import {GridComponent} from '../app/grid/grid.component';
 import {GridEventComponent} from '../app/grid/grid-event.component';
 import {GridCDNComponent} from '../app/grid/grid-cdn.component';
 import {GridDataComponent} from '../app/grid/grid-data.component';
+import {GridConfiguratedComponent} from '../app/grid/grid-configurated.component';
 import {moduleMetadata} from '@storybook/angular';
 import {CommonModule} from '@angular/common';
 
@@ -33,6 +34,10 @@ export const Base = () => ({
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
+});
+
+export const Configurated = () => ({
+  component: GridConfiguratedComponent,
 });
 
 export const Data = () => ({
