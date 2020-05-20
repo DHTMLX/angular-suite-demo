@@ -38,6 +38,14 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: SidebarConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      width: 200,
+      minWidth: 120,
+      collapsed: false,
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -49,7 +57,7 @@ export const Configurated = () => ({
             Source code
         </a>
      </div>
-      <app-sidebar-configurated></app-sidebar-configurated>
+      <app-sidebar-configurated [options]="options"></app-sidebar-configurated>
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
