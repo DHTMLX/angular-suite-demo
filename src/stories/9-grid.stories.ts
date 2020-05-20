@@ -11,7 +11,7 @@ export default {
   component: GridComponent,
   decorators: [
     moduleMetadata({
-      declarations: [GridComponent, GridDataComponent, GridCDNComponent, GridEventComponent],
+      declarations: [GridComponent, GridConfiguratedComponent, GridDataComponent, GridCDNComponent, GridEventComponent],
       imports: [CommonModule],
     }),
   ],
@@ -38,6 +38,39 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: GridConfiguratedComponent,
+  props: {
+    options: {
+      columns: [
+        {minWidth: 200, id: 'country', header: [{text: 'Country'}]},
+        {minWidth: 125, id: 'population', header: [{text: 'Population'}]},
+        {minWidth: 125, id: 'yearlyChange', header: [{text: 'Yearly Change'}]},
+        {minWidth: 125, id: 'netChange', header: [{text: 'Net Change'}]},
+        {minWidth: 125, id: 'destiny', header: [{text: 'Density (P/Km²)'}]},
+        {minWidth: 125, id: 'area', header: [{text: 'Land Area (Km²)'}]},
+        {minWidth: 125, id: 'migrants', header: [{text: 'Migrants (net)'}]},
+        {minWidth: 125, id: 'fert', header: [{text: 'Fert. Rate'}]},
+        {minWidth: 125, id: 'age', header: [{text: 'Med. Age'}]},
+        {minWidth: 125, id: 'urban', header: [{text: 'Urban Pop'}]},
+      ],
+      adjust: true,
+      autoWidth: true,
+    }
+  },
+  template: `
+    <div style="padding: 3rem">
+     <div>
+        <a
+        class="source-link"
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid-configurated.component.ts" 
+        target="_blank"
+        >
+            Source code
+        </a>
+     </div>
+      <app-grid-configurated [options]="options"></app-grid-configurated>
+    </div>
+  `,
+  styleUrls: ['./styles/stories.css'],
 });
 
 export const Data = () => ({
