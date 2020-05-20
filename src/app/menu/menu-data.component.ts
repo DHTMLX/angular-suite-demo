@@ -6,7 +6,7 @@ import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
   template: `
       <div>
           <div class="btn-container">
-              <button (click)="handleClick()">disable/enable edit button</button>
+              <button (click)="handleClick()" class="custom-button">disable/enable edit button</button>
           </div>
           <div #widget class='container widget-box-wide'></div>
 

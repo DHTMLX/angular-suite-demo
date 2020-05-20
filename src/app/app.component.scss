@@ -39,7 +39,6 @@
 }
 
 .custom-button {
-  flex: 0 0 auto;
   border: none;
   outline: none;
   padding: 6px 28px;
@@ -48,12 +47,15 @@
   line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  display: flex;
   cursor: pointer;
   background: #0288d1;
   color: #fff;
   border-radius: 32px;
   text-decoration: none;
+}
+
+.custom-button:not(:last-child) {
+  margin-right: 20px;
 }
 
 .widget-box {

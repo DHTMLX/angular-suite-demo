@@ -6,7 +6,7 @@ import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
   template: `
       <div>
           <div class="btn-container">
-              <button (click)="handleClick()">Select first item</button>
+              <button (click)="handleClick()" class="custom-button">Select first item</button>
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,

@@ -6,7 +6,7 @@ import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
   template: `
       <div>
           <div class="btn-container">
-              <button (click)="handleAddClick(click)">disable/enable print button</button>
+              <button (click)="handleAddClick(click)" class="custom-button">disable/enable print button</button>
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,

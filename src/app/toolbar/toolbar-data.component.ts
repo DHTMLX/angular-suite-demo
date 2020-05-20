@@ -6,8 +6,8 @@ import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
   template: `
       <div>
           <div class="btn-container">
-              <button (click)="handleAddClick(click)">Add notification</button>
-              <button (click)="handleResetClick(click)">Reset {{count}} notifications</button>
+              <button (click)="handleAddClick(click)" class="custom-button">Add notification</button>
+              <button (click)="handleResetClick(click)" class="custom-button">Reset {{count}} notifications</button>
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,

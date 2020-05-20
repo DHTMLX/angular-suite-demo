@@ -6,8 +6,8 @@ import {DataView as DataviewDHX, DataCollection} from 'dhx-suite';
   template: `
       <div>
           <div class='btn-container'>
-              <button (click)="handleClick('reset')">Reset</button>
-              <button (click)="handleClick('remove')">Remove first item</button>
+              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+              <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
           </div>
           <div>
               <div #widget class='widget-box-wide'></div>

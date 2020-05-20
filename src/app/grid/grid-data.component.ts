@@ -6,8 +6,8 @@ import {Grid as GridDHX, DataCollection} from 'dhx-suite';
   template: `
       <div>
           <div class='btn-container'>
-              <button (click)="handleClick('reset')">Reset</button>
-              <button (click)="handleClick('remove')">Remove first row</button>
+              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+              <button (click)="handleClick('remove')" class="custom-button">Remove first row</button>
           </div>
           <div class="container">
               <div #widget class='widget-box-wide'></div>

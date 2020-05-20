@@ -6,8 +6,8 @@ import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
   template: `
       <div>
           <div class="btn-container">
-              <button (click)="handleClick(false)">Collapse All</button>
-              <button (click)="handleClick(true)">Expand All</button>
+              <button (click)="handleClick(false)" class="custom-button">Collapse All</button>
+              <button (click)="handleClick(true)" class="custom-button">Expand All</button>
           </div>
           <div #widget class='container widget-box-wide'></div>
       </div>`,
