@@ -7,7 +7,7 @@ declare const dhx;
   selector: 'app-window-cdn',
   template: `<div class="container">
         <div #widget class='widget-box-wide'></div>
-        <button className="button" (click)="this.window.show()">
+        <button className="button" (click)="this.window.show()" class="custom-button">
         Show Window
         </button>
     </div>`,

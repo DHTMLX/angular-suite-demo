@@ -8,7 +8,7 @@ import {Popup as PopupDHX} from 'dhx-suite';
       <div>
         <div #widget class='widget-box-wide'>
         </div>
-        <button (click)="this.popup.show(this.container.nativeElement)">Show Popup</button>
+        <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">Show Popup</button>
       </div>
       <div class="events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>

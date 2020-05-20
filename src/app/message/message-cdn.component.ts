@@ -7,9 +7,9 @@ declare const dhx;
   selector: 'app-message-cdn',
   template: `
       <div class="container">
-          <button className="button" (click)="this.showAlert()">Show Alert</button>
-          <button className="button" (click)="this.showConfirm()">Show Confirm</button>
-          <button className="button" (click)="this.showMessage()">Show Message</button>
+          <button className="button" (click)="this.showAlert()" class="custom-button">Show Alert</button>
+          <button className="button" (click)="this.showConfirm()" class="custom-button">Show Confirm</button>
+          <button className="button" (click)="this.showMessage()" class="custom-button">Show Message</button>
       </div>`,
   styleUrls: ['../app.component.scss'],
 })

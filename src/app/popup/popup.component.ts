@@ -7,7 +7,7 @@ import {Popup as PopupDHX} from 'dhx-suite';
       <div class="container">
           <div #widget class='widget-box-wide'>
           </div>
-          <button (click)="this.popup.show(this.container.nativeElement)">
+          <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">
               Show Popup
           </button>
       </div>`,
