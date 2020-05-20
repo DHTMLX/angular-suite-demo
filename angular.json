@@ -125,8 +125,5 @@
       }
     }
   },
-  "defaultProject": "ng-widgets",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "ng-widgets"
 }
