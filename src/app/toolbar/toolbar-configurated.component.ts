@@ -1,4 +1,4 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
 import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
 
 @Component({
@@ -15,10 +15,11 @@ export class ToolbarConfiguratedComponent implements OnDestroy {
   toolbar: ToolbarDHX;
   wait: Promise<void>;
 
+  @Input() options: any;
+
   ngOnInit() {
     this.toolbar = new ToolbarDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-      navigationType: 'pointer',
+      ...this.options
     });
 
     this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/toolbar.json');

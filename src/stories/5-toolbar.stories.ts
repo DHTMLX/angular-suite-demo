@@ -38,6 +38,12 @@ export const Base = () => ({
 
 export const Configurated = () => ({
   component: ToolbarConfiguratedComponent,
+  props: {
+    options: {
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      navigationType: 'pointer',
+    }
+  },
   template: `
     <div style="padding: 3rem">
      <div>
@@ -49,7 +55,7 @@ export const Configurated = () => ({
             Source code
         </a>
      </div>
-      <app-toolbar-configurated></app-toolbar-configurated>
+      <app-toolbar-configurated [options]="options"></app-toolbar-configurated>
     </div>
   `,
   styleUrls: ['./styles/stories.css'],
