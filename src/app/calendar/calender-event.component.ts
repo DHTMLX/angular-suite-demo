@@ -4,7 +4,7 @@ import fromCDN from 'from-cdn';
 declare const dhx;
 
 @Component({
-    selector: 'app-calendar-event-cdn',
+    selector: 'app-calendar-event',
     template: `<div class="component-wrapper">
         <div #widget class='widget-box-wide'></div>
         <div class="events-list-wrapper">
@@ -20,7 +20,7 @@ declare const dhx;
 export class CalendarEventComponent implements OnDestroy {
     @ViewChild('widget', { static: true })
     container: ElementRef;
-    colorPicker: any;
+    calendar: any;
     wait: Promise<void>;
 
     @Output() ready: EventEmitter<any> = new EventEmitter();
@@ -36,37 +36,37 @@ export class CalendarEventComponent implements OnDestroy {
             'https://cdn.dhtmlx.com/suite/edge/suite.js',
             'https://cdn.dhtmlx.com/suite/edge/suite.css',
         ]).then(() => {
-            this.colorPicker = new dhx.Calendar(this.container.nativeElement, {
+            this.calendar = new dhx.Calendar(this.container.nativeElement, {
                 css: 'dhx_widget--bordered',
                 value: new Date(),
             });
 
-            this.ready.emit({ colorPicker: this.colorPicker });
-            this.colorPicker.events.on('dateMouseOver', (date) =>
+            this.ready.emit({ calendar: this.calendar });
+            this.calendar.events.on('dateMouseOver', (date) =>
                 this.logEvent(date, 'dateMouseOver'),
             );
 
-            this.colorPicker.events.on('change', (id) => this.logEvent(id, 'change'));
+            this.calendar.events.on('change', (id) => this.logEvent(id, 'change'));
 
-            this.colorPicker.events.on('modeChange', (mode) => this.logEvent(mode, 'modeChange'));
-            this.colorPicker.events.on('beforeChange', (id) =>
+            this.calendar.events.on('modeChange', (mode) => this.logEvent(mode, 'modeChange'));
+            this.calendar.events.on('beforeChange', (id) =>
                 this.logEvent(id.toString(), 'beforeChange'),
             );
 
-            this.colorPicker.events.on('cancelClick', () => this.logEvent(null, 'cancelClick'));
-            this.colorPicker.events.on('monthSelected', (month) =>
+            this.calendar.events.on('cancelClick', () => this.logEvent(null, 'cancelClick'));
+            this.calendar.events.on('monthSelected', (month) =>
                 this.logEvent(month + 1 + '', 'monthSelected'),
             );
 
-            this.colorPicker.events.on('yearSelected', (year) =>
+            this.calendar.events.on('yearSelected', (year) =>
                 this.logEvent(year.toString(), 'yearSelected'),
             );
         });
     }
 
     ngOnDestroy() {
-        if (this.colorPicker) {
-            this.colorPicker.destructor();
+        if (this.calendar) {
+            this.calendar.destructor();
         }
     }
 }

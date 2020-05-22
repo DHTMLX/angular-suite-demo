@@ -1,41 +1,27 @@
-import {
-    Output,
-    Component,
-    ViewChild,
-    OnDestroy,
-    ElementRef,
-    EventEmitter,
-} from '@angular/core';
-import fromCDN from 'from-cdn';
-
-declare const dhx;
+import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter,} from '@angular/core';
+import {Colorpicker as ColorpickerDHX} from 'dhx-suite';
 
 @Component({
-    selector: 'app-richtext-cdn',
-    template: `<div #widget class='widget-box-wide'></div>`,
+  selector: 'app-colorpicker',
+  template: `
+      <div class="container">
+          <div #widget class='widget-box-wide'></div>
+      </div>`,
+  styleUrls: ['../app.component.scss'],
 })
-export class ColorPickerCDNComponent implements OnDestroy {
-    @ViewChild('widget', { static: true })
-    container: ElementRef;
-    colorPicker: any;
-    wait: Promise<void>;
+export class ColorPickerComponent implements OnDestroy {
+  @ViewChild('widget', {static: true})
+  container: ElementRef;
+  colorPicker: any;
+  wait: Promise<void>;
 
-    @Output() ready: EventEmitter<any> = new EventEmitter();
+  ngOnInit() {
+    this.colorPicker = new ColorpickerDHX(this.container.nativeElement);
+  }
 
-    constructor() {
-        this.wait = fromCDN([
-            'https://cdn.dhtmlx.com/suite/edge/suite.js',
-            'https://cdn.dhtmlx.com/suite/edge/suite.css',
-        ]).then(() => {
-            this.colorPicker = new dhx.Colorpicker(this.container.nativeElement);
-
-            this.ready.emit({ colorPicker: this.colorPicker });
-        });
+  ngOnDestroy() {
+    if (this.colorPicker) {
+      this.colorPicker.destructor();
     }
-
-    ngOnDestroy() {
-        if (this.colorPicker) {
-            this.colorPicker.destructor();
-        }
-    }
+  }
 }
