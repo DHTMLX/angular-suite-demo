@@ -1,8 +1,6 @@
 import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import fromCDN from 'from-cdn';
 
-declare const dhx;
-
 @Component({
     selector: 'app-calendar-cdn',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,

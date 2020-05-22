@@ -1,7 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
 
 @Component({
   selector: 'app-message-cdn',
