@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Window} from 'dhx-suite';
+import { Component, OnDestroy } from '@angular/core';
+import { Window } from 'dhx-suite';
 
 @Component({
   selector: 'app-window-event',

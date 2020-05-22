@@ -1,12 +1,12 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
-import {Tabbar as TabbarDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
+import { Tabbar as TabbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tabbar-configurated',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class TabbarConfiguratedComponent implements OnDestroy {

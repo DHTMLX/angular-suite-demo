@@ -1,22 +1,22 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {List as ListDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { List as ListDHX, DataCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-list-data',
   template: `
-      <div>
-          <div class='btn-container'>
-              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
-              <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
-          </div>
-          <div class="container">
-              <div #widget class='widget-box-wide'></div>
-          </div>
-      </div>`,
+    <div>
+      <div class='btn-container'>
+        <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+        <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
+      </div>
+      <div class="container">
+        <div #widget class='widget-box-wide'></div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   list: ListDHX;
   wait: Promise<void>;

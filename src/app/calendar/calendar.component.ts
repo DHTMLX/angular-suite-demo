@@ -1,12 +1,13 @@
 import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import { Calendar as CalendarDHX } from 'dhx-suite';
-import 'dhx-suite/codebase/suite.min.css';
-
-declare const dhx;
 
 @Component({
     selector: 'app-calendar',
-    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
+    template: `
+      <div class="container">
+        <div #widget class='widget-box-wide'>
+        </div>
+      </div>`,
     styleUrls: [ '../app.component.scss' ],
 })
 export class CalendarComponent implements OnDestroy {
@@ -18,15 +19,13 @@ export class CalendarComponent implements OnDestroy {
     @Output() ready: EventEmitter<any> = new EventEmitter();
 
     ngOnInit() {
-        this.calendar = new CalendarDHX(this.container.nativeElement, {
-            css: 'dhx_widget--bordered',
-            value: new Date(),
-        });
+      this.calendar = new CalendarDHX(this.container.nativeElement, {
+        css: 'dhx_widget--bordered',
+        value: new Date(),
+      });
     }
 
     ngOnDestroy() {
-        if (this.calendar) {
-            this.calendar.destructor();
-        }
+      this.calendar && this.calendar.destructor();
     }
 }

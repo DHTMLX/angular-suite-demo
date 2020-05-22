@@ -1,15 +1,15 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
 import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
 
 @Component({
   selector: 'app-combobox-data',
   template: `
-      <div>
-          <div class="btn-container">
-              <button (click)="handleClick()" class="custom-button">Select first item</button>
-          </div>
-          <div #widget class='container widget-box-wide'></div>
-      </div>`,
+    <div>
+      <div class="btn-container">
+        <button (click)="handleClick()" class="custom-button">Select first item</button>
+      </div>
+      <div #widget class='container widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './combobox.scss'],
 })
 export class ComboboxDataComponent implements OnDestroy {

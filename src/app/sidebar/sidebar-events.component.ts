@@ -1,5 +1,5 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Sidebar as SidebarDHX, TreeCollection } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Sidebar as SidebarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-sidebar-event',
@@ -25,7 +25,7 @@ export class SidebarEventsComponent implements OnDestroy {
     eventsList = [];
 
     logEvent = (payload, name: string) => {
-        this.eventsList = [ { name, payload } ].concat(this.eventsList);
+        this.eventsList = [{ name, payload }].concat(this.eventsList);
     };
 
     ngOnInit() {

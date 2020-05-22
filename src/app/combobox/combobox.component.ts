@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import {Combobox as ComboboxDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-combobox',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './combobox.scss'],
 })
 export class ComboboxComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   combobox: ComboboxDHX;
   wait: Promise<void>;

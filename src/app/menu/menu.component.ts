@@ -1,12 +1,12 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Menu as MenuDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-menu',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class MenuComponent implements OnDestroy {

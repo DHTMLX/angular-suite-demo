@@ -1,15 +1,14 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Menu as MenuDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Menu as MenuDHX, TreeCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-menu-data',
   template: `
       <div>
-          <div class="btn-container">
-              <button (click)="handleClick()" class="custom-button">disable/enable edit button</button>
-          </div>
-          <div #widget class='container widget-box-wide'></div>
-
+        <div class="btn-container">
+          <button (click)="handleClick()" class="custom-button">disable/enable edit button</button>
+        </div>
+        <div #widget class='container widget-box-wide'></div>
       </div>`,
   styleUrls: ['../app.component.scss'],
 })

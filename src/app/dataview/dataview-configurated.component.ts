@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
-import {DataView as DataviewDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
+import { DataView as DataviewDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-dataview-configurated',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class DataviewConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   dataview: DataviewDHX;
   wait: Promise<void>;

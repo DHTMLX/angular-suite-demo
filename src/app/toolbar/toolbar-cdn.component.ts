@@ -1,21 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Toolbar as ToolbarDHX} from 'dhx-suite';
-
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
+import { Toolbar as ToolbarDHX } from 'dhx-suite';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
-
-
 @Component({
   selector: 'app-toolbar-cdn',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './toolbar.scss'],
 })
 export class ToolbarCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;

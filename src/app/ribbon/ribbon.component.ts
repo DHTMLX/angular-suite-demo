@@ -1,12 +1,12 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Ribbon as RibbonDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-ribbon',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './ribbon.scss'],
 })
 export class RibbonComponent implements OnDestroy {

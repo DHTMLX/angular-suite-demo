@@ -1,23 +1,23 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {DataView as DataviewDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { DataView as DataviewDHX, DataCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-dataview-data',
   template: `
+    <div>
+      <div class='btn-container'>
+        <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+        <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
+      </div>
       <div>
-          <div class='btn-container'>
-              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
-              <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
-          </div>
-          <div>
-              <div #widget class='widget-box-wide'></div>
-          </div>
-      </div>`,
+        <div #widget class='widget-box-wide'></div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 
 })
 export class DataviewDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   dataview: DataviewDHX;
   wait: Promise<void>;
@@ -33,15 +33,17 @@ export class DataviewDataComponent implements OnDestroy {
     }
   };
 
-  renderTemplate = (item) => `<div class='item_wrap item-wrap--grid'>
-    <img
+  renderTemplate = (item) => `
+    <div class='item_wrap item-wrap--grid'>
+      <img
         class='image'
-        style="max-width: 145px"
+        style="max-width: 80px"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
-    />
-    <h2 class='title'>${item.title}</h2>
-    <div>${item.short}</div>
-  </div>`;
+      />
+      <h2 class='title'>${item.title}</h2>
+      <div>${item.short}</div>
+    </div>
+  `;
 
   ngOnInit() {
     this.dataview = new DataviewDHX(this.container.nativeElement, {

@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Popup as PopupDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Popup as PopupDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-popup',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'>
-          </div>
-          <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">
-              Show Popup
-          </button>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'>
+      </div>
+      <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">
+        Show Popup
+      </button>
+    </div>`,
   styleUrls: ['../app.component.scss', './popup.scss'],
 })
 export class PopupComponent implements OnDestroy {
@@ -24,7 +24,7 @@ export class PopupComponent implements OnDestroy {
       css: 'dhx_widget--bordered',
     });
     this.popup.attachHTML(
-        '<div style=\'padding: 16px; text-align: center\'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>',
+      '<div style=\'padding: 16px; text-align: center\'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>',
     );
   }
 

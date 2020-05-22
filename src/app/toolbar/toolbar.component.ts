@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Toolbar as ToolbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-toolbar',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './toolbar.scss'],
 })
 export class ToolbarComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;

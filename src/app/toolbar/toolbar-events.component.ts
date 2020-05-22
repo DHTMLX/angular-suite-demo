@@ -1,19 +1,19 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Toolbar as ToolbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-toolbar-event',
   template: `
-      <div class="component-wrapper">
-          <div #widget class='widget-box-wide slider-container'></div>
-          <div class="events-list-wrapper">
-              <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-              <div class="events-list--element" *ngFor='let event of eventsList'>
-                  <p>{{event.name}}</p>
-                  <p>{{event.payload}}</p>
-              </div>
-          </div>
-      </div>`,
+    <div class="component-wrapper">
+      <div #widget class='widget-box-wide slider-container'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
+        </div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class ToolbarEventsComponent implements OnDestroy {

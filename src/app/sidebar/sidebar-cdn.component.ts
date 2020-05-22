@@ -1,11 +1,6 @@
 import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import { Sidebar as SidebarDHX } from 'dhx-suite';
-
-
 import fromCDN from 'from-cdn';
-
-declare const dhx;
-
 
 @Component({
     selector: 'app-sidebar-cdn',
@@ -22,20 +17,20 @@ export class SidebarCDNComponent implements OnDestroy {
 
     constructor() {
         this.wait = fromCDN([
-            'https://cdn.dhtmlx.com/suite/edge/suite.js',
-            'https://cdn.dhtmlx.com/suite/edge/suite.css',
+          'https://cdn.dhtmlx.com/suite/edge/suite.js',
+          'https://cdn.dhtmlx.com/suite/edge/suite.css',
         ]).then(() => {
-            this.sidebar = new dhx.Sidebar(this.container.nativeElement, {
-                css: 'dhx_widget--bordered dhx_widget--bg_white',
-            });
-            this.ready.emit({ sidebar: this.sidebar });
-            this.sidebar.data.load('https://dhtmlx.github.io/react-widgets/static/sidebar.json');
+          this.sidebar = new dhx.Sidebar(this.container.nativeElement, {
+            css: 'dhx_widget--bordered dhx_widget--bg_white',
+          });
+          this.ready.emit({ sidebar: this.sidebar });
+          this.sidebar.data.load('https://dhtmlx.github.io/react-widgets/static/sidebar.json');
         });
     }
 
     ngOnDestroy() {
-        if (this.sidebar) {
-            this.sidebar.destructor();
-        }
+      if (this.sidebar) {
+          this.sidebar.destructor();
+      }
     }
 }

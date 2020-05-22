@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
-import {Combobox as ComboboxDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
+import { Combobox as ComboboxDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-combobox-configurated',

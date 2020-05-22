@@ -1,20 +1,19 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Timepicker as TimepickerDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Timepicker as TimepickerDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-timepicker',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+        <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './timepicker.scss'],
 })
 export class TimePickerComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   timepicker: TimepickerDHX;
   wait: Promise<void>;
-
 
   ngOnInit() {
     this.timepicker = new TimepickerDHX(this.container.nativeElement, {

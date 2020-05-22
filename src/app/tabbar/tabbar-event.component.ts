@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Tabbar as TabbarDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Tabbar as TabbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tabbar-event',

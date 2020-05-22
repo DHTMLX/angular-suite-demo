@@ -1,15 +1,13 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
+import { Ribbon as RibbonDHX } from 'dhx-suite';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
 
 @Component({
   selector: 'app-ribbon-cdn',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './ribbon.scss'],
 })
 export class RibbonCDNComponent implements OnDestroy {

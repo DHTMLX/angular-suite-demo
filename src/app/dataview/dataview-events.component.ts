@@ -1,23 +1,23 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {DataView as DataviewDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { DataView as DataviewDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-dataview-event',
   template: `
-      <div class="component-wrapper">
-          <div #widget class='widget-box'></div>
-          <div class="events-list-wrapper">
-              <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-              <div class="events-list--element" *ngFor='let event of eventsList'>
-                  <p>{{event.name}}</p>
-                  <p>{{event.payload}}</p>
-              </div>
-          </div>
-      </div>`,
+    <div class="component-wrapper">
+      <div #widget class='widget-box'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
+        </div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class DataviewEventsComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   dataview: DataviewDHX;
   wait: Promise<void>;
@@ -28,15 +28,17 @@ export class DataviewEventsComponent implements OnDestroy {
     this.eventsList = [{name, payload}].concat(this.eventsList);
   };
 
-  renderTemplate = (item) => `<div class='item_wrap item-wrap--grid'>
-    <img
+  renderTemplate = (item) => `
+    <div class='item_wrap item-wrap--grid'>
+      <img
         class='image'
         style="max-width: 80px"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
-    />
-    <h2 class='title'>${item.title}</h2>
-    <div>${item.short}</div>
-  </div>`;
+      />
+      <h2 class='title'>${item.title}</h2>
+      <div>${item.short}</div>
+    </div>
+  `;
 
   ngOnInit() {
     this.dataview = new DataviewDHX(this.container.nativeElement, {

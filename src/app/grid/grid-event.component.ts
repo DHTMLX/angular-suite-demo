@@ -1,19 +1,19 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Grid as GridDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Grid as GridDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-grid-event',
   template: `
-      <div class="component-wrapper">
-          <div #widget class='widget-box'></div>
-          <div class="events-list-wrapper">
-              <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-              <div class="events-list--element" *ngFor='let event of eventsList'>
-                  <p>{{event.name}}</p>
-                  <p>{{event.payload}}</p>
-              </div>
-          </div>
-      </div>`,
+    <div class="component-wrapper">
+      <div #widget class='widget-box'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
+        </div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss', './grid.scss'],
 })
 export class GridEventComponent implements OnDestroy {

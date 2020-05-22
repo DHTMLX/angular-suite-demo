@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, Input} from '@angular/core';
-import {Sidebar as SidebarDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
+import { Sidebar as SidebarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-sidebar-configurated',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class SidebarConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: SidebarDHX;
   wait: Promise<void>;

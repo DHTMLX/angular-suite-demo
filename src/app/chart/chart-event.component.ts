@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Chart as ChartDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-chart-event',
@@ -19,7 +19,7 @@ import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
   styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartEventComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   chart: ChartDHX;
   wait: Promise<void>;
@@ -70,7 +70,7 @@ export class ChartEventComponent implements OnDestroy {
     this.chart.events.on('toggleSeries', (id) => this.logEvent(id, 'toggleSeries'));
     this.chart.events.on('resize', (size) => this.logEvent(JSON.stringify(size), 'resize'));
     this.chart.events.on('serieClick', (id, value) => {
-      const infoSerieClick = {id, value};
+      const infoSerieClick = { id, value };
       this.logEvent(JSON.stringify(infoSerieClick), 'serieClick');
     });
   }

@@ -1,15 +1,15 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Ribbon as RibbonDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Ribbon as RibbonDHX, TreeCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-ribbon-data',
   template: `
-      <div>
-          <div class="btn-container">
-              <button (click)="handleAddClick(click)" class="custom-button">disable/enable print button</button>
-          </div>
-          <div #widget class='container widget-box-wide'></div>
-      </div>`,
+    <div>
+      <div class="btn-container">
+        <button (click)="handleAddClick(click)" class="custom-button">disable/enable print button</button>
+      </div>
+      <div #widget class='container widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './ribbon.scss'],
 })
 export class RibbonDataComponent implements OnDestroy {
@@ -22,7 +22,7 @@ export class RibbonDataComponent implements OnDestroy {
   disabled = false;
 
   handleAddClick = () => {
-    this.data.update('print', {disabled: !this.data.getItem('print').disabled});
+    this.data.update('print', { disabled: !this.data.getItem('print').disabled });
   };
 
   ngOnInit() {

@@ -1,20 +1,20 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Toolbar as ToolbarDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Toolbar as ToolbarDHX, TreeCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-toolbar-data',
   template: `
-      <div>
-          <div class="btn-container">
-              <button (click)="handleAddClick(click)" class="custom-button">Add notification</button>
-              <button (click)="handleResetClick(click)" class="custom-button">Reset {{count}} notifications</button>
-          </div>
-          <div #widget class='container widget-box-wide'></div>
-      </div>`,
+    <div>
+      <div class="btn-container">
+        <button (click)="handleAddClick(click)" class="custom-button">Add notification</button>
+        <button (click)="handleResetClick(click)" class="custom-button">Reset {{count}} notifications</button>
+      </div>
+      <div #widget class='container widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './toolbar.scss'],
 })
 export class ToolbarDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;

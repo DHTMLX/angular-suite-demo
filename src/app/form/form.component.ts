@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Form as FormDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Form as FormDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +10,7 @@ import {Form as FormDHX} from 'dhx-suite';
   styleUrls: ['../app.component.scss'],
 })
 export class FormComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   form: FormDHX;
   wait: Promise<void>;

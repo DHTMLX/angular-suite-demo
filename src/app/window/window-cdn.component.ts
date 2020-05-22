@@ -1,15 +1,14 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
+import { Output, Component, OnDestroy, EventEmitter } from '@angular/core';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
 
 @Component({
   selector: 'app-window-cdn',
-  template: `<div class="container">
-        <div #widget class='widget-box-wide'></div>
-        <button className="button" (click)="this.window.show()" class="custom-button">
+  template:
+  `<div class="container">
+      <div #widget class='widget-box-wide'></div>
+      <button className="button" (click)="this.window.show()" class="custom-button">
         Show Window
-        </button>
+      </button>
     </div>`,
   styleUrls: ['../app.component.scss'],
 })

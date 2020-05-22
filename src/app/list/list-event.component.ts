@@ -1,23 +1,23 @@
-import {Component, ViewChild, OnDestroy, ElementRef} from '@angular/core';
-import {List as ListDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { List as ListDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-list-event',
   template: `
-      <div class="component-wrapper">
-          <div #widget class='widget-box-wide'></div>
-          <div class="events-list-wrapper">
-              <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-              <div class="events-list--element" *ngFor='let event of eventsList'>
-                  <p>{{event.name}}</p>
-                  <p>{{event.payload}}</p>
-              </div>
-          </div>
-      </div>`,
+    <div class="component-wrapper">
+      <div #widget class='widget-box-wide'></div>
+      <div class="events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor='let event of eventsList'>
+          <p>{{event.name}}</p>
+          <p>{{event.payload}}</p>
+        </div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss', './list.scss'],
 })
 export class ListEventComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   list: ListDHX;
   wait: Promise<void>;

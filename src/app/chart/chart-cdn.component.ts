@@ -1,14 +1,12 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
 
 @Component({
   selector: 'app-chart-cdn',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartCDNComponent implements OnDestroy {
@@ -53,8 +51,6 @@ export class ChartCDNComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.chart) {
-      this.chart.destructor();
-    }
+    this.chart && this.chart.destructor();
   }
 }

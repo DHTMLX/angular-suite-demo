@@ -1,5 +1,5 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Sidebar as SidebarDHX, TreeCollection } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Sidebar as SidebarDHX } from 'dhx-suite';
 @Component({
     selector: 'app-sidebar',
     template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,

@@ -1,5 +1,5 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Tree as TreeDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tree-event',
@@ -17,7 +17,7 @@ import {Tree as TreeDHX, TreeCollection} from 'dhx-suite';
   styleUrls: ['../app.component.scss', './tree.scss'],
 })
 export class TreeEventComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   tree: TreeDHX;
   wait: Promise<void>;

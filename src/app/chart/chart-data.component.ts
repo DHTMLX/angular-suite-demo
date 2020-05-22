@@ -1,16 +1,16 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Chart as ChartDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Chart as ChartDHX, DataCollection} from 'dhx-suite';
 
 @Component({
   selector: 'app-chart-data',
   template: `
-      <div class="container">
-          <div class="btn-container">
-              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
-              <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
-          </div>
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div class="btn-container">
+        <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+        <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
+      </div>
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss', './chart.scss'],
 })
 export class ChartDataComponent implements OnDestroy {

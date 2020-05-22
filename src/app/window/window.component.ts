@@ -1,15 +1,15 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Window} from 'dhx-suite';
+import { Component, OnDestroy } from '@angular/core';
+import { Window } from 'dhx-suite';
 
 @Component({
   selector: 'app-window',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-          <button className="button" (click)="this.window.show()" class="custom-button">
-              Show Window
-          </button>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+      <button className="button" (click)="this.window.show()" class="custom-button">
+        Show Window
+      </button>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class WindowComponent implements OnDestroy {
@@ -25,7 +25,6 @@ export class WindowComponent implements OnDestroy {
       html: windowHtml,
       closable: true,
     });
-
   }
 
   ngOnDestroy() {

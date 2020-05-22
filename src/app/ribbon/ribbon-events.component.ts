@@ -1,5 +1,5 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import { Ribbon as RibbonDHX, TreeCollection } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Ribbon as RibbonDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-ribbon-event',

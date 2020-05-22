@@ -1,18 +1,18 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter} from '@angular/core';
-import {Grid as GridDHX, DataCollection} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
+import { Grid as GridDHX, DataCollection } from 'dhx-suite';
 
 @Component({
   selector: 'app-grid-data',
   template: `
-      <div>
-          <div class='btn-container'>
-              <button (click)="handleClick('reset')" class="custom-button">Reset</button>
-              <button (click)="handleClick('remove')" class="custom-button">Remove first row</button>
-          </div>
-          <div class="container">
-              <div #widget class='widget-box-wide'></div>
-          </div>
-      </div>`,
+    <div>
+      <div class='btn-container'>
+        <button (click)="handleClick('reset')" class="custom-button">Reset</button>
+        <button (click)="handleClick('remove')" class="custom-button">Remove first row</button>
+      </div>
+      <div class="container">
+        <div #widget class='widget-box-wide'></div>
+      </div>
+    </div>`,
   styleUrls: ['../app.component.scss', './grid.scss'],
 })
 export class GridDataComponent implements OnDestroy {

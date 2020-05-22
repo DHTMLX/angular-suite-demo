@@ -1,7 +1,5 @@
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnDestroy, Output, ViewChild } from '@angular/core';
 import fromCDN from 'from-cdn';
-
-declare const dhx;
 
 @Component({
   selector: 'app-richtext-cdn',

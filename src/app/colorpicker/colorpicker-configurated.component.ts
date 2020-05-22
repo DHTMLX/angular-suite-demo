@@ -1,12 +1,12 @@
-import {Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter, Input} from '@angular/core';
-import {Colorpicker as ColorpickerDHX} from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
+import { Colorpicker as ColorpickerDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-colorpicker-configurated',
   template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
+    <div class="container">
+      <div #widget class='widget-box-wide'></div>
+    </div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class ColorpickerComponentConfigurated implements OnDestroy {
