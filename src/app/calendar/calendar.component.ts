@@ -6,21 +6,21 @@ import { Calendar as CalendarDHX } from 'dhx-suite';
     template: `<div #widget></div>`,
 })
 export class CalendarComponent implements OnDestroy {
-    @ViewChild('widget', { static: true })
-    container: ElementRef;
-    calendar: CalendarDHX;
-    wait: Promise<void>;
+  @ViewChild('widget', { static: true })
+  container: ElementRef;
+  calendar: CalendarDHX;
+  wait: Promise<void>;
 
-    @Output() ready: EventEmitter<any> = new EventEmitter();
+  @Output() ready: EventEmitter<any> = new EventEmitter();
 
-    ngOnInit() {
-      this.calendar = new CalendarDHX(this.container.nativeElement, {
-        css: 'dhx_widget--bordered',
-        value: new Date(),
-      });
-    }
+  ngOnInit() {
+    this.calendar = new CalendarDHX(this.container.nativeElement, {
+      css: 'dhx_widget--bordered',
+      value: new Date(),
+    });
+  }
 
-    ngOnDestroy() {
-      this.calendar && this.calendar.destructor();
-    }
+  ngOnDestroy() {
+    this.calendar && this.calendar.destructor();
+  }
 }

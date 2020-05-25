@@ -25,7 +25,7 @@ export const Base = () => ({
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar.component.ts"
         target="_blank"
       >
-        Code example
+        Source code
       </a>
       <app-calendar></app-calendar>
     </section>

@@ -1,1 +1,1 @@
-declare const dhx;
+declare const dhx: any;

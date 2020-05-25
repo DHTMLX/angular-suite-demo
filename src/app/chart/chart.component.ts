@@ -4,13 +4,13 @@ import { Chart as ChartDHX } from 'dhx-suite';
 @Component({
   selector: 'app-chart',
   template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './chart.scss'],
+    <section style="width: 600px">
+      <div #widget></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ChartComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   chart: ChartDHX;
   wait: Promise<void>;

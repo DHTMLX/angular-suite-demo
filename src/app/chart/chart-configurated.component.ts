@@ -4,10 +4,9 @@ import { Chart as ChartDHX } from 'dhx-suite';
 @Component({
   selector: 'app-chart-configurated',
   template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './chart.scss'],
+    <section style="width: 600px">
+      <div #widget></div>
+    </section>`,
 })
 export class ChartConfiguratedComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

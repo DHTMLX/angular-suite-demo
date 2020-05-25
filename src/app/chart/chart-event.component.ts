@@ -5,8 +5,8 @@ import { Chart as ChartDHX } from 'dhx-suite';
   selector: 'app-chart-event',
   template: `
     <div class="component-wrapper">
-      <div class="container">
-        <div #widget class='widget-box-wide'></div>
+      <div style="width: 600px">
+        <div #widget></div>
       </div>
       <div class="events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
@@ -16,7 +16,7 @@ import { Chart as ChartDHX } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './chart.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class ChartEventComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

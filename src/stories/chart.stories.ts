@@ -20,20 +20,17 @@ export default {
 export const Base = () => ({
   component: ChartComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-chart></app-chart>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-chart></app-chart>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -42,45 +39,41 @@ export const Configurated = () => ({
   component: ChartConfiguratedComponent,
   props: {
     options: {
-      type: 'bar',
-      barWidth: 45,
-      scales: {
-        bottom: {
-          text: 'month',
-        },
-        left: {
-          maxTicks: 10,
-          max: 100,
-          min: 0,
-        },
-      },
-      series: [
-        {
-          id: 'A',
-          value: 'company C',
-          color: '#5E83BA',
-          pointType: 'circle',
-          fill: '#5E83BA',
-          barWidth: 35,
-        },
-      ],
+			type: "spline",
+			scales: {
+				"bottom": {
+					text: "month"
+				},
+				"left": {
+					maxTicks: 10,
+					max: 100,
+					min: 0
+				}
+			},
+			series: [
+				{
+					id: "A",
+					value: "company C",
+					color: "#5E83BA",
+					pointType: "circle",
+					fill: "#5E83BA",
+					barWidth: 35
+				}
+			]
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-chart-configurated [options]="options"></app-chart-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-chart-configurated [options]="options"></app-chart-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -88,20 +81,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: ChartDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+    <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-chart-data></app-chart-data>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-chart-data></app-chart-data>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -109,20 +99,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: ChartCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-chart-cdn></app-chart-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-chart-cdn></app-chart-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -130,20 +117,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: ChartEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-chart-event></app-chart-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-chart-event></app-chart-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

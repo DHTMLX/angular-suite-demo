@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/ng-widgets",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,

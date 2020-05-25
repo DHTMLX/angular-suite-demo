@@ -4,13 +4,12 @@ import fromCDN from 'from-cdn';
 @Component({
   selector: 'app-chart-cdn',
   template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './chart.scss'],
+    <section style="width: 600px">
+      <div #widget></div>
+    </section>`,
 })
 export class ChartCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   chart: any;
   wait: Promise<void>;
@@ -23,27 +22,27 @@ export class ChartCDNComponent implements OnDestroy {
       'https://cdn.dhtmlx.com/suite/edge/suite.css',
     ]).then(() => {
       this.chart = new dhx.Chart(this.container.nativeElement, {
-        type: 'bar',
-        scales: {
-          bottom: {
-            text: 'month',
-          },
-          left: {
-            maxTicks: 10,
-            max: 100,
-            min: 0,
-          },
-        },
-        series: [
-          {
-            id: 'A',
-            value: 'company C',
-            color: '#5E83BA',
-            pointType: 'circle',
-            fill: '#5E83BA',
-            barWidth: 35,
-          },
-        ],
+        type: "line",
+				scales: {
+					"bottom": {
+						text: "month"
+					},
+					"left": {
+						maxTicks: 10,
+						max: 100,
+						min: 0
+					}
+				},
+				series: [
+					{
+						id: "A",
+						value: "company C",
+						color: "#5E83BA",
+						pointType: "circle",
+						fill: "#5E83BA",
+						barWidth: 35
+					}
+				]
       });
       this.chart.data.load('https://dhtmlx.github.io/react-widgets/static/chart.json');
       this.ready.emit({chart: this.chart});

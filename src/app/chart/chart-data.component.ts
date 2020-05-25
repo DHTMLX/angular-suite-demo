@@ -4,17 +4,17 @@ import { Chart as ChartDHX, DataCollection} from 'dhx-suite';
 @Component({
   selector: 'app-chart-data',
   template: `
-    <div class="container">
-      <div class="btn-container">
+    <section class="dhx-container" style="width: 600px; height: 400px">
+      <div class="dhx-container--button">
         <button (click)="handleClick('reset')" class="custom-button">Reset</button>
         <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
       </div>
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './chart.scss'],
+      <div #widget></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ChartDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   chart: ChartDHX;
   wait: Promise<void>;
