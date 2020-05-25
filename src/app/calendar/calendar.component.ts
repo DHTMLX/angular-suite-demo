@@ -3,12 +3,7 @@ import { Calendar as CalendarDHX } from 'dhx-suite';
 
 @Component({
     selector: 'app-calendar',
-    template: `
-      <div class="container">
-        <div #widget class='widget-box-wide'>
-        </div>
-      </div>`,
-    styleUrls: [ '../app.component.scss' ],
+    template: `<div #widget></div>`,
 })
 export class CalendarComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

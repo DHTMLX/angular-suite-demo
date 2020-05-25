@@ -3,8 +3,7 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-calendar-cdn',
-  template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-  styleUrls:['../app.component.scss']
+  template: `<div #widget></div>`
 })
 export class CalendarCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

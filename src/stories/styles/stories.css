@@ -1,8 +1,21 @@
-.source-link {
-    font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    color: #1EA7FD;
-    font-size: 13px;
+.dhx-container {
+  font-family: Roboto;
+  background-color: rgba(0, 0, 0, .07);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.dhx-container a {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: #0288D1;
+  margin-bottom: 36px;
+}
+
+.dhx-container h3 {
+  color: rgba(0, 0, 0, .7);
+}

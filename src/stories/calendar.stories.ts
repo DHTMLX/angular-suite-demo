@@ -19,20 +19,16 @@ export default {
 export const Base = () => ({
   component: CalendarComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
-        class="source-link"
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar.component.ts"
         target="_blank"
-        >
-          Source code
-        </a>
-     </div>
-     <div>
-        <app-calendar></app-calendar>
-     </div>
-    </div>
+      >
+        Code example
+      </a>
+      <app-calendar></app-calendar>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -50,20 +46,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-configurated.component.ts"
         target="_blank"
-        >
-          Source code
-        </a>
-     </div>
-     <div>
-        <app-calendar-configurated [options]="options"></app-calendar-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-calendar-configurated [options]="options"></app-calendar-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -71,20 +64,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: CalendarCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+    <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-cdn.component.ts"
         target="_blank"
-        >
-          Source code
-        </a>
-     </div>
-     <div>
-        <app-calendar-cdn></app-calendar-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-calendar-cdn></app-calendar-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -92,20 +82,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: CalendarEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-event.component.ts"
         target="_blank"
-        >
-          Source code
-        </a>
-     </div>
-     <div>
-        <app-calendar-event></app-calendar-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-calendar-event></app-calendar-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

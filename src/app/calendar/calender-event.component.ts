@@ -6,12 +6,12 @@ import fromCDN from 'from-cdn';
     template: `
       <div class="component-wrapper">
         <div #widget class='widget-box-wide'></div>
-        <div class="events-list-wrapper">
-        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-          <div class="events-list--element" *ngFor='let event of eventsList'>
-            <p>{{event.name}}</p>
-            <p>{{event.payload}}</p>
-          </div>
+        <div class="events-list events-list-wrapper">
+          <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+            <div class="events-list--element" *ngFor='let event of eventsList'>
+              <p>{{event.name}}</p>
+              <p>{{event.payload}}</p>
+            </div>
         </div>
       </div>
     `,
