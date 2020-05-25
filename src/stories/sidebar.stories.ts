@@ -1,10 +1,10 @@
-import {SidebarComponent} from '../app/sidebar/sidebar.component';
-import {SidebarConfiguratedComponent} from '../app/sidebar/sidebar-configurated';
-import {SidebarDataComponent} from '../app/sidebar/sidebar-data.component';
-import {SidebarCDNComponent} from '../app/sidebar/sidebar-cdn.component';
-import {SidebarEventsComponent} from '../app/sidebar/sidebar-events.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { SidebarComponent } from '../app/sidebar/sidebar.component';
+import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated';
+import { SidebarDataComponent } from '../app/sidebar/sidebar-data.component';
+import { SidebarCDNComponent } from '../app/sidebar/sidebar-cdn.component';
+import { SidebarEventsComponent } from '../app/sidebar/sidebar-events.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Sidebar',
@@ -24,7 +24,7 @@ export const Base = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar.component.ts"
         target="_blank"
         >
             Source code
@@ -51,7 +51,7 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-configurated.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-configurated.component.ts"
         target="_blank"
         >
             Source code
@@ -70,7 +70,7 @@ export const Data = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-data.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-data.component.ts"
         target="_blank"
         >
             Source code
@@ -89,7 +89,7 @@ export const CDN = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-cdn.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-cdn.component.ts"
         target="_blank"
         >
             Source code
@@ -108,7 +108,7 @@ export const Events = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-event.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-event.component.ts"
         target="_blank"
         >
             Source code

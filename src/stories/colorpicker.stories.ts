@@ -1,9 +1,9 @@
-import {ColorPickerComponent} from '../app/colorpicker/colorpicker.component';
-import {ColorPickerCDNComponent} from '../app/colorpicker/colorpicker-cdn.component';
-import {ColorpickerEventComponent} from '../app/colorpicker/colorpicker-event.component';
-import {ColorpickerComponentConfigurated} from '../app/colorpicker/colorpicker-configurated.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { ColorPickerComponent } from '../app/colorpicker/colorpicker.component';
+import { ColorPickerCDNComponent } from '../app/colorpicker/colorpicker-cdn.component';
+import { ColorpickerEventComponent } from '../app/colorpicker/colorpicker-event.component';
+import { ColorpickerComponentConfigurated } from '../app/colorpicker/colorpicker-configurated.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 
 export default {

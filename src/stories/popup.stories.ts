@@ -1,8 +1,8 @@
-import {PopupComponent} from '../app/popup/popup.component';
-import {PopupEventComponent} from '../app/popup/popup-event.component';
-import {PopupCDNComponent} from '../app/popup/popup-cdn.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { PopupComponent } from '../app/popup/popup.component';
+import { PopupEventComponent } from '../app/popup/popup-event.component';
+import { PopupCDNComponent } from '../app/popup/popup-cdn.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Popup',

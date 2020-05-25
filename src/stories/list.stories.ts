@@ -1,10 +1,10 @@
-import {ListComponent} from '../app/list/list.component';
-import {ListEventComponent} from '../app/list/list-event.component';
-import {ListCDNComponent} from '../app/list/list-cdn.component';
-import {ListConfiguratedComponent} from '../app/list/list-configurated.component';
-import {ListDataComponent} from '../app/list/list-data.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { ListComponent } from '../app/list/list.component';
+import { ListEventComponent } from '../app/list/list-event.component';
+import { ListCDNComponent } from '../app/list/list-cdn.component';
+import { ListConfiguratedComponent } from '../app/list/list-configurated.component';
+import { ListDataComponent } from '../app/list/list-data.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 
 export default {

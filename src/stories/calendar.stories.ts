@@ -1,9 +1,9 @@
-import {CalendarCDNComponent} from '../app/calendar/calendar-cdn.component';
-import {CalendarEventComponent} from '../app/calendar/calender-event.component';
-import {CalendarComponent} from '../app/calendar/calendar.component';
-import {CalendarConfiguratedComponent} from '../app/calendar/calendar-configurated.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { CalendarCDNComponent } from '../app/calendar/calendar-cdn.component';
+import { CalendarEventComponent } from '../app/calendar/calender-event.component';
+import { CalendarComponent } from '../app/calendar/calendar.component';
+import { CalendarConfiguratedComponent } from '../app/calendar/calendar-configurated.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Calendar',
@@ -26,7 +26,7 @@ export const Base = () => ({
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar.component.ts"
         target="_blank"
         >
-            Source code
+          Source code
         </a>
      </div>
      <div>
@@ -57,7 +57,7 @@ export const Configurated = () => ({
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-configurated.component.ts"
         target="_blank"
         >
-            Source code
+          Source code
         </a>
      </div>
      <div>
@@ -78,7 +78,7 @@ export const CDN = () => ({
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-cdn.component.ts"
         target="_blank"
         >
-            Source code
+          Source code
         </a>
      </div>
      <div>
@@ -99,7 +99,7 @@ export const Events = () => ({
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/calendar/calendar-event.component.ts"
         target="_blank"
         >
-            Source code
+          Source code
         </a>
      </div>
      <div>

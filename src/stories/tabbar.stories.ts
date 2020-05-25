@@ -1,9 +1,9 @@
-import {TabbarComponent} from '../app/tabbar/tabbar.component';
-import {TabbarEventComponent} from '../app/tabbar/tabbar-event.component';
-import {TabbarCDNComponent} from '../app/tabbar/tabbar-cdn.component';
-import {TabbarConfiguratedComponent} from '../app/tabbar/tabbar-configurated.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { TabbarComponent } from '../app/tabbar/tabbar.component';
+import { TabbarEventComponent } from '../app/tabbar/tabbar-event.component';
+import { TabbarCDNComponent } from '../app/tabbar/tabbar-cdn.component';
+import { TabbarConfiguratedComponent } from '../app/tabbar/tabbar-configurated.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Tabbar',

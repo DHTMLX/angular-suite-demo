@@ -1,9 +1,9 @@
-import {TimePickerComponent} from '../app/timepicker/timepicker.component';
-import {TimePickerConfiguratedComponent} from '../app/timepicker/timepicker-configurated.component';
-import {TimePickerCDNComponent} from '../app/timepicker/timepicker-cdn.components';
-import {TimePickerEventsComponent} from '../app/timepicker/timepicker-event.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { TimePickerComponent } from '../app/timepicker/timepicker.component';
+import { TimePickerConfiguratedComponent } from '../app/timepicker/timepicker-configurated.component';
+import { TimePickerCDNComponent } from '../app/timepicker/timepicker-cdn.components';
+import { TimePickerEventsComponent } from '../app/timepicker/timepicker-event.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Time Picker',

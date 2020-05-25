@@ -1,10 +1,10 @@
-import {RibbonComponent} from '../app/ribbon/ribbon.component';
-import {RibbonConfiguratedComponent} from '../app/ribbon/ribbon-configurated.component';
-import {RibbonDataComponent} from '../app/ribbon/ribbon-data.component';
-import {RibbonCDNComponent} from '../app/ribbon/ribbon-cdn.component';
-import {RibbonEventsComponent} from '../app/ribbon/ribbon-events.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { RibbonComponent } from '../app/ribbon/ribbon.component';
+import { RibbonConfiguratedComponent } from '../app/ribbon/ribbon-configurated.component';
+import { RibbonDataComponent } from '../app/ribbon/ribbon-data.component';
+import { RibbonCDNComponent } from '../app/ribbon/ribbon-cdn.component';
+import { RibbonEventsComponent } from '../app/ribbon/ribbon-events.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Ribbon',
@@ -24,7 +24,7 @@ export const Base = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon.component.ts"
         target="_blank"
         >
             Source code
@@ -48,7 +48,7 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-configurated.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-configurated.component.ts"
         target="_blank"
         >
             Source code
@@ -67,7 +67,7 @@ export const Data = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-data.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-data.component.ts"
         target="_blank"
         >
             Source code
@@ -86,7 +86,7 @@ export const CDN = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-cdn.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-cdn.component.ts"
         target="_blank"
         >
             Source code
@@ -105,7 +105,7 @@ export const Events = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-event.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-event.component.ts"
         target="_blank"
         >
             Source code

@@ -1,9 +1,9 @@
-import {DataviewComponent} from '../app/dataview/dataview.component';
-import {DataviewConfiguratedComponent} from '../app/dataview/dataview-configurated.component';
-import {DataviewCDNComponent} from '../app/dataview/dataview-cdn.component';
-import {DataviewEventsComponent} from '../app/dataview/dataview-events.component';
-import {DataviewDataComponent} from '../app/dataview/dataview-data.component';
-import {moduleMetadata} from '@storybook/angular';
+import { DataviewComponent } from '../app/dataview/dataview.component';
+import { DataviewConfiguratedComponent } from '../app/dataview/dataview-configurated.component';
+import { DataviewCDNComponent } from '../app/dataview/dataview-cdn.component';
+import { DataviewEventsComponent } from '../app/dataview/dataview-events.component';
+import { DataviewDataComponent } from '../app/dataview/dataview-data.component';
+import { moduleMetadata } from '@storybook/angular';
 
 import {CommonModule} from '@angular/common';
 
@@ -25,7 +25,7 @@ export const Base = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview.component.ts"
         target="_blank"
         >
             Source code
@@ -62,7 +62,7 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-configurated.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-configurated.component.ts"
         target="_blank"
         >
             Source code
@@ -81,7 +81,7 @@ export const Data = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-data.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-data.component.ts"
         target="_blank"
         >
             Source code
@@ -100,7 +100,7 @@ export const CDN = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-cdn.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-cdn.component.ts"
         target="_blank"
         >
             Source code
@@ -119,7 +119,7 @@ export const Events = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-event.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/dataview/dataview-event.component.ts"
         target="_blank"
         >
             Source code

@@ -1,10 +1,10 @@
-import {ToolbarComponent} from '../app/toolbar/toolbar.component';
-import {ToolbarConfiguratedComponent} from '../app/toolbar/toolbar-configurated.component';
-import {ToolbarDataComponent} from '../app/toolbar/toolbar-data.component';
-import {ToolbarCDNComponent} from '../app/toolbar/toolbar-cdn.component';
-import {ToolbarEventsComponent} from '../app/toolbar/toolbar-events.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { ToolbarComponent } from '../app/toolbar/toolbar.component';
+import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated.component';
+import { ToolbarDataComponent } from '../app/toolbar/toolbar-data.component';
+import { ToolbarCDNComponent } from '../app/toolbar/toolbar-cdn.component';
+import { ToolbarEventsComponent } from '../app/toolbar/toolbar-events.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Toolbar',
@@ -24,7 +24,7 @@ export const Base = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar.component.ts"
         target="_blank"
         >
             Source code
@@ -49,7 +49,7 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-configurated.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-configurated.component.ts"
         target="_blank"
         >
             Source code
@@ -68,7 +68,7 @@ export const Data = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-data.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-data.component.ts"
         target="_blank"
         >
             Source code
@@ -87,7 +87,7 @@ export const CDN = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-cdn.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-cdn.component.ts"
         target="_blank"
         >
             Source code
@@ -107,7 +107,7 @@ export const Events = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-event.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-event.component.ts"
         target="_blank"
         >
             Source code

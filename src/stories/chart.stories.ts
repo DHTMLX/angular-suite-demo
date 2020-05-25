@@ -1,10 +1,10 @@
-import {ChartComponent} from '../app/chart/chart.component';
-import {ChartEventComponent} from '../app/chart/chart-event.component';
-import {ChartCDNComponent} from '../app/chart/chart-cdn.component';
-import {ChartDataComponent} from '../app/chart/chart-data.component';
-import {ChartConfiguratedComponent} from '../app/chart/chart-configurated.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { ChartComponent } from '../app/chart/chart.component';
+import { ChartEventComponent } from '../app/chart/chart-event.component';
+import { ChartCDNComponent } from '../app/chart/chart-cdn.component';
+import { ChartDataComponent } from '../app/chart/chart-data.component';
+import { ChartConfiguratedComponent } from '../app/chart/chart-configurated.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Chart',

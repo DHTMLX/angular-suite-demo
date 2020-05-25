@@ -1,9 +1,9 @@
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
-import {SliderComponent} from '../app/slider/slider.component';
-import {SliderConfiguraetedComponent} from '../app/slider/slider-configurated.component';
-import {SliderCDNComponent} from '../app/slider/slider-cdn.component';
-import {SliderEventsComponent} from '../app/slider/slider-events.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { SliderComponent } from '../app/slider/slider.component';
+import { SliderConfiguraetedComponent } from '../app/slider/slider-configurated.component';
+import { SliderCDNComponent } from '../app/slider/slider-cdn.component';
+import { SliderEventsComponent } from '../app/slider/slider-events.component';
 
 
 import './styles/stories.css';
@@ -26,7 +26,7 @@ export const Base = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider.component.ts"
         target="_blank"
         >
             Source code
@@ -56,7 +56,7 @@ export const Configurated = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-configurated.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-configurated.component.ts"
         target="_blank"
         >
             Source code
@@ -75,7 +75,7 @@ export const CDN = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-cdn.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-cdn.component.ts"
         target="_blank"
         >
             Source code
@@ -94,7 +94,7 @@ export const Events = () => ({
      <div>
         <a
         class="source-link"
-        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-events.component.ts" 
+        href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-events.component.ts"
         target="_blank"
         >
             Source code

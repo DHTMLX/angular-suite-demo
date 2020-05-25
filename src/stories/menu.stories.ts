@@ -1,10 +1,10 @@
-import {MenuComponent} from '../app/menu/menu.component';
-import {MenuEventComponent} from '../app/menu/menu-event.component';
-import {MenuCDNComponent} from '../app/menu/menu-cdn.component';
-import {MenuConfiguratedComponent} from '../app/menu/menu-configurated.component';
-import {MenuDataComponent} from '../app/menu/menu-data.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { MenuComponent } from '../app/menu/menu.component';
+import { MenuEventComponent } from '../app/menu/menu-event.component';
+import { MenuCDNComponent } from '../app/menu/menu-cdn.component';
+import { MenuConfiguratedComponent } from '../app/menu/menu-configurated.component';
+import { MenuDataComponent } from '../app/menu/menu-data.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 
 export default {

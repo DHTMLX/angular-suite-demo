@@ -1,7 +1,7 @@
-import {MessageComponent} from '../app/message/message.component';
-import {MessageCDNComponent} from '../app/message/message-cdn.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { MessageComponent } from '../app/message/message.component';
+import { MessageCDNComponent } from '../app/message/message-cdn.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Message',

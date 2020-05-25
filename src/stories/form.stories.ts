@@ -1,9 +1,9 @@
-import {FormComponent} from '../app/form/form.component';
-import {FormEventComponent} from '../app/form/form-event.component';
-import {FormCDNComponent} from '../app/form/form-cdn.component';
-import {FormConfiguratedComponent} from '../app/form/form-configurated.component';
-import {moduleMetadata} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { FormComponent } from '../app/form/form.component';
+import { FormEventComponent } from '../app/form/form-event.component';
+import { FormCDNComponent } from '../app/form/form-cdn.component';
+import { FormConfiguratedComponent } from '../app/form/form-configurated.component';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'Form',
