@@ -1,27 +1,88 @@
-# NgWidgets
+<p align="center">      
+	<a href="https://dhtmlx.github.io/angular-suite-demo/?path=/story"><img src="https://dhtmlx.github.io/react-widgets/static/logo_r.svg" width="150" heigh="55"></a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-## Development server
+# DHTMLX Widgets + Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
+[![License: GPL v2](https://img.shields.io/badge/license-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
-## Code scaffolding
+[![react-widgets](https://raw.githubusercontent.com/plazarev/media/master/Suite%402x.png)](https://dhtmlx.github.io/angular-suite-demo/?path=/story)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+In most samples DHTMLX Widgets are loaded through NPM that provides limited (GPL) version of components. For production you should use the PRO version.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+There are also samples where DHTMLX Widgets are loaded from CDN. `cdn.dhtmlx.com` serves limited (GPL) version of components. For production use your own CDN / file server.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Development server
 
-## Running end-to-end tests
+To run the app in the development mode, run `npm storybook` in the project directory.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Examples
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Calendar](https://dhtmlx.github.io/angular-suite-demo/?path=/story/calendar--base)
+
+- [Chart](https://dhtmlx.github.io/angular-suite-demo/?path=/story/chart--base)
+
+- [Colorpicker](https://dhtmlx.github.io/angular-suite-demo/?path=/story/color-picker--base)
+
+- [Combobox](https://dhtmlx.github.io/angular-suite-demo/?path=/story/combobox--base)
+
+- [Dataview](https://dhtmlx.github.io/angular-suite-demo/?path=/story/dataview--base)
+
+- [Form](https://dhtmlx.github.io/angular-suite-demo/?path=/story/form--base)
+
+- [Grid](https://dhtmlx.github.io/angular-suite-demo/?path=/story/grid--base)
+
+- [List](https://dhtmlx.github.io/angular-suite-demo/?path=/story/list--base)
+
+- [Menu](https://dhtmlx.github.io/angular-suite-demo/?path=/story/menu--base)
+
+- [Message](https://dhtmlx.github.io/angular-suite-demo/?path=/story/message--base)
+
+- [Popup](https://dhtmlx.github.io/angular-suite-demo/?path=/story/popup--base)
+
+- [Ribbon](https://dhtmlx.github.io/angular-suite-demo/?path=/story/ribbon--base)
+
+- [Sidebar](https://dhtmlx.github.io/angular-suite-demo/?path=/story/sidebar--base)
+
+- [Slider](https://dhtmlx.github.io/angular-suite-demo/?path=/story/slider--base)
+
+- [Tabbar](https://dhtmlx.github.io/angular-suite-demo/?path=/story/tabbar--base)
+
+- [Timepicker](https://dhtmlx.github.io/angular-suite-demo/?path=/story/time-picker--base)
+
+- [Toolbar](https://dhtmlx.github.io/angular-suite-demo/?path=/story/toolbar--base)
+
+- [Tree](https://dhtmlx.github.io/angular-suite-demo/?path=/story/tree--base)
+
+- [Window](https://dhtmlx.github.io/angular-suite-demo/?path=/story/window--base)
+
+
+## License
+
+[![License: GPL v2](https://img.shields.io/badge/license-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+
+## Useful links
+
+- [Online  documentation](https://docs.dhtmlx.com/)
+- [Support forum](https://forum.dhtmlx.com/c/suite6)
+
+
+## Follow Us
+
+Star our GitHub repo :star:
+
+Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
+
+Read us on [Medium](https://medium.com/@dhtmlx) :newspaper:
+
+Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
+
+Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
