@@ -3,11 +3,7 @@ import { Form as FormDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-form-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+  template: `<div #widget></div>`
 })
 export class FormConfiguratedComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

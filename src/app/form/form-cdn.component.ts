@@ -3,11 +3,7 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-form-cdn',
-  template: `
-    <div class="container">
-        <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+  template: `<div #widget></div>`
 })
 export class FormCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
@@ -23,7 +19,7 @@ export class FormCDNComponent implements OnDestroy {
       'https://cdn.dhtmlx.com/suite/edge/suite.css',
     ]).then(() => {
       this.form = new dhx.Form(this.container.nativeElement, {
-        css: 'dhx_widget--bordered',
+        css: 'dhx_widget--bordered dhx_widget--bg_white',
         gravity: false,
         width: 400,
         rows: [

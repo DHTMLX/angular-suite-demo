@@ -19,20 +19,17 @@ export default {
 export const Base = () => ({
   component: FormComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/form/form.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-form></app-form>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-form></app-form>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -41,70 +38,64 @@ export const Configurated = () => ({
   component: FormConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered',
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
       gravity: false,
       padding: 20,
       title: 'DHX Form',
       width: 400,
       rows: [
-        {
-          type: 'input',
-          label: 'Name',
-          icon: 'dxi-magnify',
-          placeholder: 'John Doe',
-          required: true
-        },
-        {
-          type: 'input',
-          label: 'Email',
-          placeholder: 'jd@mail.name',
-          preMessage: 'Enter Email',
-          errorMessage: 'Invalid email',
-          successMessage: 'Valid Email',
-          validation: 'email',
-          required: true
-        },
-        {
-          type: 'input',
-          inputType: 'password',
-          label: 'Password',
-          placeholder: '********',
-          required: true
-        },
-        {
-          type: 'checkbox',
-          label: 'I agree',
-          name: 'agree',
-          labelInline: true,
-          value: 'checkboxvalue',
-          required: true
-        },
-        {
-          type: 'button',
-          value: 'Send',
-          size: 'medium',
-          view: 'flat',
-          submit: true,
-          color: 'primary'
-        }
-      ]
+				{
+					type: "datepicker",
+					label: "Date",
+					required: true,
+					id: "date",
+					name: "date"
+				},
+				{
+					type: "timepicker",
+					controls: "true",
+					label: "Time",
+					required: true,
+					id: "time",
+					name: "time"
+				},
+				{
+					type: "colorpicker",
+					label: "Color",
+					required: true,
+					id: "color",
+					name: "color"
+				},
+				{
+					type: "simpleVault",
+					required: true,
+					label: "Files",
+					id: "simplevault",
+					name: "simplevault"
+				},
+				{
+					type: "button",
+					value: "Send",
+					size: "medium",
+					view: "flat",
+					submit: true,
+					color: "primary"
+				}
+			]
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/form/form-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-form-configurated [options]="options"></app-form-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-form-configurated [options]="options"></app-form-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -112,20 +103,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: FormCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/form/form-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-form-cdn></app-form-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-form-cdn></app-form-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -133,20 +121,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: FormEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/form/form-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-form-event></app-form-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-form-event></app-form-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

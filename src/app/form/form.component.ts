@@ -3,11 +3,7 @@ import { Form as FormDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-form',
-  template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
-  styleUrls: ['../app.component.scss'],
+  template: `<div #widget></div>`
 })
 export class FormComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
@@ -17,7 +13,7 @@ export class FormComponent implements OnDestroy {
 
   ngOnInit() {
     this.form = new FormDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered',
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
       gravity: false,
       width: 400,
       rows: [
