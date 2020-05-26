@@ -4,13 +4,13 @@ import { DataView as DataviewDHX, DataCollection } from 'dhx-suite';
 @Component({
   selector: 'app-dataview-data',
   template: `
-    <div>
-      <div class='btn-container'>
+    <section class="dhx-container">
+      <div class="dhx-container--button">
         <button (click)="handleClick('reset')" class="custom-button">Reset</button>
         <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
       </div>
       <div #widget style="height: 400px; padding: 0 24px"></div>
-    </div>`,
+    </section>`,
   styleUrls: ['../app.component.scss'],
 
 })
