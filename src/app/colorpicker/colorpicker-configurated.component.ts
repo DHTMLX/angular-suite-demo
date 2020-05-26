@@ -3,14 +3,10 @@ import { Colorpicker as ColorpickerDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-colorpicker-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+  template: ` <div #widget></div>`,
 })
 export class ColorpickerComponentConfigurated implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   colorpicker: any;
   wait: Promise<void>;

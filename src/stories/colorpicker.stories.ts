@@ -20,20 +20,17 @@ export default {
 export const Base = () => ({
   component: ColorPickerComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/colorpicker/colorpicker.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-colorpicker></app-colorpicker>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-colorpicker></app-colorpicker>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -49,20 +46,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/colorpicker/colorpicker-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-colorpicker-configurated [options]="options"></app-colorpicker-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-colorpicker-configurated [options]="options"></app-colorpicker-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -70,20 +64,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: ColorPickerCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/colorpicker/colorpicker-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-colorpicker-cdn></app-colorpicker-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-colorpicker-cdn></app-colorpicker-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -91,20 +82,17 @@ export const CDN = () => ({
 export const Event = () => ({
   component: ColorpickerEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/colorpicker/colorpicker-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-colorpicker-event></app-colorpicker-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-colorpicker-event></app-colorpicker-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
