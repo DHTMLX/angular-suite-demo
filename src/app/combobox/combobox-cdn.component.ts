@@ -3,14 +3,10 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-combobox-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './combobox.scss'],
+  template: `<div #widget style="width: 400px"></div>`,
 })
 export class ComboboxCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   combobox: any;
   wait: Promise<void>;

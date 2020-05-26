@@ -82,7 +82,7 @@ export const Data = () => ({
   component: ChartDataComponent,
   template: `
     <section class="dhx-container">
-    <h3>Work with data</h3>
+      <h3>Work with data</h3>
       <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/chart/chart-data.component.ts"

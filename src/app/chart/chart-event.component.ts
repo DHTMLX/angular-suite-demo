@@ -8,7 +8,7 @@ import { Chart as ChartDHX } from 'dhx-suite';
       <div style="width: 600px">
         <div #widget></div>
       </div>
-      <div class="events-list-wrapper">
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>

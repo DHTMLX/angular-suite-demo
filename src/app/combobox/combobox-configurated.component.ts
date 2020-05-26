@@ -3,14 +3,10 @@ import { Combobox as ComboboxDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-combobox-configurated',
-  template: `
-      <div class="container">
-          <div #widget class='widget-box-wide'></div>
-      </div>`,
-  styleUrls: ['../app.component.scss', './combobox.scss'],
+  template: `<div #widget style="width: 400px"></div>`
 })
 export class ComboboxConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   combobox: ComboboxDHX;
   wait: Promise<void>;

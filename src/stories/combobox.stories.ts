@@ -21,20 +21,17 @@ export default {
 export const Base = () => ({
   component: ComboboxComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-combobox></app-combobox>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-combobox></app-combobox>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -54,20 +51,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-combobox-configurated [options]="options"></app-combobox-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-combobox-configurated [options]="options"></app-combobox-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -75,20 +69,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: ComboboxDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-combobox-data></app-combobox-data>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-combobox-data></app-combobox-data>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -96,20 +87,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: ComboboxCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-combobox-cdn></app-combobox-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-combobox-cdn></app-combobox-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -117,20 +105,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: ComboboxEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/combobox/combobox-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-combobox-event></app-combobox-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-combobox-event></app-combobox-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

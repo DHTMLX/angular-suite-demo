@@ -4,17 +4,17 @@ import { Combobox as ComboboxDHX } from 'dhx-suite';
 @Component({
   selector: 'app-combobox-event',
   template: `
-    <div class="component-wrapper">
-      <div><div #widget class='widget-box-wide'></div></div>
-      <div class="events-list-wrapper">
+    <section class="component-wrapper">
+      <div #widget style="width:400px"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
           <p>{{event.payload}}</p>
         </div>
       </div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './combobox.scss'],
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ComboboxEventComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
@@ -31,7 +31,6 @@ export class ComboboxEventComponent implements OnDestroy {
   ngOnInit() {
     this.combobox = new ComboboxDHX(this.container.nativeElement, {
       placeholder: 'Click to choose',
-      width: 200
     });
 
     this.combobox.data.load('https://dhtmlx.github.io/react-widgets/static/combobox.json');
