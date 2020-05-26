@@ -5,8 +5,8 @@ import { DataView as DataviewDHX } from 'dhx-suite';
   selector: 'app-dataview-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box'></div>
-      <div class="events-list-wrapper">
+    <div #widget style="height: 420px; width: 650px; padding: 0 24px"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -29,14 +29,13 @@ export class DataviewEventsComponent implements OnDestroy {
   };
 
   renderTemplate = (item) => `
-    <div class='item_wrap item-wrap--grid'>
+    <div class="template template__container">
       <img
-        class='image'
-        style="max-width: 80px"
+        class="template__image"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
       />
-      <h2 class='title'>${item.title}</h2>
-      <div>${item.short}</div>
+      <h2 class="template__title">${item.title}</h2>
+      <p class="template__description">${item.short}</з>
     </div>
   `;
 
@@ -44,13 +43,13 @@ export class DataviewEventsComponent implements OnDestroy {
     this.dataview = new DataviewDHX(this.container.nativeElement, {
       css: 'dhx_widget--bordered dhx_widget--bg_white',
       template: this.renderTemplate,
-      itemsInRow: 6,
+      itemsInRow: 2,
+      gap: 10
     });
 
     this.dataview.data.load('https://dhtmlx.github.io/react-widgets/static/dataview.json');
 
     this.dataview.events.on('click', (id) => this.logEvent(id, 'click'));
-    this.dataview.events.on('focuschange', (id) => this.logEvent(id, 'focuschange'));
     this.dataview.events.on('doubleclick', (id) => this.logEvent(id, 'doubleclick'));
   }
 

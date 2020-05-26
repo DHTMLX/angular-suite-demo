@@ -7,7 +7,6 @@
   justify-content: center;
   flex-direction: column;
 }
-
 .dhx-container a {
   cursor: pointer;
   text-decoration: none;
@@ -15,7 +14,6 @@
   color: #0288D1;
   margin-bottom: 36px;
 }
-
 .dhx-container h3 {
   color: rgba(0, 0, 0, .7);
 }

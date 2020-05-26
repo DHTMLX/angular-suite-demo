@@ -3,27 +3,22 @@ import { DataView as DataviewDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-dataview',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+  template: `<div #widget style="height: 400px; padding: 0 24px"></div>`,
 })
 export class DataviewComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: DataviewDHX;
   wait: Promise<void>;
 
   renderTemplate = (item) => `
-    <div class='item_wrap item-wrap--grid'>
+    <div class="template template__container">
       <img
-        class='image'
-        style="max-width: 80px"
+        class="template__image"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
       />
-      <h2 class='title'>${item.title}</h2>
-      <div>${item.short}</div>
+      <h2 class="template__title">${item.title}</h2>
+      <p class="template__description">${item.short}</з>
     </div>
   `;
 
@@ -31,7 +26,8 @@ export class DataviewComponent implements OnDestroy {
     this.toolbar = new DataviewDHX(this.container.nativeElement, {
       css: 'dhx_widget--bordered dhx_widget--bg_white',
       template: this.renderTemplate,
-      itemsInRow: 6
+      itemsInRow: 4,
+      gap: 10
     });
 
     this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/dataview.json');

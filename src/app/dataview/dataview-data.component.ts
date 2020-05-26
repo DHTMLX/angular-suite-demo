@@ -9,9 +9,7 @@ import { DataView as DataviewDHX, DataCollection } from 'dhx-suite';
         <button (click)="handleClick('reset')" class="custom-button">Reset</button>
         <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
       </div>
-      <div>
-        <div #widget class='widget-box-wide'></div>
-      </div>
+      <div #widget style="height: 400px; padding: 0 24px"></div>
     </div>`,
   styleUrls: ['../app.component.scss'],
 
@@ -34,14 +32,13 @@ export class DataviewDataComponent implements OnDestroy {
   };
 
   renderTemplate = (item) => `
-    <div class='item_wrap item-wrap--grid'>
+    <div class="template template__container">
       <img
-        class='image'
-        style="max-width: 80px"
+        class="template__image"
         src="https://dhtmlx.github.io/react-widgets/static/${item.img}"
       />
-      <h2 class='title'>${item.title}</h2>
-      <div>${item.short}</div>
+      <h2 class="template__title">${item.title}</h2>
+      <p class="template__description">${item.short}</з>
     </div>
   `;
 
@@ -49,7 +46,8 @@ export class DataviewDataComponent implements OnDestroy {
     this.dataview = new DataviewDHX(this.container.nativeElement, {
       css: 'dhx_widget--bordered dhx_widget--bg_white',
       template: this.renderTemplate,
-      itemsInRow: 6,
+      itemsInRow: 4,
+      gap: 10,
       data: this.data
     });
 
