@@ -20,18 +20,17 @@ export default {
 export const Base = () => ({
   component: SidebarComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-sidebar></app-sidebar>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -47,18 +46,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-sidebar-configurated [options]="options"></app-sidebar-configurated>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -66,18 +64,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: SidebarDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-sidebar-data></app-sidebar-data>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -85,18 +82,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: SidebarCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-sidebar-cdn></app-sidebar-cdn>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -104,18 +100,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: SidebarEventsComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/sidebar/sidebar-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-sidebar-event></app-sidebar-event>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

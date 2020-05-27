@@ -4,8 +4,7 @@ import fromCDN from 'from-cdn';
 
 @Component({
     selector: 'app-sidebar-cdn',
-    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: ['../app.component.scss'],
+    template: `<div #widget class='widget-box-wide'></div>`
 })
 export class SidebarCDNComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

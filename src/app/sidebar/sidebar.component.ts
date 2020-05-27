@@ -2,8 +2,7 @@ import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
 import { Sidebar as SidebarDHX } from 'dhx-suite';
 @Component({
     selector: 'app-sidebar',
-    template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-    styleUrls: ['../app.component.scss'],
+    template: `<div #widget class='widget-box-wide'></div>`
 })
 export class SidebarComponent implements OnDestroy {
     @ViewChild('widget', { static: true })

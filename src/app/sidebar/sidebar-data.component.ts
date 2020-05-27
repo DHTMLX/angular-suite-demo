@@ -4,13 +4,13 @@ import { Sidebar as SidebarDHX, TreeCollection } from 'dhx-suite';
 @Component({
   selector: 'app-sidebar-data',
   template: `
-    <div>
-      <div class="btn-container">
+    <section class="dhx-container">
+      <div class="dhx-container--button">
         <button (click)="handleAddClick(click)" class="custom-button">Add notification</button>
         <button (click)="handleResetClick(click)" class="custom-button">Reset {{count}} notifications</button>
       </div>
-      <div #widget class='container widget-box-wide'></div>
-    </div>`,
+      <div #widget></div>
+    </section>`,
   styleUrls: ['../app.component.scss'],
 })
 export class SidebarDataComponent implements OnDestroy {
