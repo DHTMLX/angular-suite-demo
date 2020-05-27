@@ -3,11 +3,8 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-grid-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './grid.scss'],
+  template: `<div #widget class="dhx-container--grid"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class GridCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

@@ -4,16 +4,14 @@ import { Grid as GridDHX, DataCollection } from 'dhx-suite';
 @Component({
   selector: 'app-grid-data',
   template: `
-    <div>
-      <div class='btn-container'>
+    <section>
+      <div class="dhx-container--button">
         <button (click)="handleClick('reset')" class="custom-button">Reset</button>
         <button (click)="handleClick('remove')" class="custom-button">Remove first row</button>
       </div>
-      <div class="container">
-        <div #widget class='widget-box-wide'></div>
-      </div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './grid.scss'],
+      <div #widget class="dhx-container--grid"></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class GridDataComponent implements OnDestroy {
   @ViewChild('widget', {static: true})

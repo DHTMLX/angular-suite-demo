@@ -20,18 +20,17 @@ export default {
 export const Base = () => ({
   component: GridComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-grid></app-grid>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -41,34 +40,36 @@ export const Configurated = () => ({
   props: {
     options: {
       columns: [
-        {minWidth: 200, id: 'country', header: [{text: 'Country'}]},
-        {minWidth: 125, id: 'population', header: [{text: 'Population'}]},
-        {minWidth: 125, id: 'yearlyChange', header: [{text: 'Yearly Change'}]},
-        {minWidth: 125, id: 'netChange', header: [{text: 'Net Change'}]},
-        {minWidth: 125, id: 'destiny', header: [{text: 'Density (P/Km²)'}]},
-        {minWidth: 125, id: 'area', header: [{text: 'Land Area (Km²)'}]},
-        {minWidth: 125, id: 'migrants', header: [{text: 'Migrants (net)'}]},
-        {minWidth: 125, id: 'fert', header: [{text: 'Fert. Rate'}]},
-        {minWidth: 125, id: 'age', header: [{text: 'Med. Age'}]},
-        {minWidth: 125, id: 'urban', header: [{text: 'Urban Pop'}]},
+        { id: 'country', header: [{text: 'Country'}] },
+        { id: 'population', header: [{text: 'Population'}] },
+        { id: 'yearlyChange', header: [{text: 'Yearly Change'}] },
+        { id: 'netChange', header: [{text: 'Net Change'}] },
+        { id: 'destiny', header: [{text: 'Density (P/Km²)'}] },
+        { id: 'area', header: [{text: 'Land Area (Km²)'}] },
+        { id: 'migrants', header: [{text: 'Migrants (net)'}] },
+        { id: 'fert', header: [{text: 'Fert. Rate'}] },
+        { id: 'age', header: [{text: 'Med. Age'}] },
+        { id: 'urban', header: [{text: 'Urban Pop'}] },
       ],
-      adjust: true,
-      autoWidth: true,
+			rowHeight: 60,
+			autoWidth: true,
+			editable: true,
+			multiselection: true,
+			selection: "complex",
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-grid-configurated [options]="options"></app-grid-configurated>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -76,18 +77,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: GridDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-grid-data></app-grid-data>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -95,18 +95,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: GridCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-grid-cdn></app-grid-cdn>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -114,18 +113,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: GridEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/grid/grid-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-grid-event></app-grid-event>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

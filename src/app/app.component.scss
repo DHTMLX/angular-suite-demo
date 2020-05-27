@@ -53,10 +53,15 @@
 }
 
 .dhx-container {
-  justify-content: center;
   &--button {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+  }
+
+  &--grid {
+    width: calc(100vw - 48px);
+    height: 450px;
+    padding: 0 24px;
   }
 }

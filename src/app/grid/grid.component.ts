@@ -3,14 +3,11 @@ import { Grid as GridDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-grid',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './grid.scss'],
+  template: `<div #widget class="dhx-container--grid"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class GridComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   grid: GridDHX;
   wait: Promise<void>;

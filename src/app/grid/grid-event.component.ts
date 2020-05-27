@@ -5,8 +5,8 @@ import { Grid as GridDHX } from 'dhx-suite';
   selector: 'app-grid-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box'></div>
-      <div class="events-list-wrapper">
+      <div #widget class="dhx-container--grid" style="width: 800px"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -14,10 +14,10 @@ import { Grid as GridDHX } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './grid.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class GridEventComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   grid: GridDHX;
   wait: Promise<void>;
@@ -43,11 +43,9 @@ export class GridEventComponent implements OnDestroy {
         {minWidth: 125, id: 'urban', header: [{text: 'Urban Pop'}], footer: [{text: 'Urban Pop'}]},
       ],
       adjust: true,
-      autoWidth: true,
       selection: true,
       editable: true,
       resizable: true,
-      dragMode: 'both',
     });
     this.grid.data.load(`https://dhtmlx.github.io/react-widgets/static/grid.json`);
 
