@@ -3,14 +3,10 @@ import { List as ListDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-list-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './list.scss'],
+  template: `<div #widget></div>`,
 })
 export class ListConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   list: ListDHX;
   wait: Promise<void>;

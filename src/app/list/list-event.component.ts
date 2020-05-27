@@ -5,8 +5,8 @@ import { List as ListDHX } from 'dhx-suite';
   selector: 'app-list-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box-wide'></div>
-      <div class="events-list-wrapper">
+      <div #widget></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -14,7 +14,7 @@ import { List as ListDHX } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './list.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class ListEventComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

@@ -21,20 +21,17 @@ export default {
 export const Base = () => ({
   component: ListComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-list></app-list>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-list></app-list>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -47,25 +44,22 @@ export const Configurated = () => ({
       template: (item) => `<span><strong>${item.title}</strong> ${item.short}</span>`,
       height: 400,
       itemHeight: 70,
-      virtual: false,
-      keyNavigation: true
+      keyNavigation: true,
+      dragMode: "both"
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-list-configurated [options]="options"></app-list-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-list-configurated [options]="options"></app-list-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -73,20 +67,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: ListDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-list-data></app-list-data>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-list-data></app-list-data>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -94,20 +85,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: ListCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-list-cdn></app-list-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-list-cdn></app-list-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -115,20 +103,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: ListEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/list/list-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-list-event></app-list-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-list-event></app-list-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

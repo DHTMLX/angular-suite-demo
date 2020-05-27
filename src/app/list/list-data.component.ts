@@ -4,16 +4,14 @@ import { List as ListDHX, DataCollection } from 'dhx-suite';
 @Component({
   selector: 'app-list-data',
   template: `
-    <div>
-      <div class='btn-container'>
+    <section>
+      <div class="dhx-container--button">
         <button (click)="handleClick('reset')" class="custom-button">Reset</button>
         <button (click)="handleClick('remove')" class="custom-button">Remove first item</button>
       </div>
-      <div class="container">
-        <div #widget class='widget-box-wide'></div>
-      </div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './list.scss'],
+      <div #widget style="height: 400px"></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ListDataComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

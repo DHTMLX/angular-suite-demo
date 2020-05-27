@@ -3,14 +3,10 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-list-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './list.scss'],
+  template: `<div #widget></div>`
 })
 export class ListCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   list: any;
   wait: Promise<void>;
