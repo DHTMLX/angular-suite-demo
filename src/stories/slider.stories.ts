@@ -5,9 +5,6 @@ import { SliderConfiguraetedComponent } from '../app/slider/slider-configurated.
 import { SliderCDNComponent } from '../app/slider/slider-cdn.component';
 import { SliderEventsComponent } from '../app/slider/slider-events.component';
 
-
-import './styles/stories.css';
-
 export default {
   title: 'Slider',
   component: SliderComponent,
@@ -22,18 +19,17 @@ export default {
 export const Base = () => ({
   component: SliderComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-slider></app-slider>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -52,18 +48,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-slider-configurated [options]="options"></app-slider-configurated>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -71,18 +66,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: SliderCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-slider-cdn></app-slider-cdn>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -90,18 +84,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: SliderEventsComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/slider/slider-events.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-slider-events></app-slider-events>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

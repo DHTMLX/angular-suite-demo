@@ -1,5 +1,5 @@
 import { SidebarComponent } from '../app/sidebar/sidebar.component';
-import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated';
+import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated.component';
 import { SidebarDataComponent } from '../app/sidebar/sidebar-data.component';
 import { SidebarCDNComponent } from '../app/sidebar/sidebar-cdn.component';
 import { SidebarEventsComponent } from '../app/sidebar/sidebar-events.component';

@@ -3,8 +3,7 @@ import { Slider as SliderDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-slider',
-  template: `<div class="container"><div #widget class='widget-box-wide'></div></div>`,
-  styleUrls: ['../app.component.scss', './slider.scss'],
+  template: `<div #widget style="width:400px"></div>`
 })
 export class SliderComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
