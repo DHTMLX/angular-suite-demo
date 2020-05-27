@@ -5,8 +5,8 @@ import { Timepicker as TimepickerDHX } from 'dhx-suite';
   selector: 'app-timepicker-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box-wide'></div>
-      <div class="events-list-wrapper">
+      <div #widget style="height: 310px"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -14,10 +14,10 @@ import { Timepicker as TimepickerDHX } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './timepicker.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class TimePickerEventsComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   timepicker: TimepickerDHX;
   wait: Promise<void>;
@@ -34,7 +34,10 @@ export class TimePickerEventsComponent implements OnDestroy {
       controls: true,
     });
 
-    this.timepicker.events.on('change', (id) => this.logEvent(id, 'change'));
+    this.timepicker.events.on('change', (value) => this.logEvent(value, 'change'));
+    this.timepicker.events.on('afterClose', (value) => this.logEvent(value, 'afterClose'));
+    this.timepicker.events.on('beforeClose', (value) => this.logEvent(value, 'beforeClose'));
+    this.timepicker.events.on('apply', (value) => this.logEvent(JSON.stringify(value), 'apply'));
   }
 
   ngOnDestroy() {

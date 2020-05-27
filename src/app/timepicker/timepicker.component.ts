@@ -3,11 +3,7 @@ import { Timepicker as TimepickerDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-timepicker',
-  template: `
-    <div class="container">
-        <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './timepicker.scss'],
+  template: `<div #widget></div>`
 })
 export class TimePickerComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

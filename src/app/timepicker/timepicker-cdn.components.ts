@@ -4,11 +4,7 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-timepicker-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './timepicker.scss'],
+  template: `<div #widget></div>`
 })
 export class TimePickerCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

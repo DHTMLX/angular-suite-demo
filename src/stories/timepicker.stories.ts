@@ -19,20 +19,17 @@ export default {
 export const Base = () => ({
   component: TimePickerComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/timepicker/timepicker.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-timepicker></app-timepicker>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-timepicker></app-timepicker>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -47,20 +44,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/timepicker/timepicker-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-timepicker-configurated [options]="options"></app-timepicker-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-timepicker-configurated [options]="options"></app-timepicker-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -68,20 +62,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: TimePickerCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/timepicker/timepicker-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-timepicker-cdn></app-timepicker-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-timepicker-cdn></app-timepicker-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -89,20 +80,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: TimePickerEventsComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/timepicker/timepicker-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-timepicker-event></app-timepicker-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-timepicker-event></app-timepicker-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
