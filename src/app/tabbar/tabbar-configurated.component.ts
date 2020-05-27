@@ -3,14 +3,11 @@ import { Tabbar as TabbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tabbar-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
+  template: `<div #widget class="dhx-container--tabbar"></div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class TabbarConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   tabbar: TabbarDHX;
   wait: Promise<void>;

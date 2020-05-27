@@ -3,10 +3,7 @@ import { Tabbar as TabbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tabbar',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
+  template: `<div #widget class="dhx-container--tabbar"></div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class TabbarComponent implements OnDestroy {
