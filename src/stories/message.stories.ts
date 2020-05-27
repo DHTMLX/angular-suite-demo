@@ -17,20 +17,17 @@ export default {
 export const Base = () => ({
   component: MessageComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/message/message.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-message></app-message>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-message></app-message>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -38,20 +35,17 @@ export const Base = () => ({
 export const CDN = () => ({
   component: MessageCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/message/message-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-message-cdn></app-message-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-message-cdn></app-message-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

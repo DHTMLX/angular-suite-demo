@@ -4,7 +4,7 @@ import fromCDN from 'from-cdn';
 @Component({
   selector: 'app-message-cdn',
   template: `
-    <div class="container">
+    <div class="dhx-container--button">
       <button className="button" (click)="this.showAlert()" class="custom-button">Show Alert</button>
       <button className="button" (click)="this.showConfirm()" class="custom-button">Show Confirm</button>
       <button className="button" (click)="this.showMessage()" class="custom-button">Show Message</button>
