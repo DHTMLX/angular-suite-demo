@@ -6,7 +6,6 @@ import { MenuDataComponent } from '../app/menu/menu-data.component';
 import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
-
 export default {
   title: 'Menu',
   component: MenuComponent,
@@ -21,20 +20,17 @@ export default {
 export const Base = () => ({
   component: MenuComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-menu></app-menu>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-menu></app-menu>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -43,24 +39,21 @@ export const Configurated = () => ({
   component: MenuConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered',
+      css: 'dhx_widget--bordered dhx_widget--bg_white',
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-menu-configurated [options]="options"></app-menu-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-menu-configurated [options]="options"></app-menu-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -68,20 +61,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: MenuDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-menu-data></app-menu-data>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-menu-data></app-menu-data>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -89,20 +79,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: MenuCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-menu-cdn></app-menu-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-menu-cdn></app-menu-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -110,20 +97,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: MenuEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/menu/menu-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-menu-event></app-menu-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-menu-event></app-menu-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

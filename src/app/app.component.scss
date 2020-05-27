@@ -64,4 +64,9 @@
     height: 450px;
     padding: 0 24px;
   }
+
+  &--menu {
+    width: calc(100vw - 48px);
+    padding: 0 24px;
+  }
 }

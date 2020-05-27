@@ -3,14 +3,11 @@ import { Menu as MenuDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-menu-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
+  template: `<div #widget class="dhx-container--menu"></div>`,
   styleUrls: ['../app.component.scss'],
 })
 export class MenuConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   menu: MenuDHX;
   wait: Promise<void>;
