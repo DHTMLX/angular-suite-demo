@@ -18,20 +18,17 @@ export default {
 export const Base = () => ({
   component: PopupComponent,
   template: `
-    <div style="padding: 3rem">
-     <div class="link-container">
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/popup/popup.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-popup></app-popup>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-popup></app-popup>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -39,20 +36,17 @@ export const Base = () => ({
 export const CDN = () => ({
   component: PopupCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div class="link-container">
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/popup/popup-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-popup-cdn></app-popup-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-popup-cdn></app-popup-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -60,20 +54,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: PopupEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div class="link-container">
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/popup/popup-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-popup-event></app-popup-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-popup-event></app-popup-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

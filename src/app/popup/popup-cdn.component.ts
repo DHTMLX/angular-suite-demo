@@ -4,17 +4,14 @@ import fromCDN from 'from-cdn';
 @Component({
   selector: 'app-popup-cdn',
   template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'>
-      </div>
-      <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">
-        Show Popup
-      </button>
+    <div>
+      <div #widget></div>
+      <button (click)="popupShow()" class="custom-button">Show Popup</button>
     </div>`,
-  styleUrls: ['../app.component.scss', './popup.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class PopupCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   popup: any;
   wait: Promise<void>;
@@ -33,6 +30,13 @@ export class PopupCDNComponent implements OnDestroy {
         '<div style=\'padding: 16px; text-align: center\'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>',
       );
       this.ready.emit({popup: this.popup});
+    });
+  }
+
+  popupShow(): void {
+    this.popup.show(this.container.nativeElement, {
+      mode: "bottom",
+      indent: 50
     });
   }
 

@@ -4,20 +4,26 @@ import { Popup as PopupDHX } from 'dhx-suite';
 @Component({
   selector: 'app-popup',
   template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'>
-      </div>
-      <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">
+    <div>
+      <div #widget></div>
+      <button (click)="popupShow()" class="custom-button">
         Show Popup
       </button>
     </div>`,
-  styleUrls: ['../app.component.scss', './popup.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class PopupComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   popup: PopupDHX;
   wait: Promise<void>;
+
+  popupShow(): void {
+    this.popup.show(this.container.nativeElement, {
+      mode: "bottom",
+      indent: 50
+    });
+  }
 
   ngOnInit() {
     this.popup = new PopupDHX({

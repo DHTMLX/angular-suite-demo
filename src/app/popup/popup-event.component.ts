@@ -4,24 +4,23 @@ import { Popup as PopupDHX } from 'dhx-suite';
 @Component({
   selector: 'app-popup-event',
   template: `
-    <div class="component-wrapper">
+    <section class="component-wrapper">
       <div>
-        <div #widget class='widget-box-wide'>
-        </div>
-        <button (click)="this.popup.show(this.container.nativeElement)" class="custom-button">Show Popup</button>
+        <div #widget></div>
+        <button (click)="popupShow()" class="custom-button">Show Popup</button>
       </div>
-      <div class="events-list-wrapper">
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
           <p>{{event.payload}}</p>
         </div>
       </div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './popup.scss'],
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class PopupEventComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   popup: PopupDHX;
   wait: Promise<void>;
@@ -31,6 +30,13 @@ export class PopupEventComponent implements OnDestroy {
   logEvent = (payload, name: string) => {
     this.eventsList = [{name, payload}].concat(this.eventsList);
   };
+
+  popupShow(): void {
+    this.popup.show(this.container.nativeElement, {
+      mode: "left",
+      indent: 20
+    });
+  }
 
   ngOnInit() {
     this.popup = new PopupDHX({
