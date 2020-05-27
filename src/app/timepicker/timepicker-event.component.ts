@@ -37,7 +37,7 @@ export class TimePickerEventsComponent implements OnDestroy {
     this.timepicker.events.on('change', (value) => this.logEvent(value, 'change'));
     this.timepicker.events.on('afterClose', (value) => this.logEvent(value, 'afterClose'));
     this.timepicker.events.on('beforeClose', (value) => this.logEvent(value, 'beforeClose'));
-    this.timepicker.events.on('apply', (value) => this.logEvent(JSON.stringify(value), 'apply'));
+    this.timepicker.events.on('apply', (value) => this.logEvent(JSON.stringify(value, null, 2), 'apply'));
   }
 
   ngOnDestroy() {
