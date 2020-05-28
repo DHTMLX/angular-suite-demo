@@ -12,7 +12,7 @@ function addButtons() {
 	let div = document.createElement('div');
 	const url = window.location.href.split("/");
 	const currentWidget = url[url.length - 1].split("--")[0];
-	div.innerHTML = `<button id='btn-docs'>DHX ${currentWidget[0].toUpperCase() + currentWidget.slice(1)} documentation</button><button id='btn-trial'>Free trial</button>`
+	div.innerHTML = `<button id='btn-docs'>DHX ${currentWidget[0].toUpperCase() + currentWidget.slice(1)} documentation</button><button id='btn-trial'><span>Free trial</span></button>`
 	menuElement.after(div);
 
 	const btnDocs = document.getElementById('btn-docs');
