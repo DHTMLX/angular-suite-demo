@@ -8,7 +8,7 @@
     border: 1px solid #DFDFDF;
     background: #FFF;
     padding: 10px;
-    height: 400px;
+    height: 430px;
     line-height: 1.3;
     overflow-y: auto;
   }
@@ -78,5 +78,12 @@
   &--tabbar {
     width: 802px;
     height: 400px;
+  }
+
+  &--tree {
+    width: 350px;
+    height: 450px;
+    overflow-y: auto;
+    background: #FFF;
   }
 }

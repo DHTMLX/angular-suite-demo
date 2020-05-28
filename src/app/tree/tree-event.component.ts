@@ -5,8 +5,8 @@ import { Tree as TreeDHX } from 'dhx-suite';
   selector: 'app-tree-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box-wide'></div>
-      <div class="events-list-wrapper">
+      <div #widget class="dhx-container--tree"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -14,7 +14,7 @@ import { Tree as TreeDHX } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './tree.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class TreeEventComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
@@ -29,9 +29,7 @@ export class TreeEventComponent implements OnDestroy {
   };
 
   ngOnInit() {
-    this.tree = new TreeDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bg_white dhx_widget--bordered',
-    });
+    this.tree = new TreeDHX(this.container.nativeElement);
 
     this.tree.data.load('https://dhtmlx.github.io/react-widgets/static/tree.json');
 

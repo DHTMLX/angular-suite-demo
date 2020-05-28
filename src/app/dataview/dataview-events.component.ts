@@ -5,7 +5,7 @@ import { DataView as DataviewDHX } from 'dhx-suite';
   selector: 'app-dataview-event',
   template: `
     <div class="component-wrapper">
-    <div #widget style="height: 420px; width: 650px; padding: 0 24px"></div>
+    <div #widget style="height: 450px; width: 650px; padding: 0 24px"></div>
       <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>

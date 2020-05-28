@@ -20,20 +20,17 @@ export default {
 export const Base = () => ({
   component: TreeComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-tree></app-tree>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-tree></app-tree>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -42,26 +39,22 @@ export const Configurated = () => ({
   component: TreeConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
       keyNavigation: true,
       checkbox: true,
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-tree-configurated [options]="options"></app-tree-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-tree-configurated [options]="options"></app-tree-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -69,20 +62,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: TreeDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-tree-data></app-tree-data>
-     </div>
-    </div>
+      >
+         Source code
+      </a>
+      <app-tree-data></app-tree-data>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -90,20 +80,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: TreeCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-tree-cdn></app-tree-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-tree-cdn></app-tree-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -111,20 +98,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: TreeEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/tree/tree-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-tree-event></app-tree-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-tree-event></app-tree-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });

@@ -3,11 +3,8 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-tree-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './tree.scss'],
+  template: `<div #widget class="dhx-container--tree"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class TreeCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })
@@ -22,9 +19,7 @@ export class TreeCDNComponent implements OnDestroy {
       'https://cdn.dhtmlx.com/suite/edge/suite.js',
       'https://cdn.dhtmlx.com/suite/edge/suite.css',
     ]).then(() => {
-      this.tree = new dhx.Tree(this.container.nativeElement, {
-        css: 'dhx_widget--bordered dhx_widget--bg_white',
-      });
+      this.tree = new dhx.Tree(this.container.nativeElement);
       this.tree.data.load('https://dhtmlx.github.io/react-widgets/static/tree.json');
       this.ready.emit({tree: this.tree});
     });

@@ -3,11 +3,8 @@ import { Tree as TreeDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-tree-configurated',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './tree.scss'],
+  template: `<div #widget class="dhx-container--tree"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class TreeConfiguratedComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

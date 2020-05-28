@@ -4,17 +4,17 @@ import { Tree as TreeDHX, TreeCollection } from 'dhx-suite';
 @Component({
   selector: 'app-tree-data',
   template: `
-    <div>
-      <div class="btn-container">
+    <section>
+      <div class="dhx-container--button">
         <button (click)="handleClick(false)" class="custom-button">Collapse All</button>
         <button (click)="handleClick(true)" class="custom-button">Expand All</button>
       </div>
-      <div #widget class='container widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './tree.scss'],
+      <div #widget class="dhx-container--tree"></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class TreeDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   tree: TreeDHX;
   wait: Promise<void>;
@@ -29,7 +29,6 @@ export class TreeDataComponent implements OnDestroy {
 
   ngOnInit() {
     this.tree = new TreeDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
       data: this.data
     });
 
