@@ -3,11 +3,8 @@ import { Toolbar as ToolbarDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-toolbar',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './toolbar.scss'],
+  template: `<div #widget class="dhx-container--menu"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ToolbarComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

@@ -3,11 +3,8 @@ import { Toolbar as ToolbarDHX } from 'dhx-suite';
 import fromCDN from 'from-cdn';
 @Component({
   selector: 'app-toolbar-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './toolbar.scss'],
+  template: `<div #widget class="dhx-container--menu"></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ToolbarCDNComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

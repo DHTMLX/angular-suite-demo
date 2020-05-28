@@ -4,14 +4,14 @@ import { Toolbar as ToolbarDHX, TreeCollection } from 'dhx-suite';
 @Component({
   selector: 'app-toolbar-data',
   template: `
-    <div>
-      <div class="btn-container">
+    <section>
+      <div class="dhx-container--button">
         <button (click)="handleAddClick(click)" class="custom-button">Add notification</button>
         <button (click)="handleResetClick(click)" class="custom-button">Reset {{count}} notifications</button>
       </div>
-      <div #widget class='container widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './toolbar.scss'],
+      <div #widget class="dhx-container--menu"></div>
+    </section>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class ToolbarDataComponent implements OnDestroy {
   @ViewChild('widget', { static: true })

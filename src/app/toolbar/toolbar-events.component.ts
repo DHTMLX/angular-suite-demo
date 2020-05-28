@@ -5,8 +5,8 @@ import { Toolbar as ToolbarDHX } from 'dhx-suite';
   selector: 'app-toolbar-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box-wide slider-container'></div>
-      <div class="events-list-wrapper">
+      <div #widget class="dhx-container--menu" style="width: 600px"></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -17,7 +17,7 @@ import { Toolbar as ToolbarDHX } from 'dhx-suite';
   styleUrls: ['../app.component.scss'],
 })
 export class ToolbarEventsComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;

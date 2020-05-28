@@ -20,18 +20,17 @@ export default {
 export const Base = () => ({
   component: ToolbarComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-      <app-toolbar></app-toolbar>
-    </div>
+      >
+        Source code
+      </a>
+    <app-toolbar></app-toolbar>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -45,18 +44,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-toolbar-configurated [options]="options"></app-toolbar-configurated>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -64,18 +62,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: ToolbarDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-toolbar-data></app-toolbar-data>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -83,18 +80,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: ToolbarCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-toolbar-cdn></app-toolbar-cdn>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 
@@ -103,18 +99,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: ToolbarEventsComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/toolbar/toolbar-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-toolbar-event></app-toolbar-event>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
