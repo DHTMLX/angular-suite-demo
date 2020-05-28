@@ -4,8 +4,8 @@ import fromCDN from 'from-cdn';
 @Component({
   selector: 'app-window-cdn',
   template:
-  `<div class="container">
-      <div #widget class='widget-box-wide'></div>
+  `<div>
+      <div #widget></div>
       <button className="button" (click)="this.window.show()" class="custom-button">
         Show Window
       </button>

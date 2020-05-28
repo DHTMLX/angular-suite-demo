@@ -7,11 +7,11 @@ import { Window } from 'dhx-suite';
     <div class="component-wrapper">
       <div class="container">
         <div #widget class='widget-box-wide'></div>
-        <button className="button" (click)="this.window.show()" class="custom-button">
+        <button className="button" (click)="this.window.show(20, 20)" class="custom-button">
           Show Window
         </button>
       </div>
-      <div class="events-list-wrapper">
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>
@@ -19,7 +19,7 @@ import { Window } from 'dhx-suite';
         </div>
       </div>
     </div>`,
-  styleUrls: ['../app.component.scss', './window.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class WindowEventComponent implements OnDestroy {
   window: Window;
@@ -43,7 +43,7 @@ export class WindowEventComponent implements OnDestroy {
       resizable: true
     });
 
-    this.window.show(650, 100);
+    this.window.show(20, 20);
 
     this.window.events.on('resize', (size, oldsize, resizeSide) => {
       const info = {size, oldsize, resizeSide};

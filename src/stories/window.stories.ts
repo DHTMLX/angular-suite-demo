@@ -19,20 +19,17 @@ export default {
 export const Base = () => ({
   component: WindowComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-window></app-window>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-window></app-window>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -50,20 +47,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-window-configurated [options]="options"></app-window-configurated>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-window-configurated [options]="options"></app-window-configurated>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -71,20 +65,17 @@ export const Configurated = () => ({
 export const CDN = () => ({
   component: WindowCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-window-cdn></app-window-cdn>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-window-cdn></app-window-cdn>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -92,20 +83,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: WindowEventComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/window/window-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
-     <div>
-        <app-window-event></app-window-event>
-     </div>
-    </div>
+      >
+        Source code
+      </a>
+      <app-window-event></app-window-event>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
