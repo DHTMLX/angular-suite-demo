@@ -3,14 +3,11 @@ import { Ribbon as RibbonDHX } from 'dhx-suite';
 
 @Component({
   selector: 'app-ribbon',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './ribbon.scss'],
+  template: `<div #widget></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class RibbonComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: RibbonDHX;
   wait: Promise<void>;

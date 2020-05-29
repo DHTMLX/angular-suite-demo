@@ -4,14 +4,11 @@ import fromCDN from 'from-cdn';
 
 @Component({
   selector: 'app-ribbon-cdn',
-  template: `
-    <div class="container">
-      <div #widget class='widget-box-wide'></div>
-    </div>`,
-  styleUrls: ['../app.component.scss', './ribbon.scss'],
+  template: `<div #widget></div>`,
+  styleUrls: ['../app.component.scss'],
 })
 export class RibbonCDNComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   ribbon: RibbonDHX;
   wait: Promise<void>;

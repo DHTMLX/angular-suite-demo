@@ -5,15 +5,15 @@ import { Ribbon as RibbonDHX, TreeCollection } from 'dhx-suite';
   selector: 'app-ribbon-data',
   template: `
     <div>
-      <div class="btn-container">
+      <div class="dhx-container--button">
         <button (click)="handleAddClick(click)" class="custom-button">disable/enable print button</button>
       </div>
-      <div #widget class='container widget-box-wide'></div>
+      <div #widget></div>
     </div>`,
-  styleUrls: ['../app.component.scss', './ribbon.scss'],
+  styleUrls: ['../app.component.scss'],
 })
 export class RibbonDataComponent implements OnDestroy {
-  @ViewChild('widget', {static: true})
+  @ViewChild('widget', { static: true })
   container: ElementRef;
   toolbar: RibbonDHX;
   wait: Promise<void>;

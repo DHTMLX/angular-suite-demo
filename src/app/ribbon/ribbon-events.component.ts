@@ -5,8 +5,8 @@ import { Ribbon as RibbonDHX } from 'dhx-suite';
   selector: 'app-ribbon-event',
   template: `
     <div class="component-wrapper">
-      <div #widget class='widget-box-wide'></div>
-      <div class="events-list-wrapper">
+      <div #widget></div>
+      <div class="events-list events-list-wrapper">
         <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
         <div class="events-list--element" *ngFor='let event of eventsList'>
           <p>{{event.name}}</p>

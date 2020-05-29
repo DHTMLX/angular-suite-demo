@@ -20,18 +20,17 @@ export default {
 export const Base = () => ({
   component: RibbonComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-ribbon></app-ribbon>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -44,18 +43,17 @@ export const Configurated = () => ({
     }
   },
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Pre-configured component</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-configurated.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-ribbon-configurated [options]="options"></app-ribbon-configurated>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -63,18 +61,17 @@ export const Configurated = () => ({
 export const Data = () => ({
   component: RibbonDataComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Work with data</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-data.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-ribbon-data></app-ribbon-data>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -82,18 +79,17 @@ export const Data = () => ({
 export const CDN = () => ({
   component: RibbonCDNComponent,
   template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>CDN basic initialization</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-cdn.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-ribbon-cdn></app-ribbon-cdn>
-    </div>
+    </section>
   `,
   styleUrls: ['./styles/stories.css'],
 });
@@ -101,18 +97,17 @@ export const CDN = () => ({
 export const Events = () => ({
   component: RibbonEventsComponent,
     template: `
-    <div style="padding: 3rem">
-     <div>
-        <a
+    <section class="dhx-container">
+      <h3>Component Events</h3>
+      <a
         class="source-link"
         href="https://github.com/DHTMLX/angular-suite-demo/blob/master/src/app/ribbon/ribbon-event.component.ts"
         target="_blank"
-        >
-            Source code
-        </a>
-     </div>
+      >
+        Source code
+      </a>
       <app-ribbon-event></app-ribbon-event>
-    </div>
+    </section>
   `,
     styleUrls: ['./styles/stories.css'],
 });
