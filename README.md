@@ -6,7 +6,7 @@
 
 [![react-widgets](https://raw.githubusercontent.com/plazarev/media/master/Suite%402x.png)](https://dhtmlx.github.io/angular-suite-demo/?path=/story)
 
-## Getting Started
+## Getting started
 
 In most samples DHTMLX Widgets are loaded through NPM that provides limited (GPL) version of components. For production you should use the PRO version.
 
@@ -19,7 +19,7 @@ To run the app in the development mode, run `npm storybook` in the project direc
 Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
 
-## Examples
+## Live demos
 
 - [Calendar](https://dhtmlx.github.io/angular-suite-demo/?path=/story/calendar--base)
 
@@ -71,7 +71,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 - [Support forum](https://forum.dhtmlx.com/c/suite6)
 
 
-## Follow Us
+## Follow us
 
 Star our GitHub repo :star:
 
