@@ -1,7 +1,7 @@
 {
   "name": "ng-widgets",
-  "version": "0.0.0",
-  "homepage": " https://dhtmlx.github.io/react-widgets/",
+  "version": "1.0.0",
+  "homepage": "https://github.com/DHTMLX/angular-suite-demo",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
