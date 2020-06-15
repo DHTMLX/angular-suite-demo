@@ -1,3 +1,7 @@
+<p align="center">      
+	<a href="https://dhtmlx.github.io/angular-suite-demo/?path=/story/calendar--base"><img src="https://dhtmlx.github.io/angular-suite-demo/assets/logo.svg" width="150" heigh="55"></a>
+</p>
+
 
 # DHTMLX Widgets + Angular
 
