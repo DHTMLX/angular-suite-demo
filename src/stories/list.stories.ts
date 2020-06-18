@@ -1,14 +1,13 @@
-import { ListComponent } from '../app/list/list.component';
-import { ListEventComponent } from '../app/list/list-event.component';
-import { ListCDNComponent } from '../app/list/list-cdn.component';
-import { ListConfiguratedComponent } from '../app/list/list-configurated.component';
-import { ListDataComponent } from '../app/list/list-data.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-
+import { ListComponent } from "../app/list/list.component";
+import { ListEventComponent } from "../app/list/list-event.component";
+import { ListCDNComponent } from "../app/list/list-cdn.component";
+import { ListConfiguratedComponent } from "../app/list/list-configurated.component";
+import { ListDataComponent } from "../app/list/list-data.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'List',
+  title: "List",
   component: ListComponent,
   decorators: [
     moduleMetadata({
@@ -33,20 +32,20 @@ export const Base = () => ({
       <app-list></app-list>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: ListConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-      template: (item) => `<span><strong>${item.title}</strong> ${item.short}</span>`,
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+      template: item => `<span><strong>${item.title}</strong> ${item.short}</span>`,
       height: 400,
       itemHeight: 70,
       keyNavigation: true,
-      dragMode: "both"
-    }
+      dragMode: "both",
+    },
   },
   template: `
     <section class="dhx-container">
@@ -61,7 +60,7 @@ export const Configurated = () => ({
       <app-list-configurated [options]="options"></app-list-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -79,7 +78,7 @@ export const Data = () => ({
       <app-list-data></app-list-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -97,7 +96,7 @@ export const CDN = () => ({
       <app-list-cdn></app-list-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -115,9 +114,5 @@ export const Events = () => ({
       <app-list-event></app-list-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
-
-
-
-

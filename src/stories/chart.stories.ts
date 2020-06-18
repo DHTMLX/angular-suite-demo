@@ -1,13 +1,13 @@
-import { ChartComponent } from '../app/chart/chart.component';
-import { ChartEventComponent } from '../app/chart/chart-event.component';
-import { ChartCDNComponent } from '../app/chart/chart-cdn.component';
-import { ChartDataComponent } from '../app/chart/chart-data.component';
-import { ChartConfiguratedComponent } from '../app/chart/chart-configurated.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { ChartComponent } from "../app/chart/chart.component";
+import { ChartEventComponent } from "../app/chart/chart-event.component";
+import { ChartCDNComponent } from "../app/chart/chart-cdn.component";
+import { ChartDataComponent } from "../app/chart/chart-data.component";
+import { ChartConfiguratedComponent } from "../app/chart/chart-configurated.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Chart',
+  title: "Chart",
   component: ChartComponent,
   decorators: [
     moduleMetadata({
@@ -32,35 +32,35 @@ export const Base = () => ({
       <app-chart></app-chart>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: ChartConfiguratedComponent,
   props: {
     options: {
-			type: "spline",
-			scales: {
-				"bottom": {
-					text: "month"
-				},
-				"left": {
-					maxTicks: 10,
-					max: 100,
-					min: 0
-				}
-			},
-			series: [
-				{
-					id: "A",
-					value: "company C",
-					color: "#5E83BA",
-					pointType: "circle",
-					fill: "#5E83BA",
-					barWidth: 35
-				}
-			]
-    }
+      type: "spline",
+      scales: {
+        bottom: {
+          text: "month",
+        },
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: "A",
+          value: "company C",
+          color: "#5E83BA",
+          pointType: "circle",
+          fill: "#5E83BA",
+          barWidth: 35,
+        },
+      ],
+    },
   },
   template: `
     <section class="dhx-container">
@@ -75,7 +75,7 @@ export const Configurated = () => ({
       <app-chart-configurated [options]="options"></app-chart-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -93,7 +93,7 @@ export const Data = () => ({
       <app-chart-data></app-chart-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -111,7 +111,7 @@ export const CDN = () => ({
       <app-chart-cdn></app-chart-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -129,5 +129,5 @@ export const Events = () => ({
       <app-chart-event></app-chart-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

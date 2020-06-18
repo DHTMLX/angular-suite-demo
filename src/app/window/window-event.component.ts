@@ -1,25 +1,24 @@
-import { Component, OnDestroy } from '@angular/core';
-import { Window } from 'dhx-suite';
+import { Component, OnDestroy } from "@angular/core";
+import { Window } from "dhx-suite";
 
 @Component({
-  selector: 'app-window-event',
-  template: `
-    <div class="component-wrapper">
-      <div class="container">
-        <div #widget class='widget-box-wide'></div>
-        <button className="button" (click)="this.window.show(20, 20)" class="custom-button">
-          Show Window
-        </button>
+  selector: "app-window-event",
+  template: ` <div class="component-wrapper">
+    <div class="container">
+      <div #widget class="widget-box-wide"></div>
+      <button className="button" (click)="this.window.show(20, 20)" class="custom-button">
+        Show Window
+      </button>
+    </div>
+    <div class="events-list events-list-wrapper">
+      <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+      <div class="events-list--element" *ngFor="let event of eventsList">
+        <p>{{ event.name }}</p>
+        <p>{{ event.payload }}</p>
       </div>
-      <div class="events-list events-list-wrapper">
-        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-        <div class="events-list--element" *ngFor='let event of eventsList'>
-          <p>{{event.name}}</p>
-          <p>{{event.payload}}</p>
-        </div>
-      </div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+    </div>
+  </div>`,
+  styleUrls: ["../app.component.scss"],
 })
 export class WindowEventComponent implements OnDestroy {
   window: Window;
@@ -28,7 +27,7 @@ export class WindowEventComponent implements OnDestroy {
   eventsList = [];
 
   logEvent = (payload, name: string) => {
-    this.eventsList = [{name, payload}].concat(this.eventsList);
+    this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
   ngOnInit() {
@@ -36,30 +35,30 @@ export class WindowEventComponent implements OnDestroy {
     this.window = new Window({
       width: 340,
       height: 420,
-      title: 'Window',
+      title: "Window",
       html: windowHtml,
       closable: true,
       movable: true,
-      resizable: true
+      resizable: true,
     });
 
     this.window.show(20, 20);
 
-    this.window.events.on('resize', (size, oldsize, resizeSide) => {
-      const info = {size, oldsize, resizeSide};
-      this.logEvent(JSON.stringify(info), 'resize');
+    this.window.events.on("resize", (size, oldsize, resizeSide) => {
+      const info = { size, oldsize, resizeSide };
+      this.logEvent(JSON.stringify(info), "resize");
     });
-    this.window.events.on('headerDoubleClick', () => this.logEvent(null, 'headerDoubleClick'));
-    this.window.events.on('move', (values) => {
-      this.logEvent(JSON.stringify(values), 'move');
+    this.window.events.on("headerDoubleClick", () => this.logEvent(null, "headerDoubleClick"));
+    this.window.events.on("move", values => {
+      this.logEvent(JSON.stringify(values), "move");
     });
-    this.window.events.on('afterShow', () => this.logEvent(null, 'afterShow'));
-    this.window.events.on('afterHide', () => this.logEvent(null, 'afterHide'));
-    this.window.events.on('beforeShow', (x, y) => {
-      const position = {x, y};
-      this.logEvent(JSON.stringify(position), 'beforeShow');
+    this.window.events.on("afterShow", () => this.logEvent(null, "afterShow"));
+    this.window.events.on("afterHide", () => this.logEvent(null, "afterHide"));
+    this.window.events.on("beforeShow", (x, y) => {
+      const position = { x, y };
+      this.logEvent(JSON.stringify(position), "beforeShow");
     });
-    this.window.events.on('beforeHide', () => this.logEvent(null, 'beforeHide'));
+    this.window.events.on("beforeHide", () => this.logEvent(null, "beforeHide"));
   }
 
   ngOnDestroy() {

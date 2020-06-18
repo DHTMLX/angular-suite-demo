@@ -1,23 +1,22 @@
-import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
-import { Toolbar as ToolbarDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from "@angular/core";
+import { Toolbar as ToolbarDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-toolbar-event',
-  template: `
-    <div class="component-wrapper">
-      <div #widget class="dhx-container--menu" style="width: 600px"></div>
-      <div class="events-list events-list-wrapper">
-        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-        <div class="events-list--element" *ngFor='let event of eventsList'>
-          <p>{{event.name}}</p>
-          <p>{{event.payload}}</p>
-        </div>
+  selector: "app-toolbar-event",
+  template: ` <div class="component-wrapper">
+    <div #widget class="dhx-container--menu" style="width: 600px"></div>
+    <div class="events-list events-list-wrapper">
+      <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+      <div class="events-list--element" *ngFor="let event of eventsList">
+        <p>{{ event.name }}</p>
+        <p>{{ event.payload }}</p>
       </div>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+    </div>
+  </div>`,
+  styleUrls: ["../app.component.scss"],
 })
 export class ToolbarEventsComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;
@@ -25,25 +24,25 @@ export class ToolbarEventsComponent implements OnDestroy {
   eventsList = [];
 
   logEvent = (payload, name: string) => {
-    this.eventsList = [{name, payload}].concat(this.eventsList);
+    this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
   ngOnInit() {
     this.toolbar = new ToolbarDHX(this.container.nativeElement, {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       controls: true,
     });
 
-    this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/toolbar.json');
+    this.toolbar.data.load("https://dhtmlx.github.io/react-widgets/static/toolbar.json");
 
-    this.toolbar.events.on('click', (id) => this.logEvent(id, 'click'));
+    this.toolbar.events.on("click", id => this.logEvent(id, "click"));
 
-    this.toolbar.events.on('inputCreated', (id) => this.logEvent(id, 'inputCreated'));
-    this.toolbar.events.on('openMenu', (id) => this.logEvent(id, 'openmenu'));
-    this.toolbar.events.on('inputFocus', (id) => this.logEvent(id, 'inputFocus'));
-    this.toolbar.events.on('inputBlur', (id) => this.logEvent(id, 'inputBlur'));
-    this.toolbar.events.on('afterHide', (id) => this.logEvent(id, 'afterHide'));
-    this.toolbar.events.on('beforeHide', (id) => this.logEvent(id, 'beforeHide'));
+    this.toolbar.events.on("inputCreated", id => this.logEvent(id, "inputCreated"));
+    this.toolbar.events.on("openMenu", id => this.logEvent(id, "openmenu"));
+    this.toolbar.events.on("inputFocus", id => this.logEvent(id, "inputFocus"));
+    this.toolbar.events.on("inputBlur", id => this.logEvent(id, "inputBlur"));
+    this.toolbar.events.on("afterHide", id => this.logEvent(id, "afterHide"));
+    this.toolbar.events.on("beforeHide", id => this.logEvent(id, "beforeHide"));
   }
 
   ngOnDestroy() {

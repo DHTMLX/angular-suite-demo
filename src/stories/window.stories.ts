@@ -1,12 +1,12 @@
-import { WindowComponent } from '../app/window/window.component';
-import { WindowEventComponent } from '../app/window/window-event.component';
-import { WindowCDNComponent } from '../app/window/window-cdn.component';
-import { WindowConfiguratedComponent } from '../app/window/window-configurated.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { WindowComponent } from "../app/window/window.component";
+import { WindowEventComponent } from "../app/window/window-event.component";
+import { WindowCDNComponent } from "../app/window/window-cdn.component";
+import { WindowConfiguratedComponent } from "../app/window/window-configurated.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Window',
+  title: "Window",
   component: WindowComponent,
   decorators: [
     moduleMetadata({
@@ -31,7 +31,7 @@ export const Base = () => ({
       <app-window></app-window>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
@@ -40,11 +40,11 @@ export const Configurated = () => ({
     options: {
       width: 440,
       height: 520,
-      title: 'Window',
+      title: "Window",
       html: `<p>Here is a neat and flexible JavaScript window system with a fast and simple initialization.</p><p>Inspect all the DHTMLX window samples to discover each and every feature.</p><img style='display: block; width: 200px; height: 200px; margin-top: 20px; margin-left: auto; margin-right: auto' src='https://dhtmlx.github.io/react-widgets/static/developer.svg'>`,
       closable: true,
-      modal: true
-    }
+      modal: true,
+    },
   },
   template: `
     <section class="dhx-container">
@@ -59,7 +59,7 @@ export const Configurated = () => ({
       <app-window-configurated [options]="options"></app-window-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -77,7 +77,7 @@ export const CDN = () => ({
       <app-window-cdn></app-window-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -95,5 +95,5 @@ export const Events = () => ({
       <app-window-event></app-window-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

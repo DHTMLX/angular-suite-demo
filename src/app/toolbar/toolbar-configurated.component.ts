@@ -1,13 +1,13 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Toolbar as ToolbarDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Toolbar as ToolbarDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-toolbar-configurated',
+  selector: "app-toolbar-configurated",
   template: `<div #widget class="dhx-container--menu"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class ToolbarConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   toolbar: ToolbarDHX;
   wait: Promise<void>;
@@ -16,10 +16,10 @@ export class ToolbarConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.toolbar = new ToolbarDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
 
-    this.toolbar.data.load('https://dhtmlx.github.io/react-widgets/static/toolbar.json');
+    this.toolbar.data.load("https://dhtmlx.github.io/react-widgets/static/toolbar.json");
   }
 
   ngOnDestroy() {

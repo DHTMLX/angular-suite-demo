@@ -1,13 +1,13 @@
-import { TreeComponent } from '../app/tree/tree.component';
-import { TreeEventComponent } from '../app/tree/tree-event.component';
-import { TreeCDNComponent } from '../app/tree/tree-cdn.component';
-import { TreeDataComponent } from '../app/tree/tree-data.component';
-import { TreeConfiguratedComponent } from '../app/tree/tree-configurated.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { TreeComponent } from "../app/tree/tree.component";
+import { TreeEventComponent } from "../app/tree/tree-event.component";
+import { TreeCDNComponent } from "../app/tree/tree-cdn.component";
+import { TreeDataComponent } from "../app/tree/tree-data.component";
+import { TreeConfiguratedComponent } from "../app/tree/tree-configurated.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Tree',
+  title: "Tree",
   component: TreeComponent,
   decorators: [
     moduleMetadata({
@@ -32,7 +32,7 @@ export const Base = () => ({
       <app-tree></app-tree>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
@@ -41,7 +41,7 @@ export const Configurated = () => ({
     options: {
       keyNavigation: true,
       checkbox: true,
-    }
+    },
   },
   template: `
     <section class="dhx-container">
@@ -56,7 +56,7 @@ export const Configurated = () => ({
       <app-tree-configurated [options]="options"></app-tree-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -74,7 +74,7 @@ export const Data = () => ({
       <app-tree-data></app-tree-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -92,7 +92,7 @@ export const CDN = () => ({
       <app-tree-cdn></app-tree-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -110,5 +110,5 @@ export const Events = () => ({
       <app-tree-event></app-tree-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

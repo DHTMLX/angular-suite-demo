@@ -1,13 +1,13 @@
-import { SidebarComponent } from '../app/sidebar/sidebar.component';
-import { SidebarConfiguratedComponent } from '../app/sidebar/sidebar-configurated.component';
-import { SidebarDataComponent } from '../app/sidebar/sidebar-data.component';
-import { SidebarCDNComponent } from '../app/sidebar/sidebar-cdn.component';
-import { SidebarEventsComponent } from '../app/sidebar/sidebar-events.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { SidebarComponent } from "../app/sidebar/sidebar.component";
+import { SidebarConfiguratedComponent } from "../app/sidebar/sidebar-configurated.component";
+import { SidebarDataComponent } from "../app/sidebar/sidebar-data.component";
+import { SidebarCDNComponent } from "../app/sidebar/sidebar-cdn.component";
+import { SidebarEventsComponent } from "../app/sidebar/sidebar-events.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Sidebar',
+  title: "Sidebar",
   component: SidebarComponent,
   decorators: [
     moduleMetadata({
@@ -32,18 +32,18 @@ export const Base = () => ({
       <app-sidebar></app-sidebar>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: SidebarConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      css: "dhx_widget--bordered dhx_widget--bg_white",
       width: 200,
       minWidth: 120,
       collapsed: false,
-    }
+    },
   },
   template: `
     <section class="dhx-container">
@@ -58,7 +58,7 @@ export const Configurated = () => ({
       <app-sidebar-configurated [options]="options"></app-sidebar-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -76,7 +76,7 @@ export const Data = () => ({
       <app-sidebar-data></app-sidebar-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -94,7 +94,7 @@ export const CDN = () => ({
       <app-sidebar-cdn></app-sidebar-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -112,5 +112,5 @@ export const Events = () => ({
       <app-sidebar-event></app-sidebar-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

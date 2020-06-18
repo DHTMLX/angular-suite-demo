@@ -1,13 +1,13 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Grid as GridDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Grid as GridDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-grid-configurated',
+  selector: "app-grid-configurated",
   template: `<div #widget class="dhx-container--grid"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class GridConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   grid: GridDHX;
   wait: Promise<void>;
@@ -16,7 +16,7 @@ export class GridConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.grid = new GridDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
     this.grid.data.load(`https://dhtmlx.github.io/react-widgets/static/grid.json`);
   }

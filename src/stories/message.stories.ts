@@ -1,10 +1,10 @@
-import { MessageComponent } from '../app/message/message.component';
-import { MessageCDNComponent } from '../app/message/message-cdn.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { MessageComponent } from "../app/message/message.component";
+import { MessageCDNComponent } from "../app/message/message-cdn.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Message',
+  title: "Message",
   component: MessageComponent,
   decorators: [
     moduleMetadata({
@@ -29,7 +29,7 @@ export const Base = () => ({
       <app-message></app-message>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -47,5 +47,5 @@ export const CDN = () => ({
       <app-message-cdn></app-message-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

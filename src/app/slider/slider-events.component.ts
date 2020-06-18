@@ -1,24 +1,24 @@
-import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
-import { Slider as SliderDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from "@angular/core";
+import { Slider as SliderDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-slider-events',
+  selector: "app-slider-events",
   template: `
-  <div class="component-wrapper">
-    <div #widget style="width:400px"></div>
-    <div class="events-list events-list-wrapper">
-      <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
-        <div class="events-list--element" *ngFor='let event of eventsList'>
-          <p>{{event.name}}</p>
-          <p>{{event.payload}}</p>
+    <div class="component-wrapper">
+      <div #widget style="width:400px"></div>
+      <div class="events-list events-list-wrapper">
+        <div class="events-list--element" *ngIf="this.eventsList.length == 0">No events yet</div>
+        <div class="events-list--element" *ngFor="let event of eventsList">
+          <p>{{ event.name }}</p>
+          <p>{{ event.payload }}</p>
+        </div>
       </div>
     </div>
-  </div>
-`,
-    styleUrls: ['../app.component.scss'],
+  `,
+  styleUrls: ["../app.component.scss"],
 })
 export class SliderEventsComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   timepicker: SliderDHX;
   wait: Promise<void>;
@@ -26,7 +26,7 @@ export class SliderEventsComponent implements OnDestroy {
   eventsList = [];
 
   logEvent = (payload, name: string) => {
-    this.eventsList = [ { name, payload } ].concat(this.eventsList);
+    this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
   ngOnInit() {
@@ -37,17 +37,17 @@ export class SliderEventsComponent implements OnDestroy {
       tooltip: true,
       tick: 1,
       majorTick: 10,
-      tickTemplate: (v) => v,
+      tickTemplate: v => v,
     });
 
-    this.timepicker.events.on('change', (id) => this.logEvent(id, 'change'));
-    this.timepicker.events.on('mousedown', (id) => this.logEvent(id, 'mousedown'));
-    this.timepicker.events.on('mouseup', (id) => this.logEvent(id, 'mouseup'));
+    this.timepicker.events.on("change", id => this.logEvent(id, "change"));
+    this.timepicker.events.on("mousedown", id => this.logEvent(id, "mousedown"));
+    this.timepicker.events.on("mouseup", id => this.logEvent(id, "mouseup"));
   }
 
   ngOnDestroy() {
     if (this.timepicker) {
-        this.timepicker.destructor();
+      this.timepicker.destructor();
     }
   }
 }

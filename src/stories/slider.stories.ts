@@ -1,12 +1,12 @@
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-import { SliderComponent } from '../app/slider/slider.component';
-import { SliderConfiguraetedComponent } from '../app/slider/slider-configurated.component';
-import { SliderCDNComponent } from '../app/slider/slider-cdn.component';
-import { SliderEventsComponent } from '../app/slider/slider-events.component';
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
+import { SliderComponent } from "../app/slider/slider.component";
+import { SliderConfiguraetedComponent } from "../app/slider/slider-configurated.component";
+import { SliderCDNComponent } from "../app/slider/slider-cdn.component";
+import { SliderEventsComponent } from "../app/slider/slider-events.component";
 
 export default {
-  title: 'Slider',
+  title: "Slider",
   component: SliderComponent,
   decorators: [
     moduleMetadata({
@@ -31,7 +31,7 @@ export const Base = () => ({
       <app-slider></app-slider>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
@@ -44,8 +44,8 @@ export const Configurated = () => ({
       tooltip: true,
       tick: 1,
       majorTick: 10,
-      tickTemplate: (v) => v,
-    }
+      tickTemplate: v => v,
+    },
   },
   template: `
     <section class="dhx-container">
@@ -60,7 +60,7 @@ export const Configurated = () => ({
       <app-slider-configurated [options]="options"></app-slider-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -78,7 +78,7 @@ export const CDN = () => ({
       <app-slider-cdn></app-slider-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -96,5 +96,5 @@ export const Events = () => ({
       <app-slider-events></app-slider-events>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

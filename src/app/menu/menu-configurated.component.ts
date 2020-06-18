@@ -1,13 +1,13 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Menu as MenuDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Menu as MenuDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-menu-configurated',
+  selector: "app-menu-configurated",
   template: `<div #widget class="dhx-container--menu"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class MenuConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   menu: MenuDHX;
   wait: Promise<void>;
@@ -16,7 +16,7 @@ export class MenuConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.menu = new MenuDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
     this.menu.data.load(`https://dhtmlx.github.io/react-widgets/static/menu.json`);
   }

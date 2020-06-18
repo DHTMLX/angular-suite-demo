@@ -1,13 +1,12 @@
-import { ColorPickerComponent } from '../app/colorpicker/colorpicker.component';
-import { ColorPickerCDNComponent } from '../app/colorpicker/colorpicker-cdn.component';
-import { ColorpickerEventComponent } from '../app/colorpicker/colorpicker-event.component';
-import { ColorpickerComponentConfigurated } from '../app/colorpicker/colorpicker-configurated.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-
+import { ColorPickerComponent } from "../app/colorpicker/colorpicker.component";
+import { ColorPickerCDNComponent } from "../app/colorpicker/colorpicker-cdn.component";
+import { ColorpickerEventComponent } from "../app/colorpicker/colorpicker-event.component";
+import { ColorpickerComponentConfigurated } from "../app/colorpicker/colorpicker-configurated.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Color Picker',
+  title: "Color Picker",
   component: ColorPickerCDNComponent,
   decorators: [
     moduleMetadata({
@@ -32,18 +31,18 @@ export const Base = () => ({
       <app-colorpicker></app-colorpicker>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: ColorpickerComponentConfigurated,
   props: {
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       paletteOnly: true,
       grayShades: true,
-      pickerOnly: true
-    }
+      pickerOnly: true,
+    },
   },
   template: `
     <section class="dhx-container">
@@ -58,7 +57,7 @@ export const Configurated = () => ({
       <app-colorpicker-configurated [options]="options"></app-colorpicker-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -76,7 +75,7 @@ export const CDN = () => ({
       <app-colorpicker-cdn></app-colorpicker-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Event = () => ({
@@ -94,5 +93,5 @@ export const Event = () => ({
       <app-colorpicker-event></app-colorpicker-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

@@ -1,13 +1,13 @@
-import { ToolbarComponent } from '../app/toolbar/toolbar.component';
-import { ToolbarConfiguratedComponent } from '../app/toolbar/toolbar-configurated.component';
-import { ToolbarDataComponent } from '../app/toolbar/toolbar-data.component';
-import { ToolbarCDNComponent } from '../app/toolbar/toolbar-cdn.component';
-import { ToolbarEventsComponent } from '../app/toolbar/toolbar-events.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { ToolbarComponent } from "../app/toolbar/toolbar.component";
+import { ToolbarConfiguratedComponent } from "../app/toolbar/toolbar-configurated.component";
+import { ToolbarDataComponent } from "../app/toolbar/toolbar-data.component";
+import { ToolbarCDNComponent } from "../app/toolbar/toolbar-cdn.component";
+import { ToolbarEventsComponent } from "../app/toolbar/toolbar-events.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Toolbar',
+  title: "Toolbar",
   component: ToolbarComponent,
   decorators: [
     moduleMetadata({
@@ -32,16 +32,16 @@ export const Base = () => ({
     <app-toolbar></app-toolbar>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: ToolbarConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-      navigationType: 'pointer',
-    }
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+      navigationType: "pointer",
+    },
   },
   template: `
     <section class="dhx-container">
@@ -56,7 +56,7 @@ export const Configurated = () => ({
       <app-toolbar-configurated [options]="options"></app-toolbar-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -74,7 +74,7 @@ export const Data = () => ({
       <app-toolbar-data></app-toolbar-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -92,8 +92,7 @@ export const CDN = () => ({
       <app-toolbar-cdn></app-toolbar-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
-
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -111,5 +110,5 @@ export const Events = () => ({
       <app-toolbar-event></app-toolbar-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

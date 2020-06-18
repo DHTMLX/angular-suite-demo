@@ -1,6 +1,6 @@
 .dhx-container {
   font-family: Roboto;
-  background-color: rgba(0, 0, 0, .07);
+  background-color: rgba(0, 0, 0, 0.07);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,9 +12,9 @@
   cursor: pointer;
   text-decoration: none;
   display: block;
-  color: #0288D1;
+  color: #0288d1;
   margin-bottom: 36px;
 }
 .dhx-container h3 {
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, 0.7);
 }

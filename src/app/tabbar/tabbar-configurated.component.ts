@@ -1,13 +1,13 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Tabbar as TabbarDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Tabbar as TabbarDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-tabbar-configurated',
+  selector: "app-tabbar-configurated",
   template: `<div #widget class="dhx-container--tabbar"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class TabbarConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   tabbar: TabbarDHX;
   wait: Promise<void>;
@@ -16,7 +16,7 @@ export class TabbarConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.tabbar = new TabbarDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
   }
 

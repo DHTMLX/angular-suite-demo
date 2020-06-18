@@ -1,13 +1,13 @@
-import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
-import { Tree as TreeDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from "@angular/core";
+import { Tree as TreeDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-tree',
+  selector: "app-tree",
   template: `<div #widget class="dhx-container--tree"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class TreeComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   tree: TreeDHX;
   wait: Promise<void>;
@@ -15,7 +15,7 @@ export class TreeComponent implements OnDestroy {
   ngOnInit() {
     this.tree = new TreeDHX(this.container.nativeElement);
 
-    this.tree.data.load('https://dhtmlx.github.io/react-widgets/static/tree.json');
+    this.tree.data.load("https://dhtmlx.github.io/react-widgets/static/tree.json");
   }
 
   ngOnDestroy() {

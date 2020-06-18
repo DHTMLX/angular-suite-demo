@@ -1,12 +1,12 @@
-import { CalendarCDNComponent } from '../app/calendar/calendar-cdn.component';
-import { CalendarEventComponent } from '../app/calendar/calender-event.component';
-import { CalendarComponent } from '../app/calendar/calendar.component';
-import { CalendarConfiguratedComponent } from '../app/calendar/calendar-configurated.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { CalendarCDNComponent } from "../app/calendar/calendar-cdn.component";
+import { CalendarEventComponent } from "../app/calendar/calender-event.component";
+import { CalendarComponent } from "../app/calendar/calendar.component";
+import { CalendarConfiguratedComponent } from "../app/calendar/calendar-configurated.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Calendar',
+  title: "Calendar",
   component: CalendarCDNComponent,
   decorators: [
     moduleMetadata({
@@ -30,20 +30,20 @@ export const Base = () => ({
       <app-calendar></app-calendar>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: CalendarConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       value: new Date(),
       weekNumbers: true,
       timePicker: true,
       timeFormat: 12,
       thisMonthOnly: true,
-    }
+    },
   },
   template: `
     <section class="dhx-container">
@@ -58,7 +58,7 @@ export const Configurated = () => ({
       <app-calendar-configurated [options]="options"></app-calendar-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -76,7 +76,7 @@ export const CDN = () => ({
       <app-calendar-cdn></app-calendar-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -94,5 +94,5 @@ export const Events = () => ({
       <app-calendar-event></app-calendar-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

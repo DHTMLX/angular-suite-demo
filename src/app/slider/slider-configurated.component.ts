@@ -1,12 +1,12 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Slider as SliderDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Slider as SliderDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-slider-configurated',
-  template: `<div #widget style="width:400px"></div>`
+  selector: "app-slider-configurated",
+  template: `<div #widget style="width:400px"></div>`,
 })
 export class SliderConfiguraetedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   slider: SliderDHX;
   wait: Promise<void>;
@@ -15,7 +15,7 @@ export class SliderConfiguraetedComponent implements OnDestroy {
 
   ngOnInit() {
     this.slider = new SliderDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
   }
 

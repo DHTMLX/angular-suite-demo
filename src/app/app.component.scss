@@ -5,8 +5,8 @@
   &-wrapper {
     width: 350px;
     margin-left: 20px;
-    border: 1px solid #DFDFDF;
-    background: #FFF;
+    border: 1px solid #dfdfdf;
+    background: #fff;
     padding: 10px;
     height: 430px;
     line-height: 1.3;
@@ -17,11 +17,11 @@
     margin-bottom: 8px;
     margin-top: 0;
     padding: 8px;
-    -webkit-animation: fadeIn .8s;
-    animation: fadeIn .8s;
-    border: 1px solid #DFDFDF;
+    -webkit-animation: fadeIn 0.8s;
+    animation: fadeIn 0.8s;
+    border: 1px solid #dfdfdf;
     border-radius: 2px;
-    background: #F2F2F2;
+    background: #f2f2f2;
     word-wrap: break-word;
     white-space: pre-wrap;
   }
@@ -84,6 +84,6 @@
     width: 350px;
     height: 450px;
     overflow-y: auto;
-    background: #FFF;
+    background: #fff;
   }
 }

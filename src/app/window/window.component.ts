@@ -1,16 +1,15 @@
-import { Component, OnDestroy } from '@angular/core';
-import { Window } from 'dhx-suite';
+import { Component, OnDestroy } from "@angular/core";
+import { Window } from "dhx-suite";
 
 @Component({
-  selector: 'app-window',
-  template: `
-    <div>
-      <div #widget></div>
-      <button className="button" (click)="this.window.show()" class="custom-button">
-        Show Window
-      </button>
-    </div>`,
-  styleUrls: ['../app.component.scss'],
+  selector: "app-window",
+  template: ` <div>
+    <div #widget></div>
+    <button className="button" (click)="this.window.show()" class="custom-button">
+      Show Window
+    </button>
+  </div>`,
+  styleUrls: ["../app.component.scss"],
 })
 export class WindowComponent implements OnDestroy {
   window: Window;
@@ -21,7 +20,7 @@ export class WindowComponent implements OnDestroy {
     this.window = new Window({
       width: 440,
       height: 520,
-      title: 'Window',
+      title: "Window",
       html: windowHtml,
       closable: true,
     });

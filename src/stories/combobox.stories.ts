@@ -1,14 +1,13 @@
-import { ComboboxComponent } from '../app/combobox/combobox.component';
-import { ComboboxEventComponent } from '../app/combobox/combobox-event.component';
-import { ComboboxCDNComponent } from '../app/combobox/combobox-cdn.component';
-import { ComboboxConfiguratedComponent } from '../app/combobox/combobox-configurated.component';
-import { ComboboxDataComponent } from '../app/combobox/combobox-data.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
-
+import { ComboboxComponent } from "../app/combobox/combobox.component";
+import { ComboboxEventComponent } from "../app/combobox/combobox-event.component";
+import { ComboboxCDNComponent } from "../app/combobox/combobox-cdn.component";
+import { ComboboxConfiguratedComponent } from "../app/combobox/combobox-configurated.component";
+import { ComboboxDataComponent } from "../app/combobox/combobox-data.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Combobox',
+  title: "Combobox",
   component: ComboboxComponent,
   decorators: [
     moduleMetadata({
@@ -33,7 +32,7 @@ export const Base = () => ({
       <app-combobox></app-combobox>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
@@ -41,14 +40,14 @@ export const Configurated = () => ({
   props: {
     options: {
       multiselection: true,
-      label: 'DHX-angular combobox',
-      labelPosition: 'top',
+      label: "DHX-angular combobox",
+      labelPosition: "top",
       labelWidth: 150,
       selectAllButton: true,
       required: true,
       itemsCount: true,
-      placeholder: 'Click to choose',
-    }
+      placeholder: "Click to choose",
+    },
   },
   template: `
     <section class="dhx-container">
@@ -63,7 +62,7 @@ export const Configurated = () => ({
       <app-combobox-configurated [options]="options"></app-combobox-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -81,7 +80,7 @@ export const Data = () => ({
       <app-combobox-data></app-combobox-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -99,7 +98,7 @@ export const CDN = () => ({
       <app-combobox-cdn></app-combobox-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -117,5 +116,5 @@ export const Events = () => ({
       <app-combobox-event></app-combobox-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

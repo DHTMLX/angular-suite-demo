@@ -1,12 +1,12 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { List as ListDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { List as ListDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-list-configurated',
+  selector: "app-list-configurated",
   template: `<div #widget></div>`,
 })
 export class ListConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   list: ListDHX;
   wait: Promise<void>;

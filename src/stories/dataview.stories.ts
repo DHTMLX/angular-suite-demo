@@ -1,18 +1,24 @@
-import { DataviewComponent } from '../app/dataview/dataview.component';
-import { DataviewConfiguratedComponent } from '../app/dataview/dataview-configurated.component';
-import { DataviewCDNComponent } from '../app/dataview/dataview-cdn.component';
-import { DataviewEventsComponent } from '../app/dataview/dataview-events.component';
-import { DataviewDataComponent } from '../app/dataview/dataview-data.component';
-import { moduleMetadata } from '@storybook/angular';
+import { DataviewComponent } from "../app/dataview/dataview.component";
+import { DataviewConfiguratedComponent } from "../app/dataview/dataview-configurated.component";
+import { DataviewCDNComponent } from "../app/dataview/dataview-cdn.component";
+import { DataviewEventsComponent } from "../app/dataview/dataview-events.component";
+import { DataviewDataComponent } from "../app/dataview/dataview-data.component";
+import { moduleMetadata } from "@storybook/angular";
 
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'DataView',
+  title: "DataView",
   component: DataviewComponent,
   decorators: [
     moduleMetadata({
-      declarations: [DataviewComponent, DataviewConfiguratedComponent, DataviewDataComponent, DataviewCDNComponent, DataviewEventsComponent],
+      declarations: [
+        DataviewComponent,
+        DataviewConfiguratedComponent,
+        DataviewDataComponent,
+        DataviewCDNComponent,
+        DataviewEventsComponent,
+      ],
       imports: [CommonModule],
     }),
   ],
@@ -33,20 +39,20 @@ export const Base = () => ({
       <app-dataview></app-dataview>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: DataviewConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      css: "dhx_widget--bordered dhx_widget--bg_white",
       itemsInRow: 4,
       gap: 10,
       keyNavigation: true,
       multiselection: true,
       dragMode: "both",
-      template: (item) => `
+      template: item => `
         <div class="template template__container">
           <img
             class="template__image"
@@ -56,7 +62,7 @@ export const Configurated = () => ({
           <p class="template__description">${item.short}</з>
         </div>
       `,
-    }
+    },
   },
   template: `
     <section class="dhx-container">
@@ -71,7 +77,7 @@ export const Configurated = () => ({
       <app-dataview-configurated [options]="options"></app-dataview-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Data = () => ({
@@ -89,7 +95,7 @@ export const Data = () => ({
       <app-dataview-data></app-dataview-data>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -107,7 +113,7 @@ export const CDN = () => ({
       <app-dataview-cdn></app-dataview-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -125,5 +131,5 @@ export const Events = () => ({
       <app-dataview-event></app-dataview-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

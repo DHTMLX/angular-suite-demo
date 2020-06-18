@@ -1,12 +1,12 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Calendar } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Calendar } from "dhx-suite";
 
 @Component({
-  selector: 'app-calendar-configurated',
+  selector: "app-calendar-configurated",
   template: `<div #widget></div>`,
 })
 export class CalendarConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   calendar: Calendar;
   wait: Promise<void>;
@@ -15,7 +15,7 @@ export class CalendarConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.calendar = new Calendar(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
   }
 

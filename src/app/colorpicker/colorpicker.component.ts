@@ -1,12 +1,12 @@
-import { Component, ViewChild, OnDestroy, ElementRef } from '@angular/core';
-import { Colorpicker as ColorpickerDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef } from "@angular/core";
+import { Colorpicker as ColorpickerDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-colorpicker',
+  selector: "app-colorpicker",
   template: `<div #widget></div>`,
 })
 export class ColorPickerComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   colorPicker: any;
   wait: Promise<void>;

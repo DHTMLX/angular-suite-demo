@@ -1,13 +1,13 @@
-import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
-import fromCDN from 'from-cdn';
+import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter } from "@angular/core";
+import fromCDN from "from-cdn";
 
 @Component({
-  selector: 'app-menu-cdn',
+  selector: "app-menu-cdn",
   template: `<div #widget class="dhx-container--menu"></div>`,
-  styleUrls: ['../app.component.scss'],
+  styleUrls: ["../app.component.scss"],
 })
 export class MenuCDNComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   menu: any;
   wait: Promise<void>;
@@ -15,15 +15,12 @@ export class MenuCDNComponent implements OnDestroy {
   @Output() ready: EventEmitter<any> = new EventEmitter();
 
   constructor() {
-    this.wait = fromCDN([
-      'https://cdn.dhtmlx.com/suite/edge/suite.js',
-      'https://cdn.dhtmlx.com/suite/edge/suite.css',
-    ]).then(() => {
+    this.wait = fromCDN(["https://cdn.dhtmlx.com/suite/edge/suite.js", "https://cdn.dhtmlx.com/suite/edge/suite.css"]).then(() => {
       this.menu = new dhx.Menu(this.container.nativeElement, {
-        css: 'dhx_widget--bordered dhx_widget--bg_white',
+        css: "dhx_widget--bordered dhx_widget--bg_white",
       });
       this.menu.data.load(`https://dhtmlx.github.io/react-widgets/static/menu.json`);
-      this.ready.emit({menu: this.menu});
+      this.ready.emit({ menu: this.menu });
     });
   }
 

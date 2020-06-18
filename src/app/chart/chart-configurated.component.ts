@@ -1,15 +1,14 @@
-import { Component, ViewChild, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Chart as ChartDHX } from 'dhx-suite';
+import { Component, ViewChild, OnDestroy, ElementRef, Input } from "@angular/core";
+import { Chart as ChartDHX } from "dhx-suite";
 
 @Component({
-  selector: 'app-chart-configurated',
-  template: `
-    <section style="width: 600px">
-      <div #widget></div>
-    </section>`,
+  selector: "app-chart-configurated",
+  template: ` <section style="width: 600px">
+    <div #widget></div>
+  </section>`,
 })
 export class ChartConfiguratedComponent implements OnDestroy {
-  @ViewChild('widget', { static: true })
+  @ViewChild("widget", { static: true })
   container: ElementRef;
   chart: ChartDHX;
   wait: Promise<void>;
@@ -18,10 +17,10 @@ export class ChartConfiguratedComponent implements OnDestroy {
 
   ngOnInit() {
     this.chart = new ChartDHX(this.container.nativeElement, {
-      ...this.options
+      ...this.options,
     });
 
-    this.chart.data.load('https://dhtmlx.github.io/react-widgets/static/chart.json');
+    this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
   }
 
   ngOnDestroy() {

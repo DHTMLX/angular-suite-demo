@@ -1,11 +1,11 @@
-import { PopupComponent } from '../app/popup/popup.component';
-import { PopupEventComponent } from '../app/popup/popup-event.component';
-import { PopupCDNComponent } from '../app/popup/popup-cdn.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { PopupComponent } from "../app/popup/popup.component";
+import { PopupEventComponent } from "../app/popup/popup-event.component";
+import { PopupCDNComponent } from "../app/popup/popup-cdn.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Popup',
+  title: "Popup",
   component: PopupComponent,
   decorators: [
     moduleMetadata({
@@ -30,7 +30,7 @@ export const Base = () => ({
       <app-popup></app-popup>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -48,7 +48,7 @@ export const CDN = () => ({
       <app-popup-cdn></app-popup-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -66,5 +66,5 @@ export const Events = () => ({
       <app-popup-event></app-popup-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });

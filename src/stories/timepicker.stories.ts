@@ -1,12 +1,12 @@
-import { TimePickerComponent } from '../app/timepicker/timepicker.component';
-import { TimePickerConfiguratedComponent } from '../app/timepicker/timepicker-configurated.component';
-import { TimePickerCDNComponent } from '../app/timepicker/timepicker-cdn.component';
-import { TimePickerEventsComponent } from '../app/timepicker/timepicker-event.component';
-import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { TimePickerComponent } from "../app/timepicker/timepicker.component";
+import { TimePickerConfiguratedComponent } from "../app/timepicker/timepicker-configurated.component";
+import { TimePickerCDNComponent } from "../app/timepicker/timepicker-cdn.component";
+import { TimePickerEventsComponent } from "../app/timepicker/timepicker-event.component";
+import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 export default {
-  title: 'Time Picker',
+  title: "Time Picker",
   component: TimePickerComponent,
   decorators: [
     moduleMetadata({
@@ -31,17 +31,17 @@ export const Base = () => ({
       <app-timepicker></app-timepicker>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Configurated = () => ({
   component: TimePickerConfiguratedComponent,
   props: {
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       controls: true,
-      timeFormat: 12
-    }
+      timeFormat: 12,
+    },
   },
   template: `
     <section class="dhx-container">
@@ -56,7 +56,7 @@ export const Configurated = () => ({
       <app-timepicker-configurated [options]="options"></app-timepicker-configurated>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const CDN = () => ({
@@ -74,7 +74,7 @@ export const CDN = () => ({
       <app-timepicker-cdn></app-timepicker-cdn>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
 
 export const Events = () => ({
@@ -92,5 +92,5 @@ export const Events = () => ({
       <app-timepicker-event></app-timepicker-event>
     </section>
   `,
-  styleUrls: ['./styles/stories.css'],
+  styleUrls: ["./styles/stories.css"],
 });
