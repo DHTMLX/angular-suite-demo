@@ -6,7 +6,7 @@ const theme = create({
 
   brandTitle: "DHTMLX Widgets",
   brandUrl: "https://dhtmlx.github.io/angular-suite-demo/?path=/story",
-  brandImage: "./assets/logo.svg",
+  brandImage: "./logo.svg",
 });
 
 addons.setConfig({
