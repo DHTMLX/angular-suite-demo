@@ -40,26 +40,26 @@ export class ListEventComponent implements OnDestroy {
 
     this.list.events.on("click", id => this.logEvent("click", id));
     this.list.events.on("doubleclick", id => this.logEvent("doubleclick", id));
-		this.list.events.on("focuschange", () => this.logEvent("focuschange"));
-		this.list.events.on("beforeDrag", () => this.logEvent("beforeDrag"));
-		this.list.events.on("beforeDrop", () => this.logEvent("beforeDrop"));
-		this.list.events.on("dragStart", () => this.logEvent("dragStart"));
-		this.list.events.on("afterDrag", () => this.logEvent("afterDrag"));
-		this.list.events.on("canDrop", () => this.logEvent("canDrop"));
-		this.list.events.on("cancelDrop", () => this.logEvent("cancelDrop"));
-		this.list.events.on("afterDrop", () => this.logEvent("afterDrop"));
-		this.list.events.on("dragOut", () => this.logEvent("dragOut"));
-		this.list.events.on("dragIn", () => this.logEvent("dragIn"));
-		this.list.events.on("beforeSelect", () => this.logEvent("beforeSelect"));
-		this.list.events.on("afterSelect", () => this.logEvent("afterSelect"));
-		this.list.events.on("beforeUnSelect", () => this.logEvent("beforeUnSelect"));
-		this.list.events.on("afterUnSelect", () => this.logEvent("afterUnSelect"));
-		this.list.events.on("beforeEditStart", () => this.logEvent("beforeEditStart"));
-		this.list.events.on("afterEditStart", () => this.logEvent("afterEditStart"));
-		this.list.events.on("beforeEditEnd", () => this.logEvent("beforeEditEnd"));
-		this.list.events.on("afterEditEnd", () => this.logEvent("afterEditEnd"));
-		this.list.events.on("itemRightClick", () => this.logEvent("itemRightClick"));
-		this.list.events.on("itemMouseOver", () => this.logEvent("itemMouseOver"));
+    this.list.events.on("focuschange", () => this.logEvent("focuschange"));
+    this.list.events.on("beforeDrag", () => this.logEvent("beforeDrag"));
+    this.list.events.on("beforeDrop", () => this.logEvent("beforeDrop"));
+    this.list.events.on("dragStart", () => this.logEvent("dragStart"));
+    this.list.events.on("afterDrag", () => this.logEvent("afterDrag"));
+    this.list.events.on("canDrop", () => this.logEvent("canDrop"));
+    this.list.events.on("cancelDrop", () => this.logEvent("cancelDrop"));
+    this.list.events.on("afterDrop", () => this.logEvent("afterDrop"));
+    this.list.events.on("dragOut", () => this.logEvent("dragOut"));
+    this.list.events.on("dragIn", () => this.logEvent("dragIn"));
+    this.list.events.on("beforeSelect", () => this.logEvent("beforeSelect"));
+    this.list.events.on("afterSelect", () => this.logEvent("afterSelect"));
+    this.list.events.on("beforeUnSelect", () => this.logEvent("beforeUnSelect"));
+    this.list.events.on("afterUnSelect", () => this.logEvent("afterUnSelect"));
+    this.list.events.on("beforeEditStart", () => this.logEvent("beforeEditStart"));
+    this.list.events.on("afterEditStart", () => this.logEvent("afterEditStart"));
+    this.list.events.on("beforeEditEnd", () => this.logEvent("beforeEditEnd"));
+    this.list.events.on("afterEditEnd", () => this.logEvent("afterEditEnd"));
+    this.list.events.on("itemRightClick", () => this.logEvent("itemRightClick"));
+    this.list.events.on("itemMouseOver", () => this.logEvent("itemMouseOver"));
   }
 
   ngOnDestroy() {

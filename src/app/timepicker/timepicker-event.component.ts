@@ -34,8 +34,8 @@ export class TimePickerEventsComponent implements OnDestroy {
     });
 
     this.timepicker.events.on("change", value => this.logEvent(value, "change"));
-    this.timepicker.events.on("afterClose", value => this.logEvent(JSON.stringify(value, null, 2), "afterClose");
-    this.timepicker.events.on("beforeClose", value => this.logEvent(JSON.stringify(value, null, 2), "beforeClose");
+    this.timepicker.events.on("afterClose", value => this.logEvent(JSON.stringify(value, null, 2), "afterClose"));
+    this.timepicker.events.on("beforeClose", value => this.logEvent(JSON.stringify(value, null, 2), "beforeClose"));
     this.timepicker.events.on("beforeApply", value => this.logEvent(JSON.stringify(value, null, 2), "beforeApply"));
     this.timepicker.events.on("afterApply", value => this.logEvent(JSON.stringify(value, null, 2), "afterApply"));
   }

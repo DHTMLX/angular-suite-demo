@@ -41,7 +41,7 @@ export const Configurated = () => ({
       css: "dhx_widget--bordered",
       controls: true,
       timeFormat: 12,
-      value: new Date,
+      value: new Date(),
     },
   },
   template: `
