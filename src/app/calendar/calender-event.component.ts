@@ -39,16 +39,12 @@ export class CalendarEventComponent implements OnDestroy {
       });
 
       this.ready.emit({ calendar: this.calendar });
-      this.calendar.events.on("dateMouseOver", date => this.logEvent(date, "dateMouseOver"));
-
-      this.calendar.events.on("change", id => this.logEvent(id, "change"));
-
-      this.calendar.events.on("modeChange", mode => this.logEvent(mode, "modeChange"));
       this.calendar.events.on("beforeChange", id => this.logEvent(id.toString(), "beforeChange"));
-
+      this.calendar.events.on("change", id => this.logEvent(id, "change"));
       this.calendar.events.on("cancelClick", () => this.logEvent(null, "cancelClick"));
+      this.calendar.events.on("modeChange", mode => this.logEvent(mode, "modeChange"));
+      this.calendar.events.on("dateMouseOver", date => this.logEvent(date, "dateMouseOver"));
       this.calendar.events.on("monthSelected", month => this.logEvent(month + 1 + "", "monthSelected"));
-
       this.calendar.events.on("yearSelected", year => this.logEvent(year.toString(), "yearSelected"));
     });
   }

@@ -23,14 +23,13 @@ export class FormEventComponent implements OnDestroy {
 
   eventsList = [];
 
-  logEvent = (payload, name: string) => {
+  logEvent = (name: string, payload?: any) => {
     this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
   ngOnInit() {
     this.form = new FormDHX(this.container.nativeElement, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      gravity: false,
       width: 400,
       rows: [
         {
@@ -39,14 +38,12 @@ export class FormEventComponent implements OnDestroy {
           icon: "dxi-magnify",
           placeholder: "John Doe",
           required: true,
-          id: "name",
           name: "name",
         },
         {
           type: "datepicker",
           label: "Date",
           required: true,
-          id: "date",
           name: "date",
         },
         {
@@ -54,19 +51,17 @@ export class FormEventComponent implements OnDestroy {
           controls: "true",
           label: "Time",
           required: true,
-          id: "time",
           name: "time",
         },
         {
           type: "simpleVault",
           required: true,
           label: "Files",
-          id: "simplevault",
           name: "simplevault",
         },
         {
           type: "button",
-          value: "Send",
+          text: "Send",
           size: "medium",
           view: "flat",
           submit: true,
@@ -82,6 +77,19 @@ export class FormEventComponent implements OnDestroy {
     this.form.events.on("change", id => this.logEvent(id, "change"));
     this.form.events.on("buttonClick", id => this.logEvent(id, "buttonClick"));
     this.form.events.on("validationFail", id => this.logEvent(id, "validationFail"));
+
+    this.form.events.on("change", name => this.logEvent("change", name));
+		this.form.events.on("click", name => this.logEvent("click", name));
+		this.form.events.on("beforeHide", name => this.logEvent("beforeHide", name));
+		this.form.events.on("afterHide", name => this.logEvent("afterHide", name));
+		this.form.events.on("beforeShow", name => this.logEvent("beforeShow", name));
+		this.form.events.on("afterShow", name => this.logEvent("afterShow", name));
+		this.form.events.on("beforeValidate", name => this.logEvent("beforeValidate", name));
+		this.form.events.on("afterValidate", name => this.logEvent("afterValidate", name));
+		this.form.events.on("beforeChangeProperties", name => this.logEvent("beforeChangeProperties", name));
+		this.form.events.on("afterChangeProperties", name => this.logEvent("afterChangeProperties", name));
+		this.form.events.on("afterSend", () => this.logEvent("afterSend"));
+		this.form.events.on("beforeSend", () => this.logEvent("beforeSend"));
   }
 
   ngOnDestroy() {

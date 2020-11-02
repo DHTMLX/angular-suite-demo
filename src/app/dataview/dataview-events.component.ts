@@ -23,7 +23,7 @@ export class DataviewEventsComponent implements OnDestroy {
 
   eventsList = [];
 
-  logEvent = (payload, name: string) => {
+  logEvent = (name: string, payload?: any,) => {
     this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
@@ -48,8 +48,28 @@ export class DataviewEventsComponent implements OnDestroy {
 
     this.dataview.data.load("https://dhtmlx.github.io/react-widgets/static/dataview.json");
 
-    this.dataview.events.on("click", id => this.logEvent(id, "click"));
-    this.dataview.events.on("doubleclick", id => this.logEvent(id, "doubleclick"));
+    this.dataview.events.on("click", id => this.logEvent("click", id));
+    this.dataview.events.on("doubleclick", id => this.logEvent("doubleclick", id));
+		this.dataview.events.on("focuschange", () => this.logEvent("focuschange"));
+		this.dataview.events.on("beforeDrag", () => this.logEvent("beforeDrag"));
+		this.dataview.events.on("beforeDrop", () => this.logEvent("beforeDrop"));
+		this.dataview.events.on("dragStart", () => this.logEvent("dragStart"));
+		this.dataview.events.on("afterDrag", () => this.logEvent("afterDrag"));
+		this.dataview.events.on("canDrop", () => this.logEvent("canDrop"));
+		this.dataview.events.on("cancelDrop", () => this.logEvent("cancelDrop"));
+		this.dataview.events.on("afterDrop", () => this.logEvent("afterDrop"));
+		this.dataview.events.on("dragOut", () => this.logEvent("dragOut"));
+		this.dataview.events.on("dragIn", () => this.logEvent("dragIn"));
+		this.dataview.events.on("beforeSelect", () => this.logEvent("beforeSelect"));
+		this.dataview.events.on("afterSelect", () => this.logEvent("afterSelect"));
+		this.dataview.events.on("beforeUnSelect", () => this.logEvent("beforeUnSelect"));
+		this.dataview.events.on("afterUnSelect", () => this.logEvent("afterUnSelect"));
+		this.dataview.events.on("beforeEditStart", () => this.logEvent("beforeEditStart"));
+		this.dataview.events.on("afterEditStart", () => this.logEvent("afterEditStart"));
+		this.dataview.events.on("beforeEditEnd", () => this.logEvent("beforeEditEnd"));
+		this.dataview.events.on("afterEditEnd", () => this.logEvent("afterEditEnd"));
+		this.dataview.events.on("itemRightClick", () => this.logEvent("itemRightClick"));
+		this.dataview.events.on("itemMouseOver", () => this.logEvent("itemMouseOver"));
   }
 
   ngOnDestroy() {

@@ -23,7 +23,7 @@ export class GridEventComponent implements OnDestroy {
 
   eventsList = [];
 
-  logEvent = (payload, name: string) => {
+  logEvent = (name: string, payload?: any) => {
     this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
@@ -42,131 +42,139 @@ export class GridEventComponent implements OnDestroy {
         { minWidth: 125, id: "urban", header: [{ text: "Urban Pop" }], footer: [{ text: "Urban Pop" }] },
       ],
       adjust: true,
-      selection: true,
+      selection: "complex",
       editable: true,
       resizable: true,
     });
-    this.grid.data.load(`https://dhtmlx.github.io/react-widgets/static/grid.json`);
+    this.grid.data.load("https://dhtmlx.github.io/react-widgets/static/grid.json");
 
-    this.grid.events.on("scroll", position => this.logEvent(JSON.stringify(position), "scroll"));
-    this.grid.events.on("sort", id => this.logEvent(id, "sort"));
-    this.grid.events.on("expand", id => this.logEvent(id, "expand"));
+    this.grid.events.on("scroll", position => this.logEvent("scroll", JSON.stringify(position)));
+    this.grid.events.on("sort", id => this.logEvent("sort", id));
+    this.grid.events.on("expand", id => this.logEvent("expand", id));
     this.grid.events.on("filterChange", (value, colId, filter) => {
       const infoFilter = { value, colId, filter };
-      this.logEvent(JSON.stringify(infoFilter), "filterChange");
+      this.logEvent("filterChange", JSON.stringify(infoFilter));
     });
     this.grid.events.on("cellClick", (row, column, e) => {
       const infoCellClick = { row, column, event: e };
-      this.logEvent(JSON.stringify(infoCellClick), "cellClick");
+      this.logEvent("cellClick", JSON.stringify(infoCellClick));
     });
-
     this.grid.events.on("cellRightClick", (row, column, e) => {
       const infoRightClick = { row, column, event: e };
-      this.logEvent(JSON.stringify(infoRightClick), "cellRightClick");
+      this.logEvent("cellRightClick", JSON.stringify(infoRightClick));
     });
-
     this.grid.events.on("cellMouseOver", (row, column, e) => {
       const infoMouseOver = { row, column, event: e };
-      this.logEvent(JSON.stringify(infoMouseOver), "cellMouseOver");
+      this.logEvent("cellMouseOver", JSON.stringify(infoMouseOver));
     });
-
     this.grid.events.on("cellMouseDown", (row, column, e) => {
       const infoMouseDown = { row, column, event: e };
-      this.logEvent(JSON.stringify(infoMouseDown), "cellMouseDown");
+      this.logEvent("cellMouseDown", JSON.stringify(infoMouseDown));
     });
-
     this.grid.events.on("cellDblClick", (row, column, e) => {
       const infoDblClick = { row, column, event: e };
-      this.logEvent(JSON.stringify(infoDblClick), "cellDblClick");
+      this.logEvent("cellDblClick", JSON.stringify(infoDblClick));
     });
-
     this.grid.events.on("headerCellClick", (column, e) => {
       const infoHeaderCellClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoHeaderCellClick), "headerCellClick");
+      this.logEvent("headerCellClick", JSON.stringify(infoHeaderCellClick));
     });
-
     this.grid.events.on("footerCellClick", (column, e) => {
       const infoFooterCellClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoFooterCellClick), "footerCellClick");
+      this.logEvent("footerCellClick", JSON.stringify(infoFooterCellClick));
     });
-
     this.grid.events.on("headerCellMouseOver", (column, e) => {
       const infoHeaderCellMouseOver = { column, event: e };
-      this.logEvent(JSON.stringify(infoHeaderCellMouseOver), "headerCellMouseOver");
+      this.logEvent("headerCellMouseOver", JSON.stringify(infoHeaderCellMouseOver));
     });
-
     this.grid.events.on("footerCellMouseOver", (column, e) => {
       const infoFooterCellMouseOver = { column, event: e };
-      this.logEvent(JSON.stringify(infoFooterCellMouseOver), "footerCellMouseOver");
+      this.logEvent("footerCellMouseOver", JSON.stringify(infoFooterCellMouseOver));
     });
-
     this.grid.events.on("headerCellMouseDown", (column, e) => {
       const infoHeaderCellMouseDown = { column, event: e };
-      this.logEvent(JSON.stringify(infoHeaderCellMouseDown), "headerCellMouseDown");
+      this.logEvent("headerCellMouseDown", JSON.stringify(infoHeaderCellMouseDown));
     });
-
     this.grid.events.on("footerCellMouseDown", (column, e) => {
       const infoFooterCellMouseDown = { column, event: e };
-      this.logEvent(JSON.stringify(infoFooterCellMouseDown), "footerCellMouseDown");
+      this.logEvent("footerCellMouseDown", JSON.stringify(infoFooterCellMouseDown));
     });
-
     this.grid.events.on("headerCellDblClick", (column, e) => {
       const infoHeaderCellDblClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoHeaderCellDblClick), "headerCellDblClick");
+      this.logEvent("headerCellDblClick", JSON.stringify(infoHeaderCellDblClick));
     });
-
     this.grid.events.on("footerCellDblClick", (column, e) => {
       const infoFooterCellDblClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoFooterCellDblClick), "footerCellDblClick");
+      this.logEvent("footerCellDblClick", JSON.stringify(infoFooterCellDblClick));
     });
-
     this.grid.events.on("headerCellRightClick", (column, e) => {
       const infoHeaderCellRightClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoHeaderCellRightClick), "headerCellRightClick");
+      this.logEvent("headerCellRightClick", JSON.stringify(infoHeaderCellRightClick));
     });
-
     this.grid.events.on("footerCellRightClick", (column, e) => {
       const infoFooterCellRightClick = { column, event: e };
-      this.logEvent(JSON.stringify(infoFooterCellRightClick), "footerCellRightClick");
+      this.logEvent("footerCellRightClick", JSON.stringify(infoFooterCellRightClick));
     });
-
     this.grid.events.on("beforeEditStart", (row, col, editorType) => {
       const infoBeforeEditStart = { row, col, editorType };
-      this.logEvent(JSON.stringify(infoBeforeEditStart), "beforeEditStart");
+      this.logEvent("beforeEditStart", JSON.stringify(infoBeforeEditStart));
     });
-
     this.grid.events.on("afterEditStart", (row, col, editorType) => {
       const infoAfterEditStart = { row, col, editorType };
-      this.logEvent(JSON.stringify(infoAfterEditStart), "afterEditStart");
+      this.logEvent("afterEditStart", JSON.stringify(infoAfterEditStart));
     });
-
     this.grid.events.on("beforeEditEnd", (value, row, column) => {
       const infoBeforeEditEnd = { value, row, column };
-      this.logEvent(JSON.stringify(infoBeforeEditEnd), "beforeEditEnd");
+      this.logEvent("beforeEditEnd", JSON.stringify(infoBeforeEditEnd));
     });
-
     this.grid.events.on("afterEditEnd", (value, row, column) => {
       const infoAfterEditEnd = { value, row, column };
-      this.logEvent(JSON.stringify(infoAfterEditEnd), "afterEditEnd");
+      this.logEvent("afterEditEnd", JSON.stringify(infoAfterEditEnd));
     });
-
     this.grid.events.on("beforeResizeStart", (column, e) => {
       const infoBeforeResizeStart = { column, event: e };
-      this.logEvent(JSON.stringify(infoBeforeResizeStart), "beforeResizeStart");
+      this.logEvent("beforeResizeStart", JSON.stringify(infoBeforeResizeStart));
     });
-
     this.grid.events.on("resize", (column, e) => {
       const infoResize = { column, event: e };
-      this.logEvent(JSON.stringify(infoResize), "resize");
+      this.logEvent("resize", JSON.stringify(infoResize));
     });
-
     this.grid.events.on("afterResizeEnd", (column, e) => {
       const infoAfterResizeEnd = { column, event: e };
-      this.logEvent(JSON.stringify(infoAfterResizeEnd), "afterResizeEnd");
+      this.logEvent("afterResizeEnd", JSON.stringify(infoAfterResizeEnd));
     });
-
-    this.grid.events.on("beforeKeyDown", e => this.logEvent(JSON.stringify(e), "beforeKeyDown"));
-    this.grid.events.on("afterKeyDown", e => this.logEvent(JSON.stringify(e), "afterKeyDown"));
+    this.grid.events.on("beforeKeyDown", e => this.logEvent("beforeKeyDown", JSON.stringify(e)));
+    this.grid.events.on("afterKeyDown", e => this.logEvent("afterKeyDown", JSON.stringify(e)));
+    this.grid.events.on("beforeRowDrag", () => this.logEvent("beforeRowDrag"));
+		this.grid.events.on("dragRowStart", () => this.logEvent("dragRowStart"));
+		this.grid.events.on("dragRowOut", () => this.logEvent("dragRowOut"));
+		this.grid.events.on("dragRowIn", () => this.logEvent("dragRowIn"));
+		this.grid.events.on("canRowDrop", () => this.logEvent("canRowDrop"));
+		this.grid.events.on("cancelRowDrop", () => this.logEvent("cancelRowDrop"));
+		this.grid.events.on("beforeRowDrop", () => this.logEvent("beforeRowDrop"));
+		this.grid.events.on("afterRowDrop", () => this.logEvent("afterRowDrop"));
+		this.grid.events.on("afterRowDrag", () => this.logEvent("afterRowDrag"));
+		this.grid.events.on("beforeColumnDrag", () => this.logEvent("beforeColumnDrag"));
+		this.grid.events.on("dragColumnStart", () => this.logEvent("dragColumnStart"));
+		this.grid.events.on("dragColumnOut", () => this.logEvent("dragColumnOut"));
+		this.grid.events.on("dragColumnIn", () => this.logEvent("dragColumnIn"));
+		this.grid.events.on("canColumnDrop", () => this.logEvent("canColumnDrop"));
+		this.grid.events.on("cancelColumnDrop", () => this.logEvent("cancelColumnDrop"));
+		this.grid.events.on("beforeColumnDrop", () => this.logEvent("beforeColumnDrop"));
+		this.grid.events.on("afterColumnDrop", () => this.logEvent("afterColumnDrop"));
+		this.grid.events.on("afterColumnDrag", () => this.logEvent("afterColumnDrag"));
+		this.grid.events.on("beforeColumnHide", () => this.logEvent("beforeColumnHide"));
+		this.grid.events.on("afterColumnHide", () => this.logEvent("afterColumnHide"));
+		this.grid.events.on("beforeColumnShow", () => this.logEvent("beforeColumnShow"));
+		this.grid.events.on("afterColumnShow", () => this.logEvent("afterColumnShow"));
+		this.grid.events.on("beforeRowHide", () => this.logEvent("beforeRowHide"));
+		this.grid.events.on("afterRowHide", () => this.logEvent("afterRowHide"));
+		this.grid.events.on("beforeRowShow", () => this.logEvent( "beforeRowShow"));
+		this.grid.events.on("afterRowShow", () => this.logEvent("afterRowShow"));
+		this.grid.events.on("beforeUnSelect", () => this.logEvent( "beforeUnSelect"));
+		this.grid.events.on("afterUnSelect", () => this.logEvent("afterUnSelect"));
+		this.grid.events.on("beforeSelect", () => this.logEvent("beforeSelect"));
+		this.grid.events.on("afterSelect", () => this.logEvent("afterSelect"));
   }
 
   ngOnDestroy() {

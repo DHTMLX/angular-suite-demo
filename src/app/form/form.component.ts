@@ -14,7 +14,6 @@ export class FormComponent implements OnDestroy {
   ngOnInit() {
     this.form = new FormDHX(this.container.nativeElement, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      gravity: false,
       width: 400,
       rows: [
         {
@@ -36,14 +35,13 @@ export class FormComponent implements OnDestroy {
         },
         {
           type: "checkbox",
-          label: "I agree",
+          text: "I agree",
           name: "agree",
-          labelPosition: "right",
           value: "checkboxvalue",
         },
         {
           type: "button",
-          value: "Send",
+          text: "Send",
           size: "medium",
           view: "flat",
           submit: true,

@@ -35,9 +35,15 @@ export class TreeEventComponent implements OnDestroy {
     this.tree.events.on("itemRightClick", id => this.logEvent(id, "itemRightClick"));
     this.tree.events.on("itemDblClick", id => this.logEvent(id, "itemDblClick"));
     this.tree.events.on("itemClick", id => this.logEvent(id, "itemClick"));
-    this.tree.events.on("beforeCollapse", id => this.logEvent(id, "beforeCollapse"));
+    this.tree.events.on("beforeCollapse", id => {
+      this.logEvent(id, "beforeCollapse");
+      return true;
+    });
     this.tree.events.on("afterCollapse", id => this.logEvent(id, "afterCollapse"));
-    this.tree.events.on("beforeExpand", id => this.logEvent(id, "beforeExpand"));
+    this.tree.events.on("beforeExpand", id => {
+      this.logEvent(id, "beforeExpand");
+      return true;
+    });
     this.tree.events.on("afterExpand", id => this.logEvent(id, "afterExpand"));
   }
 

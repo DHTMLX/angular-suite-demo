@@ -1,5 +1,5 @@
 {
-  "name": "ng-widgets",
+  "name": "angular-suite-demo",
   "version": "1.0.0",
   "homepage": "https://github.com/DHTMLX/angular-suite-demo",
   "scripts": {
@@ -20,7 +20,7 @@
     "@angular/router": "~9.1.1",
     "@mdi/font": "^5.1.45",
     "@storybook/preset-typescript": "^3.0.0",
-    "dhx-suite": "^6.5.0",
+    "dhx-suite": "^6.5.8",
     "from-cdn": "^1.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

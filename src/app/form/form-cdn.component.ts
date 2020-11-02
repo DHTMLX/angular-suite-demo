@@ -17,7 +17,6 @@ export class FormCDNComponent implements OnDestroy {
     this.wait = fromCDN(["https://cdn.dhtmlx.com/suite/edge/suite.js", "https://cdn.dhtmlx.com/suite/edge/suite.css"]).then(() => {
       this.form = new dhx.Form(this.container.nativeElement, {
         css: "dhx_widget--bordered dhx_widget--bg_white",
-        gravity: false,
         width: 400,
         rows: [
           {
@@ -39,14 +38,13 @@ export class FormCDNComponent implements OnDestroy {
           },
           {
             type: "checkbox",
-            label: "I agree",
+            text: "I agree",
             name: "agree",
-            labelPosition: "right",
             value: "checkboxvalue",
           },
           {
             type: "button",
-            value: "Send",
+            text: "Send",
             size: "medium",
             view: "flat",
             submit: true,

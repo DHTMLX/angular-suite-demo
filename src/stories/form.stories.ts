@@ -39,7 +39,6 @@ export const Configurated = () => ({
   props: {
     options: {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      gravity: false,
       padding: 20,
       title: "DHX Form",
       width: 400,
@@ -48,7 +47,6 @@ export const Configurated = () => ({
           type: "datepicker",
           label: "Date",
           required: true,
-          id: "date",
           name: "date",
         },
         {
@@ -56,26 +54,23 @@ export const Configurated = () => ({
           controls: "true",
           label: "Time",
           required: true,
-          id: "time",
           name: "time",
         },
         {
           type: "colorpicker",
           label: "Color",
           required: true,
-          id: "color",
           name: "color",
         },
         {
           type: "simpleVault",
           required: true,
           label: "Files",
-          id: "simplevault",
           name: "simplevault",
         },
         {
           type: "button",
-          value: "Send",
+          text: "Send",
           size: "medium",
           view: "flat",
           submit: true,

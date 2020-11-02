@@ -23,7 +23,7 @@ export class ListEventComponent implements OnDestroy {
 
   eventsList = [];
 
-  logEvent = (payload, name: string) => {
+  logEvent = (name: string, payload?: any) => {
     this.eventsList = [{ name, payload }].concat(this.eventsList);
   };
 
@@ -36,38 +36,30 @@ export class ListEventComponent implements OnDestroy {
       editable: true,
     });
 
-    this.list.data.load(`https://dhtmlx.github.io/react-widgets/static/dataview.json`);
+    this.list.data.load(`https://dhtmlx.github.io/react-widgets/static/list.json`);
 
-    this.list.events.on("click", id => this.logEvent(id, "click"));
-    this.list.events.on("focusChange", (index, id) => {
-      const info = { index, id };
-      this.logEvent(JSON.stringify(info), "focusChange");
-    });
-    this.list.events.on("beforeDrag", id => this.logEvent(id, "beforeDrag"));
-    this.list.events.on("beforeDrop", id => this.logEvent(id, "beforeDrop"));
-    this.list.events.on("dragStart", id => this.logEvent(id, "dragStart"));
-    this.list.events.on("dragEnd", id => this.logEvent(id, "dragEnd"));
-    this.list.events.on("canDrop", id => this.logEvent(id, "canDrop"));
-    this.list.events.on("cancelDrop", id => this.logEvent(id, "cancelDrop"));
-    this.list.events.on("dropComplete", id => this.logEvent(id, "dropComplete"));
-    this.list.events.on("dragOut", id => this.logEvent(id, "dragOut"));
-    this.list.events.on("dragIn", id => this.logEvent(id, "dragIn"));
-    this.list.events.on("beforeEditStart", (value, id) => {
-      const info = { value, id };
-      this.logEvent(JSON.stringify(info), "beforeEditStart");
-    });
-    this.list.events.on("afterEditStart", id => this.logEvent(id, "afterEditStart"));
-    this.list.events.on("beforeEditEnd", (value, id) => {
-      const info = { value, id };
-      this.logEvent(JSON.stringify(info), "beforeEditEnd");
-    });
-    this.list.events.on("afterEditEnd", (value, id) => {
-      const info = { value, id };
-      this.logEvent(JSON.stringify(info), "afterEditEnd");
-    });
-    this.list.events.on("doubleClick", id => this.logEvent(id, "doubleClick"));
-    this.list.events.on("itemRightClick", id => this.logEvent(id, "itemRightClick"));
-    this.list.events.on("itemMouseOver", id => this.logEvent(id, "itemMouseOver"));
+    this.list.events.on("click", id => this.logEvent("click", id));
+    this.list.events.on("doubleclick", id => this.logEvent("doubleclick", id));
+		this.list.events.on("focuschange", () => this.logEvent("focuschange"));
+		this.list.events.on("beforeDrag", () => this.logEvent("beforeDrag"));
+		this.list.events.on("beforeDrop", () => this.logEvent("beforeDrop"));
+		this.list.events.on("dragStart", () => this.logEvent("dragStart"));
+		this.list.events.on("afterDrag", () => this.logEvent("afterDrag"));
+		this.list.events.on("canDrop", () => this.logEvent("canDrop"));
+		this.list.events.on("cancelDrop", () => this.logEvent("cancelDrop"));
+		this.list.events.on("afterDrop", () => this.logEvent("afterDrop"));
+		this.list.events.on("dragOut", () => this.logEvent("dragOut"));
+		this.list.events.on("dragIn", () => this.logEvent("dragIn"));
+		this.list.events.on("beforeSelect", () => this.logEvent("beforeSelect"));
+		this.list.events.on("afterSelect", () => this.logEvent("afterSelect"));
+		this.list.events.on("beforeUnSelect", () => this.logEvent("beforeUnSelect"));
+		this.list.events.on("afterUnSelect", () => this.logEvent("afterUnSelect"));
+		this.list.events.on("beforeEditStart", () => this.logEvent("beforeEditStart"));
+		this.list.events.on("afterEditStart", () => this.logEvent("afterEditStart"));
+		this.list.events.on("beforeEditEnd", () => this.logEvent("beforeEditEnd"));
+		this.list.events.on("afterEditEnd", () => this.logEvent("afterEditEnd"));
+		this.list.events.on("itemRightClick", () => this.logEvent("itemRightClick"));
+		this.list.events.on("itemMouseOver", () => this.logEvent("itemMouseOver"));
   }
 
   ngOnDestroy() {
