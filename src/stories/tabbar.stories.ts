@@ -43,6 +43,7 @@ export const Configurated = () => ({
       closeButtons: true,
       disabled: ["Vilnius", "London"],
       activeTab: "Paris",
+      tabAutoWidth: true,
       views: [
         {
           id: "Vilnius",

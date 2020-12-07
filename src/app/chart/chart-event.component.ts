@@ -62,7 +62,7 @@ export class ChartEventComponent implements OnDestroy {
         halign: "right",
         valign: "top",
       },
-    });
+    } as any);
 
     this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
 

@@ -37,7 +37,7 @@ export class SliderEventsComponent implements OnDestroy {
       tooltip: true,
       tick: 1,
       majorTick: 10,
-      tickTemplate: v => v,
+      tickTemplate: v => v.toString(),
     });
 
     this.timepicker.events.on("change", id => this.logEvent(id, "change"));

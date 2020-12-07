@@ -19,6 +19,7 @@ export class TabbarCDNComponent implements OnDestroy {
       this.tabbar = new dhx.Tabbar(this.container.nativeElement, {
         mode: "top",
         css: "dhx_widget--bordered dhx_widget--bg_white",
+        tabAutoWidth: true,
         views: [
           {
             tab: "Vilnius",

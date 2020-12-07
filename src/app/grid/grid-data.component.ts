@@ -18,7 +18,7 @@ export class GridDataComponent implements OnDestroy {
   grid: GridDHX;
   wait: Promise<void>;
 
-  data = new DataCollection();
+  data: any = new DataCollection();
 
   handleClick = action => {
     if (action === "reset") {

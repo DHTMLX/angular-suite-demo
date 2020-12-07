@@ -12,7 +12,7 @@ export class SliderComponent implements OnDestroy {
   wait: Promise<void>;
 
   ngOnInit() {
-    this.slider = new SliderDHX(this.container.nativeElement, {});
+    this.slider = new SliderDHX(this.container.nativeElement, {} as any);
   }
 
   ngOnDestroy() {
