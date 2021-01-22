@@ -1,5 +1,5 @@
 <p align="center">      
-	<a href="https://dhtmlx.github.io/angular-suite-demo/?path=/story/calendar--base"><img src="https://dhtmlx.github.io/angular-suite-demo/assets/logo.svg" width="150" heigh="55"></a>
+	<a href="https://dhtmlx.github.io/angular-suite-demo/?path=/story/calendar--base"><img src="https://raw.githubusercontent.com/DHTMLX/angular-suite-demo/master/public/logo.svg" width="150" heigh="55"></a>
 </p>
 
 
@@ -72,7 +72,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 ## Useful links
 
 - [Online  documentation](https://docs.dhtmlx.com/)
-- [Support forum](https://forum.dhtmlx.com/c/suite6)
+- [Support forum](https://forum.dhtmlx.com/c/suite7)
 
 
 ## Follow us
