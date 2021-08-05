@@ -74,11 +74,6 @@ export class FormEventComponent implements OnDestroy {
       const info = { name, newValue };
       this.logEvent(JSON.stringify(info), "change");
     });
-    this.form.events.on("change", id => this.logEvent(id, "change"));
-    this.form.events.on("buttonClick", id => this.logEvent(id, "buttonClick"));
-    this.form.events.on("validationFail", id => this.logEvent(id, "validationFail"));
-
-    this.form.events.on("change", name => this.logEvent("change", name));
     this.form.events.on("click", name => this.logEvent("click", name));
     this.form.events.on("beforeHide", name => this.logEvent("beforeHide", name));
     this.form.events.on("afterHide", name => this.logEvent("afterHide", name));
@@ -90,6 +85,18 @@ export class FormEventComponent implements OnDestroy {
     this.form.events.on("afterChangeProperties", name => this.logEvent("afterChangeProperties", name));
     this.form.events.on("afterSend", () => this.logEvent("afterSend"));
     this.form.events.on("beforeSend", () => this.logEvent("beforeSend"));
+    this.form.events.on("blur", (name, value) => {
+      const info = JSON.stringify({ name, value })
+      this.logEvent(info, "blur");
+    });
+    this.form.events.on("focus", (name, value) => {
+      const info = JSON.stringify({ name, value })
+      this.logEvent(info, "focus");
+    });
+    this.form.events.on("keydown", (event, id) => {
+      const value = JSON.stringify({event, id});
+      this.logEvent(value, "keydown");
+    });
   }
 
   ngOnDestroy() {

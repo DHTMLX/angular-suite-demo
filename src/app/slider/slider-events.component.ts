@@ -20,7 +20,7 @@ import { Slider as SliderDHX } from "dhx-suite";
 export class SliderEventsComponent implements OnDestroy {
   @ViewChild("widget", { static: true })
   container: ElementRef;
-  timepicker: SliderDHX;
+  slider: SliderDHX;
   wait: Promise<void>;
 
   eventsList = [];
@@ -30,7 +30,7 @@ export class SliderEventsComponent implements OnDestroy {
   };
 
   ngOnInit() {
-    this.timepicker = new SliderDHX(this.container.nativeElement, {
+    this.slider = new SliderDHX(this.container.nativeElement, {
       min: 0,
       max: 100,
       step: 1,
@@ -40,14 +40,20 @@ export class SliderEventsComponent implements OnDestroy {
       tickTemplate: v => v.toString(),
     });
 
-    this.timepicker.events.on("change", id => this.logEvent(id, "change"));
-    this.timepicker.events.on("mousedown", id => this.logEvent(id, "mousedown"));
-    this.timepicker.events.on("mouseup", id => this.logEvent(id, "mouseup"));
+    this.slider.events.on("change", id => this.logEvent(id, "change"));
+    this.slider.events.on("mousedown", id => this.logEvent(id, "mousedown"));
+    this.slider.events.on("mouseup", id => this.logEvent(id, "mouseup"));
+    this.slider.events.on("blur", () => this.logEvent(null, "blur"));
+    this.slider.events.on("focus", () => this.logEvent(null, "focus"));
+    this.slider.events.on("keydown", (event) => {
+      const value = JSON.stringify({ event });
+      this.logEvent(value, "keydown");
+    });
   }
 
   ngOnDestroy() {
-    if (this.timepicker) {
-      this.timepicker.destructor();
+    if (this.slider) {
+      this.slider.destructor();
     }
   }
 }

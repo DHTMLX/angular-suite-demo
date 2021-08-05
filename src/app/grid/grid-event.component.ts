@@ -143,6 +143,15 @@ export class GridEventComponent implements OnDestroy {
       const infoAfterResizeEnd = { column, event: e };
       this.logEvent("afterResizeEnd", JSON.stringify(infoAfterResizeEnd));
     });
+    this.grid.events.on("beforeSort", (col, dir) => {
+      const value = JSON.stringify({ col, dir });
+      this.logEvent(value, "beforeSort");
+      return true;
+    });
+    this.grid.events.on("afterSort", (col, dir) => {
+      const value = JSON.stringify({ col, dir });
+      this.logEvent(value, "beforeSort");
+    });
     this.grid.events.on("beforeKeyDown", e => this.logEvent("beforeKeyDown", JSON.stringify(e)));
     this.grid.events.on("afterKeyDown", e => this.logEvent("afterKeyDown", JSON.stringify(e)));
     this.grid.events.on("beforeRowDrag", () => this.logEvent("beforeRowDrag"));

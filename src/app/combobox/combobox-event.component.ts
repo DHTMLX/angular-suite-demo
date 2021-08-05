@@ -35,10 +35,20 @@ export class ComboboxEventComponent implements OnDestroy {
     this.combobox.data.load("https://dhtmlx.github.io/react-widgets/static/combobox.json");
 
     this.combobox.events.on("change", id => this.logEvent(id, "change"));
-    this.combobox.events.on("open", () => this.logEvent(null, "open"));
     this.combobox.events.on("beforeClose", () => this.logEvent(null, "beforeClose"));
     this.combobox.events.on("afterClose", () => this.logEvent(null, "afterClose"));
     this.combobox.events.on("input", value => this.logEvent(value, "input"));
+    this.combobox.events.on("blur", () => this.logEvent(null, "blur"));
+    this.combobox.events.on("focus", () => this.logEvent(null, "focus"));
+    this.combobox.events.on("keydown", (event, id) => {
+      const value = JSON.stringify({event, id});
+      this.logEvent(value, "keydown");
+    });
+    this.combobox.events.on("beforeOpen", () => {
+      this.logEvent(null, "beforeOpen");
+      return true;
+    });
+    this.combobox.events.on("afterOpen", () => this.logEvent(null, "afterOpen"));
   }
 
   ngOnDestroy() {

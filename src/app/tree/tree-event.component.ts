@@ -45,6 +45,14 @@ export class TreeEventComponent implements OnDestroy {
       return true;
     });
     this.tree.events.on("afterExpand", id => this.logEvent(id, "afterExpand"));
+    this.tree.events.on("beforeCheck", (index, id) => {
+      const value = JSON.stringify({index, id});
+      console.log(value, "beforeCheck");
+    });
+    this.tree.events.on("afterCheck", (index, id) => {
+      const value = JSON.stringify({index, id});
+      this.logEvent(value, "afterCheck");
+    });
   }
 
   ngOnDestroy() {
