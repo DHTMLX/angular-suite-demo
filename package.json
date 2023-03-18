@@ -27,7 +27,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.1",
+    "@angular-devkit/build-angular": "~15.2.4",
     "@angular/cli": "~9.1.1",
     "@angular/compiler-cli": "~9.1.1",
     "@angular/language-service": "~9.1.1",
@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-typescript": "^7.9.0",
     "@storybook/addons": "^5.3.18",
-    "@storybook/angular": "^5.3.18",
+    "@storybook/angular": "^6.5.16",
     "@storybook/storybook-deployer": "^2.8.5",
     "@storybook/theming": "^5.3.19",
     "@types/node": "^12.11.1",
