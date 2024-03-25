@@ -1,26 +1,37 @@
-import { Component, ViewChild, OnDestroy, ElementRef } from "@angular/core";
-import { Sidebar as SidebarDHX } from "dhx-suite";
+// sidebar.component.ts
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Sidebar } from "@dhx/trial-suite";
+import { SidebarDataService } from './sidebar-data.service'; // Assuming you have a service to handle the store
+
 @Component({
-  selector: "app-sidebar",
-  template: `<div #widget class="widget-box-wide"></div>`,
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnDestroy {
-  @ViewChild("widget", { static: true })
-  container: ElementRef;
-  toolbar: SidebarDHX;
-  wait: Promise<void>;
+export class SidebarComponent implements OnInit, OnDestroy {
+  @ViewChild('node', { static: true }) node!: ElementRef;
+  sidebar!: Sidebar;
+
+  constructor(private sidebarDataService: SidebarDataService) { }
 
   ngOnInit() {
-    this.toolbar = new SidebarDHX(this.container.nativeElement, {
-      css: "dhx_widget--bordered dhx_widget--bg_white",
+    this.sidebar = new Sidebar(this.node.nativeElement, {});
+    this.sidebar.events.on("click", (id: string) => {
+      if (id === "toggle") {
+        const toggleItem = this.sidebar.data.getItem("toggle");
+        this.sidebar.toggle();
+        toggleItem.icon = this.sidebar.config.collapsed
+          ? "mdi mdi-menu"
+          : "mdi mdi-backburger";
+      }
     });
 
-    this.toolbar.data.load("https://dhtmlx.github.io/react-widgets/static/sidebar.json");
+    this.sidebarDataService.getSidebarData().subscribe((data: any) => {
+      this.sidebar?.data.parse(data);
+    });
   }
 
   ngOnDestroy() {
-    if (this.toolbar) {
-      this.toolbar.destructor();
-    }
+    this.sidebar.destructor();
   }
 }

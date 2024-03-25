@@ -1,0 +1,13 @@
+/* left-content.component.css */
+.block {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+app-sliders-layout, app-tree {
+  flex-grow: 2;
+}
+app-tree {
+  flex-grow: 1;
+}

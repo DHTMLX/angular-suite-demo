@@ -1,0 +1,5 @@
+/* ribbon.component.css */
+.container {
+  padding: 50px;
+  background: var(--dhx-background-primary);
+}
