@@ -6,25 +6,24 @@ import { DataviewDataService } from './datview-data.service';
 @Component({
   selector: 'app-tickets-dataview',
   templateUrl: './dataview.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class TicketsDataviewComponent implements OnInit {
   @ViewChild('dataviewNode', { static: true }) dataviewNode!: ElementRef;
   dataview: any;
 
-  constructor(private store: DataviewDataService) { }
+  constructor(private store: DataviewDataService) {}
 
   ngOnInit() {
     this.dataview = new DataView(this.dataviewNode.nativeElement, {
       template: this.template,
       itemsInRow: 2,
-      css: "dhx_dataview_template_a_box",
+      css: 'dhx_dataview_template_a_box',
     });
 
     this.store.getDataviewData().subscribe((data: any) => {
       this.dataview.data.parse(data);
     });
-      
   }
 
   ngOnDestroy() {

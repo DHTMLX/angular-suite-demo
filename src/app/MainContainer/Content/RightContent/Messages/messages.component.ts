@@ -28,7 +28,8 @@ export class MessageDataviewComponent implements OnInit, OnDestroy {
       css: 'dhx_dataview_template_b_box',
       // other configuration goes here
     });
-    this.store.getMessages().subscribe((data: any) => { // <1>
+    this.store.getMessages().subscribe((data: any) => {
+      // <1>
       this.dataview.data.parse(data);
     });
   }

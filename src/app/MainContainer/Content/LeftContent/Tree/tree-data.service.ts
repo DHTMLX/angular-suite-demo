@@ -6,134 +6,134 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class TreeDataService {
-
   private treeData = [
     {
-      value: "Books",
-      id: "Books",
+      value: 'Books',
+      id: 'Books',
       opened: true,
       items: [
         {
-          value: "Thrillers",
-          id: "Thrillers",
+          value: 'Thrillers',
+          id: 'Thrillers',
           opened: true,
           items: [
             {
-              value: "Bestsellers",
-              id: "Bestsellers",
+              value: 'Bestsellers',
+              id: 'Bestsellers',
               checked: true,
               items: [
                 {
-                  value: "Lawrence Block",
-                  id: "Lawrence Block",
+                  value: 'Lawrence Block',
+                  id: 'Lawrence Block',
                 },
               ],
             },
             {
-              value: "Robert Crais",
-              id: "Robert Crais",
+              value: 'Robert Crais',
+              id: 'Robert Crais',
             },
             {
-              value: "Ian Rankin",
-              id: "Ian Rankin",
+              value: 'Ian Rankin',
+              id: 'Ian Rankin',
             },
             {
-              value: "James Johns",
-              id: "James Johns",
+              value: 'James Johns',
+              id: 'James Johns',
             },
             {
-              value: "Nancy Atherton",
-              id: "Nancy Atherton",
-            },
-          ],
-        },
-        {
-          value: "History",
-          id: "History",
-          items: [
-            {
-              value: "John Mack Faragher",
-              id: "John Mack Faragher",
-            },
-            {
-              value: "Jim Dwyer",
-              id: "Jim Dwyer",
-            },
-            {
-              value: "Larry Schweikart",
-              id: "Larry Schweikart",
-            },
-            {
-              value: "R. Lee Ermey",
-              id: "R. Lee Ermey",
+              value: 'Nancy Atherton',
+              id: 'Nancy Atherton',
             },
           ],
         },
         {
-          value: "Horror",
-          id: "Horror",
+          value: 'History',
+          id: 'History',
           items: [
             {
-              value: "Stephen King",
-              id: "Stephen King",
+              value: 'John Mack Faragher',
+              id: 'John Mack Faragher',
             },
             {
-              value: "Dan Brown",
-              id: "Dan Brown",
+              value: 'Jim Dwyer',
+              id: 'Jim Dwyer',
             },
             {
-              value: "Mary Janice Davidson",
-              id: "Mary Janice Davidson",
+              value: 'Larry Schweikart',
+              id: 'Larry Schweikart',
             },
             {
-              value: "Katie Macalister",
-              id: "Katie Macalister",
+              value: 'R. Lee Ermey',
+              id: 'R. Lee Ermey',
             },
           ],
         },
         {
-          value: "Fiction & Fantasy",
-          id: "Fiction & Fantasy",
+          value: 'Horror',
+          id: 'Horror',
           items: [
             {
-              value: "Audrey Niffenegger",
-              id: "Audrey Niffenegger",
+              value: 'Stephen King',
+              id: 'Stephen King',
             },
             {
-              value: "Philip Roth",
-              id: "Philip Roth",
+              value: 'Dan Brown',
+              id: 'Dan Brown',
+            },
+            {
+              value: 'Mary Janice Davidson',
+              id: 'Mary Janice Davidson',
+            },
+            {
+              value: 'Katie Macalister',
+              id: 'Katie Macalister',
             },
           ],
         },
         {
-          value: "Teens",
-          id: "Teens",
+          value: 'Fiction & Fantasy',
+          id: 'Fiction & Fantasy',
           items: [
             {
-              value: "Joss Whedon",
-              id: "Joss Whedon",
+              value: 'Audrey Niffenegger',
+              id: 'Audrey Niffenegger',
             },
             {
-              value: "Meg Cabot",
-              id: "Meg Cabot",
+              value: 'Philip Roth',
+              id: 'Philip Roth',
+            },
+          ],
+        },
+        {
+          value: 'Teens',
+          id: 'Teens',
+          items: [
+            {
+              value: 'Joss Whedon',
+              id: 'Joss Whedon',
             },
             {
-              value: "Garth Nix",
-              id: "Garth Nix",
+              value: 'Meg Cabot',
+              id: 'Meg Cabot',
             },
             {
-              value: "Ann Brashares",
-              id: "Ann Brashares",
+              value: 'Garth Nix',
+              id: 'Garth Nix',
+            },
+            {
+              value: 'Ann Brashares',
+              id: 'Ann Brashares',
             },
           ],
         },
       ],
     },
   ];
-  
-  
+
   getTreeData(): Observable<any[]> {
-    this.treeData.forEach((item: any) => (item.totalCost = item.nights * item.price));
+    this.treeData.forEach(
+      (item: any) => (item.totalCost = item.nights * item.price)
+    );
     return of(this.treeData);
   }
 }

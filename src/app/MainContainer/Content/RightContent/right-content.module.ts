@@ -14,7 +14,7 @@ import { MessageDataviewComponent } from './Messages/messages.component';
     FormComponent,
     ButtonsFormComponent,
     ColorpickerComponent,
-    MessageDataviewComponent
+    MessageDataviewComponent,
   ],
   imports: [BrowserModule],
   exports: [RightContentComponent],

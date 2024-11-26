@@ -18,7 +18,7 @@ import { TicketsDataviewComponent } from './Dataview/dataview.component';
     SlidersLayoutComponent,
     TreeComponent,
     RibbonComponent,
-    TicketsDataviewComponent
+    TicketsDataviewComponent,
   ],
   imports: [BrowserModule],
   exports: [LeftContentComponent],
