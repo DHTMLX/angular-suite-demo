@@ -1,32 +1,42 @@
-// toolbar.component.ts
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Toolbar, setTheme } from '@dhx/trial-suite';
-import { ToolbarDataService } from './toolbar-data.service';
+import { getData } from "./toolbar-data";
+
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  OnDestroy,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: [],
+  template: `<div #toolbar_container></div>`
 })
-export class ToolbarComponent implements OnInit {
-  @ViewChild('toolbarNode', { static: true }) toolbarNode!: ElementRef;
-  toolbar: any;
+
+export class ToolbarComponent implements OnInit, OnDestroy {
+  @ViewChild('toolbar_container', { static: true }) toolbar_container!: ElementRef;
+  
+  private _toolbar!: Toolbar;
+
   contrast = false;
   theme = 'light';
 
-  constructor(private toolbarDataService: ToolbarDataService) {}
-
   ngOnInit() {
-    this.toolbar = new Toolbar(this.toolbarNode.nativeElement, {});
-    this.toolbar.events.on('click', (id: string) => {
+    const toolbarData = getData();
+    this._toolbar = new Toolbar(this.toolbar_container.nativeElement, {
+      data: toolbarData
+    });
+
+    this._toolbar.events.on('click', (id: any) => {
       switch (id) {
         case 'theme': {
-          const checked = !this.toolbar.data.getItem('theme').checked;
-          this.toolbar.data.update('theme', {
+          const checked = !this._toolbar.data.getItem('theme')['checked'];
+          this._toolbar.data.update('theme', {
             checked,
             icon: `mdi mdi-${
               !checked ? 'weather-night' : 'white-balance-sunny'
-            }`,
+            }`
           });
           this.theme = checked ? 'dark' : 'light';
           //@ts-ignore
@@ -40,8 +50,9 @@ export class ToolbarComponent implements OnInit {
         }
       }
     });
-    this.toolbarDataService.getToolbarData().subscribe((data: any) => {
-      this.toolbar?.data.parse(data);
-    });
+  }
+
+  ngOnDestroy() {
+    this._toolbar?.destructor();
   }
 }

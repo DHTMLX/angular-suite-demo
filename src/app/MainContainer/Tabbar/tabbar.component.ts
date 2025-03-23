@@ -1,18 +1,25 @@
-// tabbar.component.ts
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Tabbar } from '@dhx/trial-suite';
+
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  OnDestroy,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-tabbar',
-  templateUrl: './tabbar.component.html',
-  styleUrls: [],
+  template: `<div #tabbar_container></div>`
 })
-export class TabbarComponent implements OnInit {
-  @ViewChild('tabbarNode', { static: true }) tabbarNode!: ElementRef;
-  tabbar: any;
+
+export class TabbarComponent implements OnInit, OnDestroy {
+  @ViewChild('tabbar_container', { static: true }) tabbar_container!: ElementRef;
+  
+  private _tabbar!: Tabbar;
 
   ngOnInit() {
-    this.tabbar = new Tabbar(this.tabbarNode.nativeElement, {
+    this._tabbar = new Tabbar(this.tabbar_container.nativeElement, {
       tabAlign: 'center',
       disabled: ['reports', 'tickets', 'users', 'applications'],
       views: [
@@ -20,12 +27,12 @@ export class TabbarComponent implements OnInit {
         { id: 'reports', tab: 'Reports' },
         { id: 'tickets', tab: 'Tickets' },
         { id: 'users', tab: 'Users' },
-        { id: 'applications', tab: 'Applications' },
-      ],
+        { id: 'applications', tab: 'Applications' }
+      ]
     });
   }
 
   ngOnDestroy() {
-    this.tabbar && this.tabbar.destructor();
+    this._tabbar?.destructor();
   }
 }

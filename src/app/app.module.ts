@@ -7,7 +7,7 @@ import { MainModule } from './MainContainer/main.module';
 @NgModule({
   declarations: [AppComponent, SidebarComponent],
   imports: [BrowserModule, MainModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
+
 export class AppModule {}
