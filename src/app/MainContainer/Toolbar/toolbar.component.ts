@@ -1,5 +1,5 @@
 import { Toolbar, setTheme } from '@dhx/trial-suite';
-import { getData } from "./toolbar-data";
+import { getData } from "../../app.data";
 
 import {
   Component,
@@ -23,7 +23,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   theme = 'light';
 
   ngOnInit() {
-    const toolbarData = getData();
+    const { toolbarData } = getData();
     this._toolbar = new Toolbar(this.toolbar_container.nativeElement, {
       data: toolbarData
     });

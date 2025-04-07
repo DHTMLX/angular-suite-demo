@@ -15,7 +15,7 @@ import {
               <div class="wrapper dhx_layout_calendar_cell" #timepicker_container></div>
               <div class="wrapper dhx_layout_calendar_cell" #year_container></div>
              </div>`,
-  styleUrls: ['./calendars.component.css'],
+  styleUrls: ['./calendars.component.css']
 })
 
 export class CalendarsComponent implements OnInit, OnDestroy {
@@ -32,12 +32,12 @@ export class CalendarsComponent implements OnInit, OnDestroy {
       weekStart: 'monday',
       timePicker: true,
       range: true,
-      value: [new Date(), new Date(Date.now() + 200000000)],
+      value: [new Date(), new Date(Date.now() + 200000000)]
     });
 
     this._timepicker = new Timepicker(this.timepicker_container.nativeElement, {
       controls: true,
-      value: new Date(),
+      value: new Date()
     });
 
     this._year_calendar = new Calendar(this.year_container.nativeElement, {

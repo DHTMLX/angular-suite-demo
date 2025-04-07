@@ -1,6 +1,6 @@
 import { Grid, Pagination } from '@dhx/trial-suite';
 import { IPaginationConfig } from '@dhx/trial-suite/codebase/types/ts-pagination';
-import { getData } from "./grid-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -26,7 +26,7 @@ export class GridComponent implements OnInit, OnDestroy {
   private _pogination!: Pagination;
 
   ngOnInit() {
-    const gridData = getData();
+    const { gridData } = getData();
     const gridConfig: any = {
       data: gridData,
       columns: [
@@ -35,19 +35,19 @@ export class GridComponent implements OnInit, OnDestroy {
           id: 'time',
           header: [{ text: 'Time', align: 'center' }],
           type: 'date',
-          dateFormat: '%M %d, %H:%i',
+          dateFormat: '%M %d, %H:%i'
         },
         { id: 'nights', header: [{ text: 'Nights' }] },
         {
           id: 'price',
           header: [{ text: 'Price' }],
           type: 'number',
-          numberMask: { prefix: "$" },
+          numberMask: { prefix: "$" }
         },
         {
           gravity: 3,
           id: 'contactPerson',
-          header: [{ text: 'Contact Person' }],
+          header: [{ text: 'Contact Person' }]
         },
         {
           gravity: 4,

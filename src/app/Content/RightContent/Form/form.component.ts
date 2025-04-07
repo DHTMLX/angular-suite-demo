@@ -1,5 +1,5 @@
 import { Form } from '@dhx/trial-suite';
-import { getData } from "./form-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -19,7 +19,7 @@ export class FormComponent implements OnInit, OnDestroy {
   private _form!: Form;
   
   ngOnInit() {
-    const countries = getData();
+    const { country } = getData();
     this._form = new Form(this.form_container.nativeElement, {
       padding: 40,
       width: 'auto',
@@ -54,7 +54,7 @@ export class FormComponent implements OnInit, OnDestroy {
           placeholder: 'Click to select',
           multiselection: true,
           value: ['austria', 'estonia'],
-          data: countries,
+          data: country,
         },
         {
           name: 'birth',
@@ -113,7 +113,7 @@ export class FormComponent implements OnInit, OnDestroy {
           label: 'Offices',
           placeholder: 'You can select several offices',
           multiselection: true,
-          data: countries,
+          data: country,
         },
         {
           name: 'attachDocument',

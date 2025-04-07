@@ -1,5 +1,5 @@
 import { Chart, Layout } from '@dhx/trial-suite';
-import { getData } from "./chart-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,

@@ -1,12 +1,12 @@
 import { Sidebar } from '@dhx/trial-suite';
-import { getData } from "./sidebar-data";
+import { getData } from "../app.data";
 
 import {
   Component,
   ElementRef,
   OnInit,
   OnDestroy,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 
 @Component({
@@ -21,7 +21,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   private _sidebar!: Sidebar;
 
   ngOnInit() {
-    const sidebarData = getData();
+    const { sidebarData } = getData();
 
     this._sidebar = new Sidebar(this.sidebar_container.nativeElement, {
       data: sidebarData

@@ -35,7 +35,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'primary',
               icon: 'dxi dxi-plus',
               full: true,
-              size: 'small',
+              size: 'small'
             },
             {
               padding: 5,
@@ -45,7 +45,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'primary',
               full: true,
               view: 'link',
-              size: 'small',
+              size: 'small'
             },
             {
               padding: 5,
@@ -55,7 +55,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'primary',
               full: true,
               disabled: true,
-              size: 'small',
+              size: 'small'
             }
           ]
         },
@@ -70,7 +70,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'secondary',
               icon: 'dxi dxi-plus',
               full: true,
-              size: 'small',
+              size: 'small'
             },
             {
               padding: 5,
@@ -80,7 +80,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'secondary',
               full: true,
               size: 'small',
-              view: 'link',
+              view: 'link'
             },
             {
               padding: 5,
@@ -90,7 +90,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'secondary',
               full: true,
               size: 'small',
-              disabled: true,
+              disabled: true
             }
           ]
         },
@@ -105,7 +105,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'danger',
               icon: 'dxi dxi-plus',
               full: true,
-              size: 'small',
+              size: 'small'
             },
             {
               padding: 5,
@@ -115,7 +115,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'danger',
               full: true,
               size: 'small',
-              view: 'link',
+              view: 'link'
             },
             {
               padding: 5,
@@ -125,7 +125,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'danger',
               full: true,
               size: 'small',
-              disabled: true,
+              disabled: true
             }
           ]
         },
@@ -140,7 +140,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'success',
               icon: 'dxi dxi-plus',
               full: true,
-              size: 'small',
+              size: 'small'
             },
             {
               padding: 5,
@@ -150,7 +150,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'success',
               full: true,
               size: 'small',
-              view: 'link',
+              view: 'link'
             },
             {
               padding: 5,
@@ -160,7 +160,7 @@ export class ButtonsFormComponent implements OnInit, OnDestroy {
               color: 'success',
               full: true,
               size: 'small',
-              disabled: true,
+              disabled: true
             }
           ]
         }

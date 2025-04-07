@@ -1,5 +1,5 @@
 import { DataView } from '@dhx/trial-suite';
-import { getData } from "./messages-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -20,9 +20,9 @@ export class MessageDataviewComponent implements OnInit, OnDestroy {
   private _dataview!: DataView;
 
   ngOnInit() {
-    const messages = getData();
+    const { messageDataviewData } = getData();
     this._dataview = new DataView(this.dataview_container.nativeElement, {
-      data: messages,
+      data: messageDataviewData,
       template: this.template,
       itemsInRow: 2,
       css: 'dhx_dataview_template_b_box',

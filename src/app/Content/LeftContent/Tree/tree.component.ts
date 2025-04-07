@@ -1,5 +1,5 @@
 import { Tree } from '@dhx/trial-suite';
-import { getData } from "./tree-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -20,7 +20,7 @@ export class TreeComponent implements OnInit, OnDestroy {
   private _tree!: Tree;
 
   ngOnInit() {
-    const treeData = getData();
+    const { treeData } = getData();
     this._tree = new Tree(this.tree_container.nativeElement, {
       data: treeData,
       checkbox: true,

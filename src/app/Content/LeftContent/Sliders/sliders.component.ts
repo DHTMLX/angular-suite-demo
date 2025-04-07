@@ -35,22 +35,22 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
             {
               padding: 10,
               height: 'content',
-              id: 'slider1',
+              id: 'slider1'
             },
             {
               padding: 10,
               height: 'content',
-              id: 'slider2',
+              id: 'slider2'
             },
             {
               padding: 10,
               height: 'content',
-              id: 'slider3',
+              id: 'slider3'
             },
             {
               padding: 10,
               height: 'content',
-              id: 'slider4',
+              id: 'slider4'
             }
           ]
         },
@@ -78,7 +78,7 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       step: 1,
       value: 50,
       tick: 10,
-      tickTemplate: (value) => `${value}`,
+      tickTemplate: (value) => `${value}`
     });
 
     this._slider3 = new Slider('', {

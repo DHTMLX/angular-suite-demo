@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { ContentModule } from '../Content/content.module';
 import { MainContainerComponent } from './main.component';
 import { ToolbarComponent } from './Toolbar/toolbar.component';
 import { TabbarComponent } from './Tabbar/tabbar.component';
-import { ContentModule } from '../Content/content.module';
 
 @NgModule({
   declarations: [MainContainerComponent, ToolbarComponent, TabbarComponent],

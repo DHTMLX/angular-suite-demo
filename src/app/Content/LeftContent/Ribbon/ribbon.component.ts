@@ -1,5 +1,5 @@
 import { Ribbon } from '@dhx/trial-suite';
-import { getData } from "./ribbon-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -20,7 +20,7 @@ export class RibbonComponent implements OnInit, OnDestroy {
   private _ribbon!: Ribbon;
 
   ngOnInit() {
-    const ribbonData = getData();
+    const { ribbonData } = getData();
     this._ribbon = new Ribbon(this.ribbon_container.nativeElement, {
       data: ribbonData,
       css: 'dhx_widget--bordered'

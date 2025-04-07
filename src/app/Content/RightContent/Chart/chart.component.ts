@@ -1,5 +1,5 @@
 import { Chart } from '@dhx/trial-suite';
-import { getData } from "./chart-data";
+import { getData } from "../../../app.data";
 
 import {
   Component,
@@ -20,7 +20,7 @@ export class ChartComponent implements OnInit, OnDestroy {
   private _chart!: Chart;
 
   ngOnInit() {
-    const chartData = getData();
+    const { chartData } = getData();
     this._chart = new Chart(this.chart_container.nativeElement, {
       data: chartData,
       type: 'pie',
