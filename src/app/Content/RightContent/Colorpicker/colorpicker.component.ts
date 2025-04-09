@@ -79,7 +79,7 @@ export class ColorpickerComponent implements OnInit, OnDestroy {
     return {
       h,
       s,
-      l,
+      l
     };
   }
 }

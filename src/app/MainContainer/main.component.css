@@ -1,8 +1,0 @@
-app-content {
-  display: flex;
-  flex-grow: 1;
-  overflow: auto;
-  padding: 12px;
-  gap: 12px;
-  background-color: var(--dhx-background-secondary);
-}

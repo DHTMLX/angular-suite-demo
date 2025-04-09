@@ -14,8 +14,7 @@ import {
               <div class="wrapper dhx_layout_calendar_cell" #week_container></div>
               <div class="wrapper dhx_layout_calendar_cell" #timepicker_container></div>
               <div class="wrapper dhx_layout_calendar_cell" #year_container></div>
-             </div>`,
-  styleUrls: ['./calendars.component.css']
+             </div>`
 })
 
 export class CalendarsComponent implements OnInit, OnDestroy {

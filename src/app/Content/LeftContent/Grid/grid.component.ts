@@ -12,7 +12,6 @@ import {
 
 @Component({
   selector: 'app-grid',
-  styleUrls: ['./grid.component.css'],
   template: `<div class="wrapper">
               <div #grid_container class="grid_container"></div>
               <div #pogination_container></div>
@@ -42,7 +41,7 @@ export class GridComponent implements OnInit, OnDestroy {
           id: 'price',
           header: [{ text: 'Price' }],
           type: 'number',
-          numberMask: { prefix: "$" }
+          numberMask: { prefix: '$' }
         },
         {
           gravity: 3,
@@ -63,8 +62,8 @@ export class GridComponent implements OnInit, OnDestroy {
           id: 'totalCost',
           header: [{ text: 'Total Cost' }],
           type: 'number',
-          numberMask: { prefix: "$" }
-        }
+          numberMask: { prefix: '$' }
+        },
       ],
       autoWidth: true,
       css: 'grid',
