@@ -11,8 +11,7 @@ import {
 
 @Component({
   selector: 'app-sidebar',
-  template: `<div #node class="dhx_widget--border_right sidebar_container"></div>`,
-  styleUrls: ['./sidebar.component.css']
+  template: `<div #sidebar_container class="dhx_widget--border_right sidebar_container"></div>`,
 })
 
 export class SidebarComponent implements OnInit, OnDestroy {

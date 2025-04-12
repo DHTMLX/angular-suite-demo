@@ -12,7 +12,6 @@ import {
 @Component({
   selector: 'app-ribbon',
   template: `<div #ribbon_container class="container"></div>`,
-  styleUrls: ['./ribbon.component.css']
 })
 export class RibbonComponent implements OnInit, OnDestroy {
   @ViewChild('ribbon_container', { static: true }) ribbon_container!: ElementRef;

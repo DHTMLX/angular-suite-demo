@@ -19,7 +19,7 @@ import { TicketsDataviewComponent } from './TicketsDataview/tickets-dataview.com
     SlidersLayoutComponent,
     TreeComponent,
     RibbonComponent,
-    TicketsDataviewComponent,
+    TicketsDataviewComponent
   ],
   imports: [BrowserModule],
   exports: [LeftContentComponent],

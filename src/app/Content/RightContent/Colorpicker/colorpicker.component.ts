@@ -10,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-colorpicker',
-  template: `<div #colorpicker_container class="container dhx_layout_colorpicker_cell" ></div>`
+  template: `<div #colorpicker_container class="container dhx_layout_colorpicker_cell"></div>`
 })
 
 export class ColorpickerComponent implements OnInit, OnDestroy {

@@ -1,10 +1,13 @@
-// calendars.component.ts
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Calendar, Timepicker } from '@dhx/trial-suite';
 
 @Component({
   selector: 'app-calendars',
-  templateUrl: './calendars.component.html',
+  templateUrl: `<div class="calendars-wrapper">
+                  <div class="wrapper dhx_layout_calendar_cell" #week_container></div>
+                  <div class="wrapper dhx_layout_calendar_cell" #timepicker_container></div>
+                  <div class="wrapper dhx_layout_calendar_cell" #year_container></div>
+                </div>`,
 })
 export class CalendarsComponent implements OnInit {
   @ViewChild('weekNode', { static: true }) weekNode!: ElementRef;
@@ -19,16 +22,16 @@ export class CalendarsComponent implements OnInit {
       weekStart: 'monday',
       timePicker: true,
       range: true,
-      value: [new Date(), new Date(Date.now() + 200000000)],
+      value: [new Date(), new Date(Date.now() + 200000000)]
     });
     this.timepicker = new Timepicker(this.timepickerNode.nativeElement, {
       controls: true,
-      value: new Date(),
+      value: new Date()
     });
     this.yearCalendar = new Calendar(this.yearNode.nativeElement, {
       timePicker: true,
       mode: 'year',
-      value: new Date(),
+      value: new Date()
     });
   }
 
