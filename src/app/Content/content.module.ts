@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LeftContentModule } from './LeftContent/left-content.module';
-import { RightContentModule } from './RightContent/right-content.module';
+import { LeftContentModule } from './LeftPanel/left-content.module';
+import { RightContentModule } from './RightPanel/right-content.module';
 
 import { ContentComponent } from './content.component';
 
