@@ -6,6 +6,14 @@
 
 ## How to start
 
+### Online
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/angular-suite-demo) 
+
+**Please note**, having clicked on this button, you open the **online demo. Don't worry about paying extra!** With GitHub's free plan, [you get 15 GB of storage and 120 hours of Codespaces use each month](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts). This is more than enough to run our demo without any extra costs.
+
+### On the local host 
+
 Clone the repository or download files.
 
 ```
@@ -20,11 +28,8 @@ npm install
 npm run start
 ```
 
-You can also use [GitHub Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository) to run online.
-
 ## Useful links
 
-- **[Online demo](https://replit.com/@dhtmlx/dhtmlx-suite-with-angular)**
 - [More demos about the DHTMLX Suite functionality](https://snippet.dhtmlx.com/1eh4ks4f)
 - [Technical support ](https://forum.dhtmlx.com/c/suite)
 - [Documentation](https://docs.dhtmlx.com/suite/)
