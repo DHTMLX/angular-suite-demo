@@ -1,43 +1,43 @@
-// sidebar.component.ts
+import { Sidebar } from "@dhx/trial-suite";
+import { getData } from "../app.data";
+
 import {
   Component,
+  ElementRef,
   OnInit,
   OnDestroy,
-  ViewChild,
-  ElementRef,
-} from '@angular/core';
-import { Sidebar } from '@dhx/trial-suite';
-import { SidebarDataService } from './sidebar-data.service'; // Assuming you have a service to handle the store
+  ViewChild
+} from "@angular/core";
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css'],
+  selector: "app-sidebar",
+  template: `<div #sidebar_container class="dhx_widget--border_right sidebar_container"></div>`,
 })
-export class SidebarComponent implements OnInit, OnDestroy {
-  @ViewChild('node', { static: true }) node!: ElementRef;
-  sidebar!: Sidebar;
 
-  constructor(private sidebarDataService: SidebarDataService) {}
+export class SidebarComponent implements OnInit, OnDestroy {
+  @ViewChild("sidebar_container", { static: true }) sidebar_container!: ElementRef;
+
+  private _sidebar!: Sidebar;
 
   ngOnInit() {
-    this.sidebar = new Sidebar(this.node.nativeElement, {});
-    this.sidebar.events.on('click', (id: string) => {
-      if (id === 'toggle') {
-        const toggleItem = this.sidebar.data.getItem('toggle');
-        this.sidebar.toggle();
-        toggleItem.icon = this.sidebar.config.collapsed
-          ? 'mdi mdi-menu'
-          : 'mdi mdi-backburger';
-      }
+    const { sidebarData } = getData();
+
+    this._sidebar = new Sidebar(this.sidebar_container.nativeElement, {
+      data: sidebarData
     });
 
-    this.sidebarDataService.getSidebarData().subscribe((data: any) => {
-      this.sidebar?.data.parse(data);
+    this._sidebar.events.on("click", (id: string) => {
+      if (id === "toggle") {
+        const toggleItem = this._sidebar.data.getItem("toggle");
+        this._sidebar.toggle();
+        toggleItem.icon = this._sidebar.config.collapsed
+          ? "mdi mdi-menu"
+          : "mdi mdi-backburger";
+      }
     });
   }
 
   ngOnDestroy() {
-    this.sidebar.destructor();
+    this._sidebar?.destructor();
   }
 }
