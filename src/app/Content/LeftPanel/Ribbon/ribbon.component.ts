@@ -1,4 +1,4 @@
-import { Ribbon } from '@dhx/trial-suite';
+import { Ribbon } from "@dhx/trial-suite";
 import { getData } from "../../../app.data";
 
 import {
@@ -10,11 +10,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-ribbon',
-  template: `<div #ribbon_container class="container"></div>`,
+  selector: "app-ribbon",
+  template: `<div #ribbon_container class="ribbon_container"></div>`,
 })
 export class RibbonComponent implements OnInit, OnDestroy {
-  @ViewChild('ribbon_container', { static: true }) ribbon_container!: ElementRef;
+  @ViewChild("ribbon_container", { static: true }) ribbon_container!: ElementRef;
 
   private _ribbon!: Ribbon;
 
@@ -22,7 +22,7 @@ export class RibbonComponent implements OnInit, OnDestroy {
     const { ribbonData } = getData();
     this._ribbon = new Ribbon(this.ribbon_container.nativeElement, {
       data: ribbonData,
-      css: 'dhx_widget--bordered'
+      css: "dhx_widget--bordered"
     });
   }
 

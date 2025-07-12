@@ -1,4 +1,4 @@
-import { Toolbar, setTheme } from '@dhx/trial-suite';
+import { Toolbar, setTheme } from "@dhx/trial-suite";
 import { getData } from "../../app.data";
 
 import {
@@ -7,20 +7,20 @@ import {
   OnInit,
   OnDestroy,
   ViewChild
-} from '@angular/core';
+} from "@angular/core";
 
 @Component({
-  selector: 'app-toolbar',
+  selector: "app-toolbar",
   template: `<div #toolbar_container></div>`
 })
 
 export class ToolbarComponent implements OnInit, OnDestroy {
-  @ViewChild('toolbar_container', { static: true }) toolbar_container!: ElementRef;
+  @ViewChild("toolbar_container", { static: true }) toolbar_container!: ElementRef;
   
   private _toolbar!: Toolbar;
 
   contrast = false;
-  theme = 'light';
+  theme = "light";
 
   ngOnInit() {
     const { toolbarData } = getData();
@@ -28,25 +28,25 @@ export class ToolbarComponent implements OnInit, OnDestroy {
       data: toolbarData
     });
 
-    this._toolbar.events.on('click', (id: any) => {
+    this._toolbar.events.on("click", (id: any) => {
       switch (id) {
-        case 'theme': {
-          const checked = !this._toolbar.data.getItem('theme')['checked'];
-          this._toolbar.data.update('theme', {
+        case "theme": {
+          const checked = !this._toolbar.data.getItem("theme")["checked"];
+          this._toolbar.data.update("theme", {
             checked,
             icon: `mdi mdi-${
-              !checked ? 'weather-night' : 'white-balance-sunny'
+              !checked ? "weather-night" : "white-balance-sunny"
             }`
           });
-          this.theme = checked ? 'dark' : 'light';
+          this.theme = checked ? "dark" : "light";
           //@ts-ignore
-          setTheme(`${this.contrast ? 'contrast-' : ''}${this.theme}`);
+          setTheme(`${this.contrast ? "contrast-" : ""}${this.theme}`);
           break;
         }
-        case 'contrast': {
+        case "contrast": {
           this.contrast = !this.contrast;
           //@ts-ignore
-          setTheme(`${this.contrast ? 'contrast-' : ''}${this.theme}`);
+          setTheme(`${this.contrast ? "contrast-" : ""}${this.theme}`);
         }
       }
     });

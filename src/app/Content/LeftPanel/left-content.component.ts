@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-left-content',
-  templateUrl: './left-content.component.html'
+  selector: "app-left-content",
+  templateUrl: "./left-content.component.html"
 })
 
 export class LeftContentComponent {}

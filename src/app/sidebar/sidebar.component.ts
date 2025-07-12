@@ -1,4 +1,4 @@
-import { Sidebar } from '@dhx/trial-suite';
+import { Sidebar } from "@dhx/trial-suite";
 import { getData } from "../app.data";
 
 import {
@@ -7,15 +7,15 @@ import {
   OnInit,
   OnDestroy,
   ViewChild
-} from '@angular/core';
+} from "@angular/core";
 
 @Component({
-  selector: 'app-sidebar',
+  selector: "app-sidebar",
   template: `<div #sidebar_container class="dhx_widget--border_right sidebar_container"></div>`,
 })
 
 export class SidebarComponent implements OnInit, OnDestroy {
-  @ViewChild('sidebar_container', { static: true }) sidebar_container!: ElementRef;
+  @ViewChild("sidebar_container", { static: true }) sidebar_container!: ElementRef;
 
   private _sidebar!: Sidebar;
 
@@ -26,13 +26,13 @@ export class SidebarComponent implements OnInit, OnDestroy {
       data: sidebarData
     });
 
-    this._sidebar.events.on('click', (id: string) => {
-      if (id === 'toggle') {
-        const toggleItem = this._sidebar.data.getItem('toggle');
+    this._sidebar.events.on("click", (id: string) => {
+      if (id === "toggle") {
+        const toggleItem = this._sidebar.data.getItem("toggle");
         this._sidebar.toggle();
         toggleItem.icon = this._sidebar.config.collapsed
-          ? 'mdi mdi-menu'
-          : 'mdi mdi-backburger';
+          ? "mdi mdi-menu"
+          : "mdi mdi-backburger";
       }
     });
   }

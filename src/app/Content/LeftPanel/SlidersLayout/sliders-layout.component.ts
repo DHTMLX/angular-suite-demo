@@ -1,4 +1,4 @@
-import { Layout, Slider } from '@dhx/trial-suite';
+import { Layout, Slider } from "@dhx/trial-suite";
 
 import {
   Component,
@@ -9,12 +9,12 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-sliders-layout',
-  template: `<div #layout_container class="container"></div>`
+  selector: "app-sliders-layout",
+  template: `<div #layout_container class="sliders_widget"></div>`
 })
 
 export class SlidersLayoutComponent implements OnInit, OnDestroy {
-  @ViewChild('layout_container', { static: true }) layout_container!: ElementRef;
+  @ViewChild("layout_container", { static: true }) layout_container!: ElementRef;
 
   private _layout!: Layout;
   private _slider1!: Slider;
@@ -25,45 +25,45 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this._layout = new Layout(this.layout_container.nativeElement, {
-      type: 'none',
-      height: 'fit-content',
+      type: "none",
+      height: "fit-content",
       cols: [
         {
-          height: 'content',
-          align: 'between',
+          height: "content",
+          align: "between",
           rows: [
             {
               padding: 10,
-              height: 'content',
-              id: 'slider1'
+              height: "content",
+              id: "slider1"
             },
             {
               padding: 10,
-              height: 'content',
-              id: 'slider2'
+              height: "content",
+              id: "slider2"
             },
             {
               padding: 10,
-              height: 'content',
-              id: 'slider3'
+              height: "content",
+              id: "slider3"
             },
             {
               padding: 10,
-              height: 'content',
-              id: 'slider4'
+              height: "content",
+              id: "slider4"
             }
           ]
         },
         {
-          padding: '10px 20px',
-          height: '260px',
-          width: '20%',
-          id: 'slider5'
+          padding: "10px 20px",
+          height: "260px",
+          width: "20%",
+          id: "slider5"
         }
       ]
     });
 
-    this._slider1 = new Slider('', {
+    this._slider1 = new Slider("", {
       min: 0,
       max: 100,
       step: 1,
@@ -72,7 +72,7 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       tickTemplate: (value) => `${value}`
     });
 
-    this._slider2 = new Slider('', {
+    this._slider2 = new Slider("", {
       min: 0,
       max: 100,
       step: 1,
@@ -81,7 +81,7 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       tickTemplate: (value) => `${value}`
     });
 
-    this._slider3 = new Slider('', {
+    this._slider3 = new Slider("", {
       min: 0,
       max: 40,
       step: 1,
@@ -92,7 +92,7 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       tickTemplate: (value) => `${value}`
     });
 
-    this._slider4 = new Slider('', {
+    this._slider4 = new Slider("", {
       min: 0,
       max: 40,
       step: 10,
@@ -100,8 +100,8 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       value: [0, 20]
     });
 
-    this._slider5 = new Slider('', {
-      mode: 'vertical',
+    this._slider5 = new Slider("", {
+      mode: "vertical",
       range: true,
       min: 0,
       max: 40,
@@ -112,11 +112,11 @@ export class SlidersLayoutComponent implements OnInit, OnDestroy {
       tickTemplate: (value) => `${value}`
     });
 
-    this._layout.getCell('slider1').attach(this._slider1);
-    this._layout.getCell('slider2').attach(this._slider2);
-    this._layout.getCell('slider3').attach(this._slider3);
-    this._layout.getCell('slider4').attach(this._slider4);
-    this._layout.getCell('slider5').attach(this._slider5);
+    this._layout.getCell("slider1").attach(this._slider1);
+    this._layout.getCell("slider2").attach(this._slider2);
+    this._layout.getCell("slider3").attach(this._slider3);
+    this._layout.getCell("slider4").attach(this._slider4);
+    this._layout.getCell("slider5").attach(this._slider5);
   }
 
   ngOnDestroy() {

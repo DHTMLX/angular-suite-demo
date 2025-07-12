@@ -1,4 +1,4 @@
-import { Calendar, Timepicker } from '@dhx/trial-suite';
+import { Calendar, Timepicker } from "@dhx/trial-suite";
 
 import {
   Component,
@@ -9,7 +9,7 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-calendars',
+  selector: "app-calendars",
   template: `<div class="calendars-wrapper">
               <div class="wrapper dhx_layout_calendar_cell" #week_container></div>
               <div class="wrapper dhx_layout_calendar_cell" #timepicker_container></div>
@@ -18,9 +18,9 @@ import {
 })
 
 export class CalendarsComponent implements OnInit, OnDestroy {
-  @ViewChild('week_container', { static: true }) week_container!: ElementRef;
-  @ViewChild('timepicker_container', { static: true }) timepicker_container!: ElementRef;
-  @ViewChild('year_container', { static: true }) year_container!: ElementRef;
+  @ViewChild("week_container", { static: true }) week_container!: ElementRef;
+  @ViewChild("timepicker_container", { static: true }) timepicker_container!: ElementRef;
+  @ViewChild("year_container", { static: true }) year_container!: ElementRef;
 
   private _week_calendar!: Calendar;
   private _timepicker!: Timepicker;
@@ -28,7 +28,7 @@ export class CalendarsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this._week_calendar = new Calendar(this.week_container.nativeElement, {
-      weekStart: 'monday',
+      weekStart: "monday",
       timePicker: true,
       range: true,
       value: [new Date(), new Date(Date.now() + 200000000)]
@@ -41,7 +41,7 @@ export class CalendarsComponent implements OnInit, OnDestroy {
 
     this._year_calendar = new Calendar(this.year_container.nativeElement, {
       timePicker: true,
-      mode: 'year',
+      mode: "year",
       value: new Date()
     });
   }

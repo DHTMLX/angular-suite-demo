@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { LeftContentModule } from './LeftPanel/left-content.module';
-import { RightContentModule } from './RightPanel/right-content.module';
+import { LeftContentModule } from "./LeftPanel/left-content.module";
+import { RightContentModule } from "./RightPanel/right-content.module";
 
-import { ContentComponent } from './content.component';
+import { ContentComponent } from "./content.component";
 
 @NgModule({
   declarations: [ContentComponent],

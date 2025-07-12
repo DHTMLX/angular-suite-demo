@@ -1,4 +1,4 @@
-import { Tree } from '@dhx/trial-suite';
+import { Tree } from "@dhx/trial-suite";
 import { getData } from "../../../app.data";
 
 import {
@@ -10,12 +10,12 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-tree',
-  template: `<div #tree_container class="container"></div>`
+  selector: "app-tree",
+  template: `<div #tree_container class="tree_widget"></div>`
 })
 
 export class TreeComponent implements OnInit, OnDestroy {
-  @ViewChild('tree_container', { static: true }) tree_container!: ElementRef;
+  @ViewChild("tree_container", { static: true }) tree_container!: ElementRef;
 
   private _tree!: Tree;
 
@@ -26,7 +26,7 @@ export class TreeComponent implements OnInit, OnDestroy {
       checkbox: true,
       editable: true,
       keyNavigation: true,
-      dragMode: 'both'
+      dragMode: "both"
     });
   }
 

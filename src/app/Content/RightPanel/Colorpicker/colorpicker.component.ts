@@ -1,4 +1,4 @@
-import { Colorpicker } from '@dhx/trial-suite';
+import { Colorpicker } from "@dhx/trial-suite";
 
 import {
   Component,
@@ -6,31 +6,31 @@ import {
   OnDestroy,
   ViewChild,
   ElementRef,
-} from '@angular/core';
+} from "@angular/core";
 
 @Component({
-  selector: 'app-colorpicker',
+  selector: "app-colorpicker",
   template: `<div #colorpicker_container class="container dhx_layout_colorpicker_cell"></div>`
 })
 
 export class ColorpickerComponent implements OnInit, OnDestroy {
-  @ViewChild('colorpicker_container', { static: true }) colorpicker_container!: ElementRef;
+  @ViewChild("colorpicker_container", { static: true }) colorpicker_container!: ElementRef;
  
   private _colorpicker!: Colorpicker;
 
   ngOnInit() {
     this._colorpicker = new Colorpicker(this.colorpicker_container.nativeElement, {
-      mode: 'picker'
+      mode: "picker"
     });
     
-    this._colorpicker.setValue('#0288d1');
-    this._colorpicker.events.on('change', (hex: string) => {
+    this._colorpicker.setValue("#0288d1");
+    this._colorpicker.events.on("change", (hex: string) => {
       const { h, s, l } = this.hexToHSLChema(hex);
       const el = document.documentElement;
 
-      el.style.setProperty('--dhx-h-primary', `${h}`);
-      el.style.setProperty('--dhx-s-primary', s + '%');
-      el.style.setProperty('--dhx-l-primary', l + '%');
+      el.style.setProperty("--dhx-h-primary", `${h}`);
+      el.style.setProperty("--dhx-s-primary", s + "%");
+      el.style.setProperty("--dhx-l-primary", l + "%");
     });
   }
 
@@ -43,13 +43,13 @@ export class ColorpickerComponent implements OnInit, OnDestroy {
       g: any = 0,
       b: any = 0;
     if (HEX.length == 4) {
-      r = '0x' + HEX[1] + HEX[1];
-      g = '0x' + HEX[2] + HEX[2];
-      b = '0x' + HEX[3] + HEX[3];
+      r = "0x" + HEX[1] + HEX[1];
+      g = "0x" + HEX[2] + HEX[2];
+      b = "0x" + HEX[3] + HEX[3];
     } else if (HEX.length == 7) {
-      r = '0x' + HEX[1] + HEX[2];
-      g = '0x' + HEX[3] + HEX[4];
-      b = '0x' + HEX[5] + HEX[6];
+      r = "0x" + HEX[1] + HEX[2];
+      g = "0x" + HEX[3] + HEX[4];
+      b = "0x" + HEX[5] + HEX[6];
     }
     // Then to HSL
     r /= 255;

@@ -1,4 +1,4 @@
-import { Chart, Layout } from '@dhx/trial-suite';
+import { Chart, Layout } from "@dhx/trial-suite";
 import { getData } from "../../../app.data";
 
 import {
@@ -10,12 +10,12 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-chart',
+  selector: "app-chart",
   template: `<div #layout_container class="container"></div>`
 })
 
 export class ChartComponent implements OnInit, OnDestroy {
-  @ViewChild('layout_container', { static: true }) layout_container!: ElementRef;
+  @ViewChild("layout_container", { static: true }) layout_container!: ElementRef;
 
   private _layout!: Layout;
   private _chart!: Chart;
@@ -23,24 +23,24 @@ export class ChartComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const { seriesData, hotelsData } = getData();
     this._layout = new Layout(this.layout_container.nativeElement, {
-      type: 'line',
+      type: "line",
       rows: [
         {
-          header: 'HOTELS',
-          height: '500px',
+          header: "HOTELS",
+          height: "500px",
           padding: 40,
-          id: 'chart',
+          id: "chart",
           collapsable: true
         }
       ]
     });
 
-    this._chart = new Chart('', {
+    this._chart = new Chart("", {
       data: hotelsData,
-      type: 'bar',
+      type: "bar",
       scales: {
         bottom: {
-          text: 'month'
+          text: "month"
         },
         left: {
           maxTicks: 10,
@@ -50,19 +50,18 @@ export class ChartComponent implements OnInit, OnDestroy {
       },
       series: seriesData,
       legend: {
-        series: ['A', 'B', 'all'],
-        halign: 'right',
-        valign: 'top',
+        series: ["A", "B", "all"],
+        halign: "right",
+        valign: "top",
         itemPadding: 20,
         margin: 40
       }
     });
 
-    this._layout.getCell('chart').attach(this._chart);
+    this._layout.getCell("chart").attach(this._chart);
   }
 
   ngOnDestroy() {
     this._layout?.destructor();
-    this._chart?.destructor();
   }
 }

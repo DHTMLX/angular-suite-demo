@@ -1,4 +1,4 @@
-import { DataView } from '@dhx/trial-suite';
+import { DataView } from "@dhx/trial-suite";
 import { getData } from "../../../app.data";
 
 import {
@@ -7,15 +7,15 @@ import {
   OnDestroy,
   ViewChild,
   ElementRef
-} from '@angular/core';
+} from "@angular/core";
 
 @Component({
-  selector: 'app-message-dataview',
+  selector: "app-message-dataview",
   template: `<div #dataview_container></div>`
 })
 
 export class MessageDataviewComponent implements OnInit, OnDestroy {
-  @ViewChild('dataview_container', { static: true }) dataview_container!: ElementRef;
+  @ViewChild("dataview_container", { static: true }) dataview_container!: ElementRef;
   
   private _dataview!: DataView;
 
@@ -25,7 +25,7 @@ export class MessageDataviewComponent implements OnInit, OnDestroy {
       data: messageDataviewData,
       template: this.template,
       itemsInRow: 2,
-      css: 'dhx_dataview_template_b_box',
+      css: "dhx_dataview_template_b_box",
       // other configuration goes here
     });
   }

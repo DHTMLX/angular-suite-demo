@@ -1,4 +1,4 @@
-import { DataView } from '@dhx/trial-suite';
+import { DataView } from "@dhx/trial-suite";
 import { getData } from "../../../app.data";
 
 import {
@@ -10,11 +10,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: 'app-tickets-dataview',
+  selector: "app-tickets-dataview",
   template: `<div #dataview_container></div>`
 })
 export class TicketsDataviewComponent implements OnInit, OnDestroy {
-  @ViewChild('dataview_container', { static: true }) dataview_container!: ElementRef;
+  @ViewChild("dataview_container", { static: true }) dataview_container!: ElementRef;
   
   private _dataview!: DataView;
 
@@ -24,7 +24,7 @@ export class TicketsDataviewComponent implements OnInit, OnDestroy {
       data: ticketsDataviewData,
       template: this.template,
       itemsInRow: 2,
-      css: 'dhx_dataview_template_a_box'
+      css: "dhx_dataview_template_a_box"
     });
   }
 
