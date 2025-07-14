@@ -1,5 +1,5 @@
 import { Sidebar } from "@dhx/trial-suite";
-import { getData } from "../app.data";
+import { getData } from "../../app.data";
 
 import {
   Component,
