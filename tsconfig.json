@@ -1,3 +1,4 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -20,7 +21,6 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"]
   },
-  "include": ["@dhx/trial-spreadsheet"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

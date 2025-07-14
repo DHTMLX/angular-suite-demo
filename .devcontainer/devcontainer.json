@@ -1,9 +1,9 @@
 {
-    "updateContentCommand": "yarn",
-    "postAttachCommand": "yarn start",
-    "customizations": {
-        "codespaces": {
-            "openFiles": ["src/app/app.component.ts"]
-        }
+  "updateContentCommand": "yarn",
+  "postAttachCommand": "yarn start",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/app/app.component.ts"]
     }
+  }
 }
