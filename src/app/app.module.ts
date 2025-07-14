@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import { MainModule } from "./MainContainer/main-container.module";
 
-import { SidebarComponent } from "./Content/Sidebar/sidebar.component";
+import { SidebarComponent } from "./Sidebar/sidebar.component";
 
 @NgModule({
   declarations: [AppComponent, SidebarComponent],
